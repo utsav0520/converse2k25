@@ -31,7 +31,7 @@ const formOptions = {
     { value: "ME", label: "Mechanical Engineering" },
     { value: "TT", label: "Textile Technology" },
     { value: "other", label: "Other" },
-  ]
+  ],
 };
 
 export default formOptions;

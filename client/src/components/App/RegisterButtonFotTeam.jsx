@@ -3,12 +3,13 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RegisterInTeam, fetchEmails } from "../../auth/Register.js";
+import EmailDropdown from "./EmailDropdown.jsx";
 
-function RegisterButtonFotTeam({ event }) {
+function RegisterButtonFotTeam({ event, min, max }) {
   const [loading, setLoading] = useState(false);
-  const [selectedEmail, setSelectedEmail] = useState("");
+  // const [selectedEmail, setSelectedEmail] = useState("");
   const [emailOptions, setEmailOptions] = useState([]);
-  const [selectedEmailsList, setSelectedEmailsList] = useState([]); 
+  const [selectedEmailsList, setSelectedEmailsList] = useState([]);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth?.authData?.user);
@@ -16,17 +17,18 @@ function RegisterButtonFotTeam({ event }) {
   useEffect(() => {
     const fetchData = async () => {
       const token = localStorage.getItem("profile");
-      if (token) {
+      if (token && user?.events?.[event] === false) {
         const { data } = await dispatch(fetchEmails({ event }));
         setEmailOptions(data?.unregisteredEmails || []);
+        
       }
     };
 
     fetchData();
-  }, [dispatch, event]);
+  }, [dispatch, event, user]);
 
-  const handleAddEmail = () => {
-    if (!selectedEmail) {
+  const handleAddEmail = (email) => {
+    if (!email) {
       toast.warn("Please select an email before adding.", {
         position: "top-right",
         autoClose: 4000,
@@ -34,7 +36,8 @@ function RegisterButtonFotTeam({ event }) {
       });
       return;
     }
-    if (selectedEmailsList.includes(selectedEmail)) {
+
+    if (selectedEmailsList.includes(email)) {
       toast.info("This email is already added.", {
         position: "top-right",
         autoClose: 3000,
@@ -42,8 +45,8 @@ function RegisterButtonFotTeam({ event }) {
       });
       return;
     }
-    setSelectedEmailsList((prev) => [...prev, selectedEmail]);
-    setSelectedEmail("");
+
+    setSelectedEmailsList((prev) => [...prev, email]);
   };
 
   const handleRemoveEmail = (emailToRemove) => {
@@ -65,7 +68,7 @@ function RegisterButtonFotTeam({ event }) {
     setLoading(true);
     try {
       const res = await dispatch(
-        RegisterInTeam({ event, emails: selectedEmailsList })
+        RegisterInTeam({ event, email: selectedEmailsList })
       );
 
       if (res?.success) {
@@ -95,34 +98,34 @@ function RegisterButtonFotTeam({ event }) {
   };
 
   if (user?.events?.[event]) {
+    const teamKey = `${event}Team`;
+    const team = user?.events?.[teamKey] || [];
+
     return (
-      <div className="text-green-500 font-semibold">Already Registered</div>
+      <div className="text-green-500 font-semibold">
+        Already Registered
+        {team.length > 0 && (
+          <ul className="mt-2 list-disc list-inside text-sm text-green-700">
+            {team.map((member, i) => (
+              <li key={i}>
+                {member.fullName} ({member.email})
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     );
   }
 
   return (
     <div className="flex flex-col gap-4 max-w-md mx-auto px-4">
-      <div className="flex gap-2">
-        <select
-          value={selectedEmail}
-          onChange={(e) => setSelectedEmail(e.target.value)}
-          className="flex-grow border border-gray-300 rounded px-3 py-2 text-gray-700 focus:outline-none focus:ring focus:border-blue-300"
-        >
-          <option value="">Select Email</option>
-          {emailOptions.map((email, idx) => (
-            <option key={idx} value={email}>
-              {email}
-            </option>
-          ))}
-        </select>
-        <button
-          onClick={handleAddEmail}
-          className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
-          disabled={!selectedEmail}
-        >
-          Add
-        </button>
-      </div>
+      <EmailDropdown
+        emailOptions={emailOptions}
+        handleAddEmail={handleAddEmail}
+        selectedEmailsList={selectedEmailsList}
+        min={min}
+        max={max}
+      />
 
       {selectedEmailsList.length > 0 && (
         <div className="border border-gray-300 rounded p-3 ">
@@ -149,10 +152,18 @@ function RegisterButtonFotTeam({ event }) {
 
       <button
         onClick={handleRegister}
-        disabled={loading || selectedEmailsList.length === 0}
+        disabled={
+          loading ||
+          selectedEmailsList.length < min - 1 ||
+          selectedEmailsList.length > max
+        }
         className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-800 transition-all duration-200 disabled:opacity-50"
       >
-        {loading ? "Registering..." : "Register"}
+        {loading
+          ? "Registering..."
+          : `Register (${
+              selectedEmailsList.length + 1
+            })  added more min : ${min} max : ${max}`}
       </button>
     </div>
   );

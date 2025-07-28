@@ -26,7 +26,7 @@ export const addedOneEvent = async (req, res) => {
 
     // Generate new JWT token with updated user
     const jwtToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-      expiresIn: "3h",
+      expiresIn: "1d",
     });
 
     res.status(200).json({
@@ -34,7 +34,7 @@ export const addedOneEvent = async (req, res) => {
       message: `Registered for ${eventName}`,
       user,
       token: jwtToken,
-    });
+    }); 
   } catch (error) {
     console.error("❌ Event registration error:", error);
     return res.status(500).json({ message: "Failed to register for event" });
@@ -42,13 +42,77 @@ export const addedOneEvent = async (req, res) => {
 };
 
 export const addedTeamEvent = async (req, res) => {
- try {
-  res.status(200).json({
-      success: true,
+  try {
+    const userId = req.userId;
+    const { eventName, email } = req.body;
+
+    if (
+      !userId ||
+      !eventName ||
+      !Array.isArray(email) ||
+      email.length === 0 ||
+      email.length > 2
+    ) {
+      return res.status(400).json({ message: "Invalid request data" });
+    }
+
+    // Find leader
+    const leader = await Person.findById(userId);
+    if (!leader) return res.status(404).json({ message: "Leader not found" });
+
+    // Fetch members
+    const members = await Person.find({ email: { $in: email } });
+    if (members.length !== email.length) {
+      return res.status(400).json({ message: "Some team members not found" });
+    }
+
+    // Final team (leader + members)
+    const team = [leader, ...members];
+
+    // Check if any already registered
+    const alreadyRegistered = team.find(
+      (person) => person.events[eventName] === true
+    );
+    if (alreadyRegistered) {
+      return res.status(400).json({
+        message: `${alreadyRegistered.fullName} is already registered for ${eventName}`,
+      });
+    }
+
+    // Build event paths
+    const updateFlagPath = `events.${eventName}`;
+    const updateTeamPath = `events.${eventName}Team`;
+
+    // For each member: set their flag and team (excluding themselves)
+    for (const person of team) {
+      const teamWithoutSelf = team
+        .filter((p) => p.email !== person.email)
+        .map((p) => ({
+          member: p._id,
+          email: p.email,
+          fullName: p.fullName,
+        }));
+
+      person.set(updateFlagPath, true);
+      person.set(updateTeamPath, teamWithoutSelf);
+      await person.save();
+    }
+
+    // Create updated JWT token for leader
+    const token = jwt.sign({ id: leader._id }, process.env.JWT_SECRET, {
+      expiresIn: "1d",
     });
- } catch (error) {
-  
- }
+
+    res.status(200).json({
+      success: true,
+      message: `Team registered for ${eventName}`,
+      user : leader,
+      token,
+    });
+  } catch (error) {
+    console.error("❌ Team registration error:", error);
+    res.status(500).json({ message: "Server error while registering team" });
+  }
 };
 
 export const fetchEmails = async (req, res) => {

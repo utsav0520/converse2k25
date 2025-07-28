@@ -22,7 +22,7 @@ export const RegisterInTeam =
   async (dispatch) => {
     try {
       const { data } = await api.RegisterInTeam({ event, email });
-      dispatch({ type: EMAILS, data });
+      dispatch({ type: AUTH, data });
       return { success: true };
     } catch (error) {
       console.log(error);

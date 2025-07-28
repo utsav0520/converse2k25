@@ -5,7 +5,7 @@ import { codathon } from "../../constants/eventNames.js";
 function Codathon() {
   return (
     <div>
-      <RegisterButtonFotTeam event={codathon} />
+      <RegisterButtonFotTeam event={codathon} min={1} max={2} />
     </div>
   );
 }

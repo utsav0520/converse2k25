@@ -13,8 +13,18 @@ import Events from './pages/Events.jsx'
 import Signin from './pages/Signin.jsx'
 import Profile from './pages/Profile.jsx'
 
-import PYIT from './pages/EventDeatils/PYIT.jsx'
+
+import LogoHunt from './pages/EventDeatils/LogoHunt.jsx'
+import Cybersiege from './pages/EventDeatils/Cybersiege.jsx'
+import ITQuiz from './pages/EventDeatils/itQuiz.jsx';
+import BugBuzz from './pages/EventDeatils/BugBuzz.jsx';
 import Codathon from './pages/EventDeatils/Codathon.jsx'
+import TechTussal from './pages/EventDeatils/TechTussal.jsx'
+import WebWaves from  './pages/EventDeatils/WebWaves.jsx'
+import AIMemes from  './pages/EventDeatils/AIMemes.jsx'
+import PYIT from './pages/EventDeatils/PYIT.jsx'
+import AIQuiz from './pages/EventDeatils/AIQuiz.jsx'
+
 
 function App() {
 const dispatch = useDispatch();
@@ -37,8 +47,17 @@ const dispatch = useDispatch();
         <Route path='/profile' element={<Profile/>} />
 
         {/* Event Page */}
-        <Route path='/event/pyit' element={<PYIT/>}/>
+        <Route path='/event/logohunt' element={<LogoHunt/>}/>
+        <Route path= '/event/cybersiege' element={<Cybersiege/>}/>
+        <Route path='/event/itquiz' element={<ITQuiz/>}/>
+        <Route path='/event/bugbuzz' element={<BugBuzz/>}/>
         <Route path='/event/codathon' element={<Codathon/>}/>
+        <Route path='/event/techtussle' element={<TechTussal/>}/>
+        <Route path='/event/webwaves' element={<WebWaves/>}/>
+        <Route path='/event/aimemes' element={<AIMemes/>}/>
+        <Route path='/event/pyit' element={<PYIT/>}/>  
+        <Route path='/event/aiquiz' element={<AIQuiz/>}/>  
+
 
       </Routes>
       <AppFottor/>

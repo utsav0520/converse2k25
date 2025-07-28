@@ -1,7 +1,12 @@
-import { AUTH, EMAILS, LOGOUT, UPDATE_PROFILE } from "../constants/actionTypes.js";
+import {
+  AUTH,
+  EMAILS,
+  LOGOUT,
+  UPDATE_PROFILE,
+} from "../constants/actionTypes.js";
 
 const authReducer = (
-  state = { authData: { user: null, token: null, emails : null } },
+  state = { authData: { user: null, token: null }, emails: null },
   action
 ) => {
   switch (action.type) {
@@ -21,20 +26,19 @@ const authReducer = (
         authData: {
           ...state.authData,
           user: action.payload,
+          token: action.data.token,
         },
       };
 
     case LOGOUT:
       localStorage.clear();
       return { ...state, authData: { user: null, token: null } };
-    
-    case EMAILS : 
-      return{ 
+
+    case EMAILS:
+      return {
         ...state,
-        authData: {
-          emails: action.data.unregisteredEmails,
-        },
-      }
+        emails: action.data.unregisteredEmails,
+      };
 
     default:
       return state;
