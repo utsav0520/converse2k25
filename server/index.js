@@ -40,8 +40,15 @@ async function connectToDB() {
 
 const PORT = process.env.PORT || 5000;
 
-connectToDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-  });
-});
+// connectToDB().then(() => {
+//   app.listen(PORT, () => {
+//     console.log(`🚀 Server running on http://localhost:${PORT}`);
+//   });
+// });
+
+
+// Vercel expects a default handler export
+export default async function handler(req, res) {
+    await connectToDB();
+    app(req, res); // Use Express to handle the request
+}
