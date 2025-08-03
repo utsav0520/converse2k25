@@ -34,20 +34,20 @@ function Events() {
           <div
             key={event.slug}
             onClick={() => handleClick(event.slug, event.name)}
-            className="bg-white/50 backdrop-blur-md border border-gray-200 rounded-lg shadow-md hover:shadow-xl cursor-pointer transform hover:scale-105 transition-all duration-300 p-4 group"
+            className="event-card borde rounded-md transition-all duration-300 cursor-pointer p-4 group"
           >
             <div className="overflow-hidden rounded-lg">
               <img
                 src={event.image}
                 alt={event.name}
-                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="mt-4">
-              <h2 className="text-xl font-semibold text-gray-800 group-hover:underline transition duration-200">
+              <h2 className="text-xl font-semibol group-hover:underline transition duration-200">
                 {event.name}
               </h2>
-              <p className="text-gray-600 text-sm italic group-hover:tracking-wide transition-all duration-300">
+              <p className="text-sm italic group-hover:tracking-wide transition-all duration-300">
                 {event.slogan}
               </p>
             </div>

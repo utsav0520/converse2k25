@@ -10,6 +10,7 @@ import LogoLogoHunt from './eventLogo/initlogohunt.jpg'
 import LogoPYIT from './eventLogo/initpyit.jpg'
 import LogoTechTussal from './eventLogo/inittech.jpg'
 import LogoWebWave from './eventLogo/initwb.jpg'
+import PosterCodathon from './Posters/PosterCodathon.jpg'
 
 export {
     converse2k25,
@@ -22,5 +23,8 @@ export {
     LogoLogoHunt,
     LogoPYIT,
     LogoTechTussal,
-    LogoWebWave
+    LogoWebWave,
+
+    PosterCodathon,
+    
 }

@@ -9,6 +9,9 @@ function RegisterButton({ event }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth?.authData?.user);
+  const handleSignin = () => {
+    navigate("/signin");
+  };
   const handleRegister = async () => {
     setLoading(true);
     try {
@@ -39,10 +42,13 @@ function RegisterButton({ event }) {
     }
     setLoading(false);
   };
+  console.log(user);
 
   return user?.events?.[event] === true ? (
-    <div className="text-green-500 font-semibold">Already Registered</div>
-  ) : (
+    <div className="borderFor font-bold text-center">
+      <p className="text-2xl md:text-4xl gradientText">Already Registered</p>
+    </div>
+  ) : user ? (
     <button
       onClick={handleRegister}
       disabled={loading}
@@ -50,6 +56,18 @@ function RegisterButton({ event }) {
     >
       {loading ? "Registering..." : "Register"}
     </button>
+  ) : (
+    <>
+      <div>
+        <h1>Please Singin First....</h1>
+      </div>
+      <button
+        onClick={handleSignin}
+        className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-800 transition-all duration-200 disabled:opacity-50"
+      >
+        SignIn
+      </button>
+    </>
   );
 }
 

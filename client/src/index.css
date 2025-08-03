@@ -3,21 +3,112 @@
 :root {
   background-color: #383b3f;
   color: #eeeeee;
-  --color-background : #000000;
-  --color-transperent : rgba(170, 161, 161, 0.603);
-  --color-border : #b8c6d6;
-  --color-divider : #ffffff;
-  --text-primary : #030303;
+  --color-background: #000000;
+  --color-transperent: rgba(170, 161, 161, 0.603);
+  --color-border: #b8c6d6;
+  --color-divider: #ffffff;
+  --text-primary: #030303;
+  --color-higlights-div: rgba(0, 0, 0, 0.5);
+  --text-highlights: linear-gradient(to top, #dddfe0, #3be719);
 }
 
-.background-color { background-color: var(--color-background);}
-.bg-transperent { background-color: var(--color-transperent);}
-.bg-divider { background-color: var(--color-divider);}
+.background-color {
+  background-color: var(--color-background);
+}
 
-.border-primary {border-color: var(--color-border);}
+.bg-transperent {
+  background-color: var(--color-transperent);
+}
+
+.bg-divider {
+  background-color: var(--color-divider);
+}
+
+.border-primary {
+  border-color: var(--color-border);
+}
+
 .icon-hover:hover {
   background-color: #383b3f;
-  color : #ffffff
+  color: #ffffff
 }
 
-.text-primary {color : var(--text-primary)}
+.text-primary {
+  color: var(--text-primary)
+}
+
+.gradientText {
+  background: var(--text-highlights);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+
+.borderFor {
+  display: grid;
+  justify-content: center;
+  padding: 2px;
+  background-color: var(--color-higlights-div);
+  border-radius: 30px;
+  border: var(--color-border) 2px solid;
+  margin: 20px 70px;
+
+  @media screen and (max-width: 768px) {
+    margin: 20px 30px;
+  }
+}
+
+.borderFor>* {
+  border-radius: 28px;
+  padding: 10px;
+  gap: 6px;
+}
+
+.event-card {
+  position: relative;
+  padding: 10px 40px;
+  z-index: 1;
+  overflow: hidden;
+  background: rgba(253, 251, 251, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 10px 10px rgba(240, 240, 240, 0.5);
+  backdrop-filter: blur(5.4px);
+  transition: all 5s ease;
+}
+
+/* Animated border lines */
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2.5px;
+  background: linear-gradient(
+    270deg,
+    #4873ff,
+    #d148d3,
+    #4873ff
+  );
+  background-size: 600% 600%;
+  animation: border-flow 8s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#000000 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* Border flow animation */
+@keyframes border-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

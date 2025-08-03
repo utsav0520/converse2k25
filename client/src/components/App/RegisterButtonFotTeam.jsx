@@ -20,13 +20,14 @@ function RegisterButtonFotTeam({ event, min, max }) {
       if (token && user?.events?.[event] === false) {
         const { data } = await dispatch(fetchEmails({ event }));
         setEmailOptions(data?.unregisteredEmails || []);
-        
       }
     };
 
     fetchData();
   }, [dispatch, event, user]);
-
+  const handleSignin = () => {
+    navigate("/signin");
+  };
   const handleAddEmail = (email) => {
     if (!email) {
       toast.warn("Please select an email before adding.", {
@@ -102,23 +103,44 @@ function RegisterButtonFotTeam({ event, min, max }) {
     const team = user?.events?.[teamKey] || [];
 
     return (
-      <div className="text-green-500 font-semibold">
-        Already Registered
-        {team.length > 0 && (
-          <ul className="mt-2 list-disc list-inside text-sm text-green-700">
-            {team.map((member, i) => (
-              <li key={i}>
-                {member.fullName} ({member.email})
-              </li>
-            ))}
-          </ul>
-        )}
+      <div className="borderFor font-bold text-center">
+        <p className="text-2xl md:text-4xl gradientText">Already Registered</p>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <p className="text-xl gradientText">This is Your Team : </p>
+          <p className="fo">
+            {team.length > 0 && (
+              <ul className="list-disc list-inside text-sm gradientText">
+                {team.map((member, i) => (
+                  <li key={i}>
+                    {member.fullName} ({member.email})
+                  </li>
+                ))}
+              </ul>
+            )}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="borderFor">
+        <div>
+          <h1>Please Singin First....</h1>
+        </div>
+        <button
+          onClick={handleSignin}
+          className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-800 transition-all duration-200 disabled:opacity-50"
+        >
+          SignIn
+        </button>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col gap-4 max-w-md mx-auto px-4">
+    <div className="flex flex-col borderFor gap-4 max-w-full mx-auto ">
       <EmailDropdown
         emailOptions={emailOptions}
         handleAddEmail={handleAddEmail}
