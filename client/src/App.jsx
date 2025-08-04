@@ -16,7 +16,7 @@ import Profile from './pages/Profile.jsx'
 
 import LogoHunt from './pages/EventDeatils/LogoHunt.jsx'
 import Cybersiege from './pages/EventDeatils/Cybersiege.jsx'
-import ITQuiz from './pages/EventDeatils/itQuiz.jsx';
+import ITQuiz from './pages/EventDeatils/ITQuiz.jsx';
 import BugBuzz from './pages/EventDeatils/BugBuzz.jsx';
 import Codathon from './pages/EventDeatils/Codathon.jsx'
 import TechTussal from './pages/EventDeatils/TechTussal.jsx'
