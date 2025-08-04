@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Registration Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .highlight {
+      color: #007BFF;
+      font-weight: bold;
+      font-size: xx-large;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Hello {{USER_NAME}},</h2>
+    <p>🎉 <b>Congratulations!</b> You have successfully registered for the event:</p>
+    <p class="highlight">{{EVENT_NAME}}</p>
+    <p>{{TEAM_LIST}}</p>
+    <p>We're thrilled to have you on board! 🚀</p>
+    <p>
+      Make sure to:
+    <ul>
+      <li>⏰ <b>Be on time </b> and follow the event schedule</li>
+      <li>🎯 Give your best and enjoy the competition</li>
+      <li>📝 <b>Register for more events</b> — there's something for everyone!</li>
+    </ul>
+    </p>
+    <p>
+      👉 Check out the full schedule, event details, and updates on our website:
+      <a href="https://converse2k25.vercel.app/" target="_blank">
+        https://converse2k25.vercel.app
+      </a>
+    </p>
+    <br />
+    <p>Let’s make it a day to remember. Good luck and see you there! 🎉</p>
+    <p>Regards,<br /><b>Team Converse2k25</b></p>
+  </div>
+</body>
+</html>

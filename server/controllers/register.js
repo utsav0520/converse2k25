@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import Person from "../models/user/person.js";
+import { sendEmailForOneEvent, sendEmailForTeamEvent } from "../utils/sendMessage.js";
 
 export const addedOneEvent = async (req, res) => {
   try {
@@ -29,12 +30,14 @@ export const addedOneEvent = async (req, res) => {
       expiresIn: "1d",
     });
 
+    await sendEmailForOneEvent(user, eventName);
+
     res.status(200).json({
       success: true,
       message: `Registered for ${eventName}`,
       user,
       token: jwtToken,
-    }); 
+    });
   } catch (error) {
     console.error("❌ Event registration error:", error);
     return res.status(500).json({ message: "Failed to register for event" });
@@ -98,6 +101,13 @@ export const addedTeamEvent = async (req, res) => {
       await person.save();
     }
 
+    for (const person of team) {
+      sendEmailForTeamEvent(person, eventName, team).catch((err) => {
+        console.error(
+          `❌ Failed to send email to ${person.email}: ${err.message}`
+        );
+      });
+    }
     // Create updated JWT token for leader
     const token = jwt.sign({ id: leader._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
@@ -106,7 +116,7 @@ export const addedTeamEvent = async (req, res) => {
     res.status(200).json({
       success: true,
       message: `Team registered for ${eventName}`,
-      user : leader,
+      user: leader,
       token,
     });
   } catch (error) {
