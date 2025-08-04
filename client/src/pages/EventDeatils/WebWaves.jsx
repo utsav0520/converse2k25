@@ -6,7 +6,6 @@ function WebWaves() {
   return (
     <div>
       <RegisterButton event={webWave} />
-      
     </div>
   )
 }

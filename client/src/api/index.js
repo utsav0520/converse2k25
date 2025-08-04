@@ -1,11 +1,12 @@
 import axios from 'axios';
-const API = axios.create({ baseURL: 'http://localhost:5000/'});
+
+const API = axios.create({ baseURL: import.meta.env.VITE_API_BASE_URL });
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('profile')) {
         req.headers.authorization = `Bearer ${JSON.parse(localStorage.getItem('profile'))}`;
     }
-    return req;
+    return req;     
 })
 
 export const signIn = (userData) => API.post(`/user/signin`,userData);

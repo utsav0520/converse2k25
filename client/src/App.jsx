@@ -53,7 +53,7 @@ const dispatch = useDispatch();
         <Route path='/event/bugbuzz' element={<BugBuzz/>}/>
         <Route path='/event/codathon' element={<Codathon/>}/>
         <Route path='/event/techtussle' element={<TechTussal/>}/>
-        <Route path='/event/webwaves' element={<WebWaves/>}/>
+        <Route path='/event/webwave' element={<WebWaves/>}/>
         <Route path='/event/aimemes' element={<AIMemes/>}/>
         <Route path='/event/pyit' element={<PYIT/>}/>  
         <Route path='/event/aiquiz' element={<AIQuiz/>}/>  
