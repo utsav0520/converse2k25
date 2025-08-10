@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import EventNoteIcon from "@mui/icons-material/EventNote";
+import Groups2Icon from '@mui/icons-material/Groups2';
 import CollectionsIcon from "@mui/icons-material/Collections";
 import PersonIcon from "@mui/icons-material/Person";
 import LoginIcon from "@mui/icons-material/Login";
@@ -10,13 +11,19 @@ import { useSelector, useDispatch } from "react-redux";
 import { LOGOUT } from "../../constants/actionTypes";
 import { toast } from "react-toastify";
 
-const IconDisplay = ({ icon, link }) => {
+
+const IconDisplay = ({ icon, link, name }) => {
   return (
-    <Link to={link}>
-      <div className="icon-hover border-0 rounded-4xl p-2">{icon}</div>
+    <Link to={link} className="block text-center">
+      <div className="icon-hover grid items-center justify-center p-2 sm:p-1 rounded-lg transition-transform hover:scale-105 hover:bg-gray-100">
+        <div className="text-2xl sm:text-lg">{icon}</div>
+        <div className="text-sm sm:text-xs font-medium text-gray-700">{name}</div>
+      </div>
     </Link>
   );
 };
+
+
 
 function AppBar() {
   const user = useSelector((state) => state.auth?.authData?.user);
@@ -37,15 +44,16 @@ function AppBar() {
   return (
     <div className="fixed bottom-0 w-full flex justify-center bg-transparent py-3 shadow-md z-50">
       <div className="bg-transperent border-primary text-primary px-4 py-2 rounded-3xl backdrop-blur-md text-sm border-3 flex gap-4">
-        <IconDisplay icon={<HomeIcon />} link="/" />
-        <IconDisplay icon={<EventNoteIcon />} link="/events" />
-        <IconDisplay icon={<CollectionsIcon />} link="/gallary" />
+        <IconDisplay icon={<HomeIcon />} name="home" link="/" />
+        <IconDisplay icon={<EventNoteIcon />} name="Events" link="/events" />
+        {/* <IconDisplay icon={<Groups2Icon />} name="Teams" link="/teams" /> */}
+        <IconDisplay icon={<CollectionsIcon />} name="Aboute" link="/gallary" />
 
         {!user ? (
-          <IconDisplay icon={<LoginIcon />} link="/signin" />
+          <IconDisplay icon={<LoginIcon />} name="Sign In" link="/signin" />
         ) : (
           <>
-            <IconDisplay icon={<PersonIcon />} link="/profile" />
+            <IconDisplay icon={<PersonIcon />} name="Profile" link="/profile" />
             <div className="bg-divider h-full w-0.5 rounded-3xl"></div>
             <button onClick={handleLogout}>
               <div className="icon-hover border-0 rounded-4xl p-2">
