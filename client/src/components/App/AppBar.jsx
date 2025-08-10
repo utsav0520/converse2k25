@@ -43,10 +43,10 @@ function AppBar() {
 
   return (
     <div className="fixed bottom-0 w-full flex justify-center bg-transparent py-3 shadow-md z-50">
-      <div className="bg-transperent border-primary text-primary px-4 py-2 rounded-3xl backdrop-blur-md text-sm border-3 flex gap-4">
+      <div className="bg-transperent border-primary text-primary px-2 py-2 rounded-3xl backdrop-blur-md text-sm border-3 flex gap-1">
         <IconDisplay icon={<HomeIcon />} name="home" link="/" />
         <IconDisplay icon={<EventNoteIcon />} name="Events" link="/events" />
-        {/* <IconDisplay icon={<Groups2Icon />} name="Teams" link="/teams" /> */}
+        <IconDisplay icon={<Groups2Icon />} name="Teams" link="/teams" />
         <IconDisplay icon={<CollectionsIcon />} name="Aboute" link="/gallary" />
 
         {!user ? (
