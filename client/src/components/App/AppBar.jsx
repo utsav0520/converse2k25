@@ -17,7 +17,7 @@ const IconDisplay = ({ icon, link, name }) => {
     <Link to={link} className="block text-center">
       <div className="icon-hover grid items-center justify-center p-2 sm:p-1 rounded-lg transition-transform hover:scale-105 hover:bg-gray-100">
         <div className="text-2xl sm:text-lg">{icon}</div>
-        <div className="text-sm sm:text-xs font-medium text-gray-700">{name}</div>
+        <div className="text-sm sm:text-xs font-medium">{name}</div>
       </div>
     </Link>
   );
@@ -43,7 +43,7 @@ function AppBar() {
 
   return (
     <div className="fixed bottom-0 w-full flex justify-center bg-transparent py-3 shadow-md z-50">
-      <div className="bg-transperent border-primary text-primary px-2 py-2 rounded-3xl backdrop-blur-md text-sm border-3 flex gap-1">
+      <div className="bg-transperent border-primary text-primary px-1 py-1 md:px-2 rounded-2xl backdrop-blur-md text-sm border-3 flex gap-0.5">
         <IconDisplay icon={<HomeIcon />} name="home" link="/" />
         <IconDisplay icon={<EventNoteIcon />} name="Events" link="/events" />
         <IconDisplay icon={<Groups2Icon />} name="Teams" link="/teams" />
