@@ -9,6 +9,8 @@ import HomePage from './pages/HomePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import Schedule from './pages/Schedule.jsx'
 import Events from './pages/Events.jsx'
+import Gallary from './pages/Gallary.jsx'
+import Teams from './pages/Teams.jsx'
 
 import Signin from './pages/Signin.jsx'
 import Profile from './pages/Profile.jsx'
@@ -43,6 +45,8 @@ const dispatch = useDispatch();
         <Route path='/about' element={<AboutPage/>}/>
         <Route path='/schedule' element={<Schedule/>} />
         <Route path='/events' element={<Events/>} />
+        <Route path='/gallary' element={<Gallary/>} />
+        <Route path='/teams' element={<Teams/>} />
         <Route path='/signin' element={<Signin/>} />
         <Route path='/profile' element={<Profile/>} />
 

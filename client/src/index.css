@@ -4,10 +4,10 @@
   background-color: #383b3f;
   color: #eeeeee;
   --color-background: #000000;
-  --color-transperent: rgba(170, 161, 161, 0.603);
-  --color-border: #b8c6d6;
-  --color-divider: #ffffff;
-  --text-primary: #030303;
+  --color-transperent: rgba(194, 144, 187, 0.603);
+  --color-border: #dd2ac5;
+  --color-divider: #000000;
+  --text-primary: #fafafa;
   --color-higlights-div: rgba(0, 0, 0, 0.5);
   --text-highlights: linear-gradient(to top, #dddfe0, #3be719);
 }
@@ -29,8 +29,8 @@
 }
 
 .icon-hover:hover {
-  background-color: #383b3f;
-  color: #ffffff
+  background-color: #b38dae;
+  color: #000000
 }
 
 .text-primary {
