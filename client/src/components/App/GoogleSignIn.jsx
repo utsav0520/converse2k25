@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { googleSignIn } from "../../auth/auth.js";
+import { useState } from "react";
 
 function GoogleIconShown() {
   return (
@@ -48,9 +49,10 @@ function GoogleIconShown() {
 export const GoogleSignIn = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [isLoadding, setIsLoadding] = useState(false);
 
   const login = useGoogleLogin({
-    flow: "implicit", 
+    flow: "implicit",
     onSuccess: async (tokenResponse) => {
       try {
         const accessToken = tokenResponse.access_token;
@@ -73,9 +75,9 @@ export const GoogleSignIn = () => {
           googleId: user.sub,
           token: accessToken,
         };
-
+        setIsLoadding(true);
         const googleRes = await dispatch(googleSignIn(userData));
-
+        setIsLoadding(false);
         if (googleRes?.success) {
           toast.success("🎉 Google Sign in Done !!", {
             position: "top-right",
@@ -109,10 +111,16 @@ export const GoogleSignIn = () => {
       onKeyDown={(e) => e.key === "Enter" && login()}
       className="cursor-pointer flex justify-center items-center m-2 md:m-4 p-2 gap-6 border-2 border-primary bg-transparent rounded-2xl icon-hover hover:font-bold"
     >
-      <div>
-        <GoogleIconShown />
-      </div>
-      <p className="text-center text-sm">Sign in with Google</p>
+      {!isLoadding ? (
+        <>
+          <div>
+            <GoogleIconShown />
+          </div>
+          <p className="text-center text-sm">Sign in with Google</p>
+        </>
+      ) : (
+        <p className="text-center text-sm">Connecting ....</p>
+      )}
     </div>
   );
 };

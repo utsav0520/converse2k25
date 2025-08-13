@@ -26,7 +26,7 @@ import {
 
 export const EventListing = {
   [pyIt]: {
-    name: "PyIt",
+    name: "PY IT",
     slug: pyIt,
     image: LogoPYIT,
     slogan: "Unleash Python Power!",

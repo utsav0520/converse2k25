@@ -6,7 +6,6 @@ function AIQuiz() {
   return (
     <div>
       <RegisterButton event={aiQuiz} />
-      
     </div>
   )
 }

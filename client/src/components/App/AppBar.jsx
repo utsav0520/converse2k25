@@ -2,8 +2,8 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import EventNoteIcon from "@mui/icons-material/EventNote";
-import Groups2Icon from '@mui/icons-material/Groups2';
-import CollectionsIcon from "@mui/icons-material/Collections";
+import InfoIcon from "@mui/icons-material/Info";
+import PeopleIcon from "@mui/icons-material/People";
 import PersonIcon from "@mui/icons-material/Person";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -11,19 +11,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { LOGOUT } from "../../constants/actionTypes";
 import { toast } from "react-toastify";
 
-
-const IconDisplay = ({ icon, link, name }) => {
+const IconDisplay = ({ icon, link }) => {
   return (
-    <Link to={link} className="block text-center">
-      <div className="icon-hover grid items-center justify-center p-2 sm:p-1 rounded-lg transition-transform hover:scale-105 hover:bg-gray-100">
-        <div className="text-2xl sm:text-lg">{icon}</div>
-        <div className="text-sm sm:text-xs font-medium">{name}</div>
+    <Link to={link} className="block no-underline" style={{ pointerEvents: "auto", zIndex: 60 }}>
+      {/* Container with a refined hover effect that scales up slightly and is now perfectly round */}
+      <div className="icon-hover p-2 group transition-transform duration-300 hover:scale-110 animate-slideUp rounded-full">
+        {React.cloneElement(icon, { className: "text-white transition-colors duration-300 group-hover:text-cyan-300 animate-glitch-flicker" })}
       </div>
     </Link>
   );
 };
-
-
 
 function AppBar() {
   const user = useSelector((state) => state.auth?.authData?.user);
@@ -31,38 +28,95 @@ function AppBar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.clear();
-    dispatch({ type: LOGOUT });
-    toast.success("Logout !!", {
-      position: "top-right",
-      autoClose: 5000,
-      theme: "dark",
-    });
-    navigate("/");
+    try {
+      localStorage.clear();
+      dispatch({ type: LOGOUT });
+      toast.success("Logout successful!", {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
+      });
+      navigate("/");
+    } catch (error) {
+      console.error("Logout error:", error);
+      toast.error("Logout failed. Please try again.", {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
+      });
+    }
   };
 
   return (
-    <div className="fixed bottom-0 w-full flex justify-center bg-transparent py-3 shadow-md z-50">
-      <div className="bg-transperent border-primary text-primary px-1 py-1 md:px-2 rounded-2xl backdrop-blur-md text-sm border-3 flex gap-0.5">
-        <IconDisplay icon={<HomeIcon />} name="home" link="/" />
-        <IconDisplay icon={<EventNoteIcon />} name="Events" link="/events" />
-        <IconDisplay icon={<Groups2Icon />} name="Teams" link="/teams" />
-        <IconDisplay icon={<CollectionsIcon />} name="Aboute" link="/gallary" />
+    <div className="fixed bottom-0 w-full flex justify-center py-3 z-50">
+      {/* The main container is now more attractive with a slight shadow, rounded edges, and a transparent background */}
+      <div className="relative bg-transparent border-primary text-primary px-4 py-2 rounded-3xl backdrop-blur-md text-sm border flex gap-4 animate-fadeIn" style={{ borderWidth: "3px", zIndex: 50 }}>
+        {/* Animated Background */}
+        <div className="absolute inset-0 z-0 animate-twinkling-stars bg-[url('/textures/starry-bg.png')] bg-cover opacity-30" style={{ width: "100%", height: "100%", zIndex: 10 }} />
+        <div className="absolute inset-0 z-10 animate-neon-glow before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-900/30 before:via-blue-900/30 before:to-purple-900/30 before:rounded-full before:blur-3xl" style={{ zIndex: 20 }} />
+
+        <IconDisplay icon={<HomeIcon />} link="/" />
+        <IconDisplay icon={<EventNoteIcon />} link="/events" />
+        <IconDisplay icon={<PeopleIcon />} link="/team" />
+        <IconDisplay icon={<InfoIcon />} link="/about" />
 
         {!user ? (
-          <IconDisplay icon={<LoginIcon />} name="Sign In" link="/signin" />
+          <IconDisplay icon={<LoginIcon />} link="/signin" />
         ) : (
           <>
-            <IconDisplay icon={<PersonIcon />} name="Profile" link="/profile" />
+            <IconDisplay icon={<PersonIcon />} link="/profile" />
             <div className="bg-divider h-full w-0.5 rounded-3xl"></div>
-            <button onClick={handleLogout}>
-              <div className="icon-hover border-0 rounded-4xl p-2">
-                <LogoutIcon />
+            <button onClick={handleLogout} className="focus:outline-none" style={{ pointerEvents: "auto", zIndex: 60 }}>
+              <div className="icon-hover p-2 group transition-transform duration-300 hover:scale-110 animate-slideUp rounded-full">
+                {React.cloneElement(<LogoutIcon />, { className: "text-white transition-colors duration-300 group-hover:text-red-400 animate-glitch-flicker" })}
               </div>
             </button>
           </>
         )}
       </div>
+      <style>
+        {`
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+          }
+          @keyframes neonGlow {
+            0%, 100% { transform: scale(1) translate(-50%, -50%); opacity: 0.3; }
+            50% { transform: scale(1.2) translate(-50%, -50%); opacity: 0.5; }
+          }
+          @keyframes glitchFlicker {
+            0% { opacity: 1; text-shadow: none; }
+            2% { opacity: 0.8; text-shadow: 2px 2px 4px rgba(0, 255, 255, 0.9); }
+            4% { opacity: 1; text-shadow: none; }
+            6% { opacity: 0.9; text-shadow: -2px -2px 4px rgba(0, 255, 255, 0.9); }
+            8% { opacity: 1; text-shadow: none; }
+            100% { opacity: 1; text-shadow: none; }
+          }
+          .animate-fadeIn { animation: fadeIn 1.2s ease-in-out; }
+          .animate-slideUp { animation: slideUp 1.2s ease-in-out; }
+          .animate-neon-glow::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(90, 24, 154, 0.5), rgba(0, 255, 255, 0.5));
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: neonGlow 3s infinite ease-in-out;
+            z-index: -1;
+          }
+          /* Ensure smooth rendering */
+          .icon-hover:hover > * {
+            transition: all 0.3s ease;
+          }
+        `}
+      </style>
     </div>
   );
 }
