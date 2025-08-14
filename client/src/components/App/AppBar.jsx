@@ -1,0 +1,124 @@
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
+import EventNoteIcon from "@mui/icons-material/EventNote";
+import InfoIcon from "@mui/icons-material/Info";
+import PeopleIcon from "@mui/icons-material/People";
+import PersonIcon from "@mui/icons-material/Person";
+import LoginIcon from "@mui/icons-material/Login";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { useSelector, useDispatch } from "react-redux";
+import { LOGOUT } from "../../constants/actionTypes";
+import { toast } from "react-toastify";
+
+const IconDisplay = ({ icon, link }) => {
+  return (
+    <Link to={link} className="block no-underline" style={{ pointerEvents: "auto", zIndex: 60 }}>
+      {/* Container with a refined hover effect that scales up slightly and is now perfectly round */}
+      <div className="icon-hover p-2 group transition-transform duration-300 hover:scale-110 animate-slideUp rounded-full">
+        {React.cloneElement(icon, { className: "text-white transition-colors duration-300 group-hover:text-cyan-300 animate-glitch-flicker" })}
+      </div>
+    </Link>
+  );
+};
+
+function AppBar() {
+  const user = useSelector((state) => state.auth?.authData?.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    try {
+      localStorage.clear();
+      dispatch({ type: LOGOUT });
+      toast.success("Logout successful!", {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
+      });
+      navigate("/");
+    } catch (error) {
+      console.error("Logout error:", error);
+      toast.error("Logout failed. Please try again.", {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
+      });
+    }
+  };
+
+  return (
+    <div className="fixed bottom-0 w-full flex justify-center py-3 z-50">
+      {/* The main container is now more attractive with a slight shadow, rounded edges, and a transparent background */}
+      <div className="relative bg-transparent border-primary text-primary px-4 py-2 rounded-3xl backdrop-blur-md text-sm border flex gap-4 animate-fadeIn" style={{ borderWidth: "3px", zIndex: 50 }}>
+        {/* Animated Background */}
+        <div className="absolute inset-0 z-0 animate-twinkling-stars bg-[url('/textures/starry-bg.png')] bg-cover opacity-30" style={{ width: "100%", height: "100%", zIndex: 10 }} />
+        <div className="absolute inset-0 z-10 animate-neon-glow before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-900/30 before:via-blue-900/30 before:to-purple-900/30 before:rounded-full before:blur-3xl" style={{ zIndex: 20 }} />
+
+        <IconDisplay icon={<HomeIcon />} link="/" />
+        <IconDisplay icon={<EventNoteIcon />} link="/events" />
+        <IconDisplay icon={<PeopleIcon />} link="/team" />
+        <IconDisplay icon={<InfoIcon />} link="/about" />
+
+        {!user ? (
+          <IconDisplay icon={<LoginIcon />} link="/signin" />
+        ) : (
+          <>
+            <IconDisplay icon={<PersonIcon />} link="/profile" />
+            <div className="bg-divider h-full w-0.5 rounded-3xl"></div>
+            <button onClick={handleLogout} className="focus:outline-none" style={{ pointerEvents: "auto", zIndex: 60 }}>
+              <div className="icon-hover p-2 group transition-transform duration-300 hover:scale-110 animate-slideUp rounded-full">
+                {React.cloneElement(<LogoutIcon />, { className: "text-white transition-colors duration-300 group-hover:text-red-400 animate-glitch-flicker" })}
+              </div>
+            </button>
+          </>
+        )}
+      </div>
+      <style>
+        {`
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+          }
+          @keyframes neonGlow {
+            0%, 100% { transform: scale(1) translate(-50%, -50%); opacity: 0.3; }
+            50% { transform: scale(1.2) translate(-50%, -50%); opacity: 0.5; }
+          }
+          @keyframes glitchFlicker {
+            0% { opacity: 1; text-shadow: none; }
+            2% { opacity: 0.8; text-shadow: 2px 2px 4px rgba(0, 255, 255, 0.9); }
+            4% { opacity: 1; text-shadow: none; }
+            6% { opacity: 0.9; text-shadow: -2px -2px 4px rgba(0, 255, 255, 0.9); }
+            8% { opacity: 1; text-shadow: none; }
+            100% { opacity: 1; text-shadow: none; }
+          }
+          .animate-fadeIn { animation: fadeIn 1.2s ease-in-out; }
+          .animate-slideUp { animation: slideUp 1.2s ease-in-out; }
+          .animate-neon-glow::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(90, 24, 154, 0.5), rgba(0, 255, 255, 0.5));
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: neonGlow 3s infinite ease-in-out;
+            z-index: -1;
+          }
+          /* Ensure smooth rendering */
+          .icon-hover:hover > * {
+            transition: all 0.3s ease;
+          }
+        `}
+      </style>
+    </div>
+  );
+}
+
+export default AppBar;
