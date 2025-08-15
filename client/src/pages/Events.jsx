@@ -5,16 +5,30 @@ import { EventListing } from "../constants/EventListing";
 function Events() {
   const navigate = useNavigate();
   const [navigatingTo, setNavigatingTo] = useState(null);
+  const [showTechEvents, setShowTechEvents] = useState(false);
+  const [showNonTechEvents, setShowNonTechEvents] = useState(false);
+  const [showCards, setShowCards] = useState(true);
 
   const handleClick = (slug, name) => {
-    // Set the state to show the overlay and display the event name
     setNavigatingTo(name);
-    
-    // Use a timeout to display the overlay before navigating
     setTimeout(() => {
       navigate(`/event/${slug.toLowerCase()}`);
-    }, 1500); // Overlay will be visible for 1.5 seconds
+    }, 1500); // Overlay visible for 1.5 seconds
   };
+
+  const handleTechCardClick = () => {
+    setShowTechEvents(true);
+    setShowNonTechEvents(false);
+    setShowCards(false);
+  };
+
+  const handleNonTechCardClick = () => {
+    setShowNonTechEvents(true);
+    setShowTechEvents(false);
+    setShowCards(false);
+  };
+
+  const allEvents = Object.values(EventListing);
 
   return (
     <div className="relative flex flex-col items-center justify-start min-h-screen text-white overflow-hidden bg-gradient-to-b from-black via-purple-950 to-black">
@@ -24,53 +38,138 @@ function Events() {
 
       {/* Main Content */}
       <div className="relative z-40 w-full px-6 py-12">
-        <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-center mb-12 tracking-tighter animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300">
-          All Events
+        {/* Dynamic heading text */}
+        <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-center md:mt-5 mb-10 tracking-tighter animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300">
+          {showTechEvents
+            ? "Explore all Tech Events"
+            : showNonTechEvents
+              ? "Explore all Non-Tech Events"
+              : "Register here for all the Fabulous Events"}
         </h1>
 
-        {/* Event Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {Object.values(EventListing).map((event) => (
+        {/* Toggle buttons to switch between tech/non-tech */}
+        {(showTechEvents || showNonTechEvents) && (
+          <div className="flex justify-center gap-6 mb-8">
+            <button
+              onClick={() => {
+                setShowTechEvents(true);
+                setShowNonTechEvents(false);
+              }}
+              className={`px-6 py-2 rounded-full font-semibold transition ${
+                showTechEvents
+                  ? "bg-cyan-400 text-black shadow-lg"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+              }`}
+            >
+              Tech Events
+            </button>
+            <button
+              onClick={() => {
+                setShowNonTechEvents(true);
+                setShowTechEvents(false);
+              }}
+              className={`px-6 py-2 rounded-full font-semibold transition ${
+                showNonTechEvents
+                  ? "bg-cyan-400 text-black shadow-lg"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+              }`}
+            >
+              Non-Tech Events
+            </button>
+          </div>
+        )}
+
+        {/* Event Category Cards */}
+        {showCards && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            {/* Tech Events Card */}
             <div
-              key={event.slug}
-              onClick={() => handleClick(event.slug, event.name)}
+              onClick={handleTechCardClick}
               className="event-card relative border border-gray-700 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-purple-500/60 transition-all duration-500 cursor-pointer bg-gray-800/50 backdrop-blur-sm group animate-slideUp"
             >
               <div className="relative w-full aspect-[4/3]">
                 <img
-                  src={event.image}
-                  alt={event.name}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                  loading="lazy"
+                  src="techiiii.webp"
+                  alt="Tech Events"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
-                {/* The black gradient overlay on hover has been removed from this file. */}
+                <div className="absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
               </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold text-white group-hover:text-cyan-300 group-hover:underline transition duration-200">
-                  {event.name}
+              <div className="p-4 text-center">
+                <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitch-flicker transition duration-200">
+                  Tech Events
                 </h2>
-                <p className="text-sm text-gray-300 italic mt-2 group-hover:text-gray-100 group-hover:tracking-wide transition-all duration-300">
-                  {event.slogan}
-                </p>
               </div>
             </div>
-          ))}
-        </div>
+
+            {/* Non-Tech Events Card */}
+            <div
+              onClick={handleNonTechCardClick}
+              className="event-card relative border border-gray-700 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-purple-500/60 transition-all duration-500 cursor-pointer bg-gray-800/50 backdrop-blur-sm group animate-slideUp"
+            >
+              <div className="relative w-full aspect-[4/3]">
+                <img
+                  src="nontechiii.webp"
+                  alt="Non-Tech Events"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+              </div>
+              <div className="p-4 text-center">
+                <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitch-flicker transition duration-200">
+                  Non-Tech Events
+                </h2>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Display All Tech Events when Tech card is clicked */}
+        {showTechEvents && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto animate-fadeIn">
+            {allEvents.map((event) => (
+              <div
+                key={event.slug}
+                onClick={() => handleClick(event.slug, event.name)}
+                className="event-card relative border border-gray-700 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-purple-500/60 transition-all duration-500 cursor-pointer bg-gray-800/50 backdrop-blur-sm group"
+              >
+                <div className="relative w-full aspect-[4/3]">
+                  <img
+                    src={event.image}
+                    alt={event.name}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                </div>
+                <div className="p-6">
+                  <h2 className="text-2xl font-semibold text-white group-hover:text-cyan-300 group-hover:underline transition duration-200">
+                    {event.name}
+                  </h2>
+                  <p className="text-sm text-gray-300 italic mt-2 group-hover:text-gray-100 group-hover:tracking-wide transition-all duration-300">
+                    {event.slogan}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Navigation Overlay */}
+        {navigatingTo && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center transition-opacity duration-300">
+            <div className="bg-white px-10 py-8 rounded-xl shadow-2xl animate-pulse-slow text-center">
+              <h2 className="text-2xl font-semibold mb-3 text-gray-900">
+                Navigating to...
+              </h2>
+              <p className="text-xl font-bold text-indigo-600 animate-fadeIn">
+                {navigatingTo}
+              </p>
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* Navigation Overlay */}
-      {navigatingTo && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center transition-opacity duration-300">
-          <div className="bg-white px-10 py-8 rounded-xl shadow-2xl animate-pulse-slow text-center">
-            <h2 className="text-2xl font-semibold mb-3 text-gray-900">
-              Navigating to...
-            </h2>
-            <p className="text-xl font-bold text-indigo-600 animate-fadeIn">{navigatingTo}</p>
-          </div>
-        </div>
-      )}
-
-      {/* Enhanced CSS Keyframes for Animations */}
       <style>
         {`
           @keyframes fadeIn {
@@ -90,6 +189,14 @@ function Events() {
             0%, 100% { transform: scale(1) translate(-50%, -50%); opacity: 0.3; }
             50% { transform: scale(1.2) translate(-50%, -50%); opacity: 0.5; }
           }
+          @keyframes glitchFlicker {
+            0% { opacity: 1; text-shadow: none; }
+            2% { opacity: 0.8; text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9), -3px -3px 6px rgba(0, 255, 255, 0.9); transform: skewX(-4deg); }
+            4% { opacity: 1; text-shadow: none; transform: skewX(0); }
+            6% { opacity: 0.9; text-shadow: -3px -3px 6px rgba(255, 255, 255, 0.9), 3px 3px 6px rgba(0, 255, 255, 0.9); transform: skewX(4deg); }
+            8% { opacity: 1; text-shadow: none; transform: skewX(0); }
+            100% { opacity: 1; text-shadow: none; }
+          }
           @keyframes twinklingStars {
             0% {
               transform: rotate(0deg) scale(1);
@@ -104,13 +211,13 @@ function Events() {
               opacity: 0.5;
             }
           }
-          @keyframes glitchFlicker {
-            0% { opacity: 1; text-shadow: none; }
-            2% { opacity: 0.8; text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9), -3px -3px 6px rgba(0, 255, 255, 0.9); transform: skewX(-4deg); }
-            4% { opacity: 1; text-shadow: none; transform: skewX(0); }
-            6% { opacity: 0.9; text-shadow: -3px -3px 6px rgba(255, 255, 255, 0.9), 3px 3px 6px rgba(0, 255, 255, 0.9); transform: skewX(4deg); }
-            8% { opacity: 1; text-shadow: none; transform: skewX(0); }
-            100% { opacity: 1; text-shadow: none; }
+          @keyframes neonPulse {
+            0% {
+              box-shadow: 0 0 8px 3px #22d3ee, 0 0 20px 6px #22d3ee;
+            }
+            100% {
+              box-shadow: 0 0 14px 6px #67e8f9, 0 0 28px 12px #67e8f9;
+            }
           }
           .animate-fadeIn { animation: fadeIn 1.3s ease-in-out; }
           .animate-slideUp { animation: slideUp 1.3s ease-in-out; }
@@ -137,10 +244,47 @@ function Events() {
             filter: blur(20px);
             opacity: 0.7;
           }
+
           /* Ensure font consistency */
           h1, h2 {
             font-family: 'Inter', sans-serif;
             letter-spacing: -0.025em;
+          }
+
+          /* Enhanced toggle buttons */
+          button {
+            position: relative;
+            overflow: hidden;
+            transition: 
+              background-color 0.4s ease, 
+              color 0.4s ease, 
+              transform 0.3s ease, 
+              box-shadow 0.4s ease;
+            will-change: transform, box-shadow;
+            outline-offset: 3px;
+          }
+
+          button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 12px 3px rgba(56, 201, 255, 0.7);
+          }
+
+          button:focus-visible {
+            outline: 3px solid rgba(56, 201, 255, 0.9);
+            outline-offset: 4px;
+            transform: scale(1.1);
+            box-shadow: 0 0 18px 4px rgba(56, 201, 255, 0.9);
+          }
+
+          button:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 8px 2px rgba(56, 201, 255, 0.5);
+          }
+
+          /* Neon glow animation for active toggle button */
+          button.bg-cyan-400 {
+            animation: neonPulse 3s infinite alternate ease-in-out;
+            box-shadow: 0 0 8px 3px #22d3ee, 0 0 20px 6px #22d3ee;
           }
         `}
       </style>

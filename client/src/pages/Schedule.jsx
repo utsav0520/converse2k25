@@ -205,6 +205,10 @@ const Schedule = () => {
             .ex h2 {
               font-size: 2rem;
             }
+            .schedule-table th,
+            .schedule-table td {
+              font-size: 0.8rem;
+            }
           }
         `}
       </style>
