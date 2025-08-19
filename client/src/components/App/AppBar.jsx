@@ -49,11 +49,12 @@ function AppBar() {
 
   return (
     <div className="fixed bottom-0 w-full flex justify-center py-3 z-50">
-      {/* The main container is now more attractive with a slight shadow, rounded edges, and a transparent background */}
-      <div className="relative bg-transparent border-primary text-primary px-4 py-2 rounded-3xl backdrop-blur-md text-sm border flex gap-4 animate-fadeIn" style={{ borderWidth: "3px", zIndex: 50 }}>
-        {/* Animated Background */}
-        <div className="absolute inset-0 z-0 animate-twinkling-stars bg-[url('/textures/starry-bg.png')] bg-cover opacity-30" style={{ width: "100%", height: "100%", zIndex: 10 }} />
+      {/* Enhanced main container with distinct background */}
+      <div className="relative bg-gradient-to-r from-purple-900/50 via-black/70 to-purple-900/50 border-primary px-4 py-2 rounded-3xl backdrop-blur-md text-sm border flex gap-4 animate-fadeIn" style={{ borderWidth: "3px", zIndex: 50 }}>
+        {/* Animated Background with Gradient */}
+        <div className="absolute inset-0 z-0 animate-background-pulse" style={{ borderRadius: "1.75rem" }} />
         <div className="absolute inset-0 z-10 animate-neon-glow before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-900/30 before:via-blue-900/30 before:to-purple-900/30 before:rounded-full before:blur-3xl" style={{ zIndex: 20 }} />
+        <div className="absolute inset-0 z-15 bg-gradient-to-r from-black/40 via-purple-950/40 to-black/40 animate-background-shift" style={{ borderRadius: "1.75rem" }} />
 
         <IconDisplay icon={<HomeIcon />} link="/" />
         <IconDisplay icon={<EventNoteIcon />} link="/events" />
@@ -96,6 +97,20 @@ function AppBar() {
             8% { opacity: 1; text-shadow: none; }
             100% { opacity: 1; text-shadow: none; }
           }
+          @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+          }
+          @keyframes background-shift {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 0%; }
+            100% { background-position: 0% 0%; }
+          }
+          @keyframes background-pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 0.9; }
+            100% { opacity: 0.6; }
+          }
           .animate-fadeIn { animation: fadeIn 1.2s ease-in-out; }
           .animate-slideUp { animation: slideUp 1.2s ease-in-out; }
           .animate-neon-glow::before {
@@ -111,6 +126,13 @@ function AppBar() {
             animation: neonGlow 3s infinite ease-in-out;
             z-index: -1;
           }
+          .animate-pulse { animation: pulse 2s infinite ease-in-out; }
+          .animate-background-shift { animation: background-shift 8s ease-in-out infinite; }
+          .animate-background-pulse { animation: background-pulse 4s infinite ease-in-out; }
+          .icon-hover:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+          }
+          .icon-hover { background: rgba(255, 255, 255, 0.1); }
           /* Ensure smooth rendering */
           .icon-hover:hover > * {
             transition: all 0.3s ease;

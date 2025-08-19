@@ -6,7 +6,6 @@ function BugBuzz() {
   return (
     <div>
       <RegisterButton event={bugBuzz} />
-      
     </div>
   )
 }
