@@ -1,9 +1,9 @@
 import React from "react";
-import RegisterButtonFotTeam from "../../components/App/RegisterButtonFotTeam.jsx";
-import { codathon } from "../../constants/eventNames.js";
-import { PosterCodathon } from "../../assets/index.js";
+import RegisterButtonFotTeam from "../../../components/App/RegisterButtonFotTeam.jsx";
+import { blindSwap } from "../../../constants/eventNames.js";
+import { PosterCodathon } from "../../../assets/index.js";
 
-function Codathon() {
+function BliendSwap() {
   return (
     <div className="relative flex flex-col items-center min-h-screen text-white overflow-hidden bg-gradient-to-b from-gray-900 via-purple-950 to-gray-900">
       {/* Animated Background */}
@@ -11,11 +11,11 @@ function Codathon() {
       <div className="absolute inset-0 z-10 w-full h-full animate-neon-glow before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-900/30 before:via-blue-900/30 before:to-purple-900/30 before:rounded-full before:blur-3xl" />
 
       <div className="relative z-40 w-full px-6 py-4"> {/* Reduced py-8 to py-4 */}
-        <RegisterButtonFotTeam event={codathon} min={1} max={2} />
+        <RegisterButtonFotTeam event={blindSwap} min={1} max={1} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto mt-4"> {/* Reduced gap-8 to gap-4, mt-8 to mt-4 */}
           {/* Event Poster */}
           <div className="flex justify-center items-center">
-            <img src={PosterCodathon} alt="Codathon" className="w-full max-w-md rounded-lg shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500" />
+            <img src={PosterCodathon} alt="bliendSwap" className="w-full max-w-md rounded-lg shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500" />
           </div>
           {/* Event Details */}
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-xl border border-gray-700">
@@ -23,7 +23,7 @@ function Codathon() {
               <section>
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">Description</h3> {/* Reduced mb-4 to mb-2 */}
                 <div className="text-gray-300 space-y-1">
-                  <p><strong>Event Name:</strong> CODATHON</p>
+                  <p><strong>Event Name:</strong> bliendSwap</p>
                   <p><strong>Date:</strong> 20 September 2024</p>
                   <p><strong>Time:</strong> 1:30 PM - 3:30 PM</p>
                   <p><strong>Event Duration:</strong> 2 hours</p>
@@ -112,4 +112,4 @@ function Codathon() {
   );
 }
 
-export default Codathon;
+export default BliendSwap;

@@ -1,6 +1,6 @@
 import React from 'react'
-import RegisterButton from '../../components/App/RegisterButton'
-import {bugBuzz} from '../../constants/eventNames' 
+import RegisterButton from '../../../components/App/RegisterButton'
+import {bugBuzz} from '../../../constants/eventNames' 
 
 function BugBuzz() {
   return (

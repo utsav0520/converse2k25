@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { googleSignIn } from "../../auth/auth.js";
+import {useState } from 'react'
 
 function GoogleIconShown() {
   return (
@@ -46,6 +47,7 @@ function GoogleIconShown() {
 }
 
 export const GoogleSignIn = () => {
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -74,7 +76,9 @@ export const GoogleSignIn = () => {
           token: accessToken,
         };
 
+        setLoading(true);
         const googleRes = await dispatch(googleSignIn(userData));
+        setLoading(false);
 
         if (googleRes?.success) {
           toast.success("🎉 Google Sign in Done !!", {
@@ -112,7 +116,7 @@ export const GoogleSignIn = () => {
       <div>
         <GoogleIconShown />
       </div>
-      <p className="text-center text-sm">Sign in with Google</p>
+      <p className="text-center text-sm">{loading ? "Signing in..." : "Sign in with Google"}</p>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { EventListing } from "../constants/EventListing";
+import { NonTechEventListing, TechEventListing } from "../constants/EventListing";
 
 function Events() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ function Events() {
     setNavigatingTo(name);
     setTimeout(() => {
       navigate(`/event/${slug.toLowerCase()}`);
-    }, 1500); // Overlay visible for 1.5 seconds
+    }, 1000); 
   };
 
   const handleTechCardClick = () => {
@@ -28,7 +28,8 @@ function Events() {
     setShowCards(false);
   };
 
-  const allEvents = Object.values(EventListing);
+  const allTechEvents = Object.values(TechEventListing);
+  const allNonTechEvents = Object.values(NonTechEventListing);
 
   return (
     <div className="relative flex flex-col items-center justify-start min-h-screen text-white overflow-hidden bg-gradient-to-b from-black via-purple-950 to-black">
@@ -43,8 +44,8 @@ function Events() {
           {showTechEvents
             ? "Explore all Tech Events"
             : showNonTechEvents
-              ? "Explore all Non-Tech Events"
-              : "Register here for all the Fabulous Events"}
+            ? "Explore all Non-Tech Events"
+            : "Register here for all the Fabulous Events"}
         </h1>
 
         {/* Toggle buttons to switch between tech/non-tech */}
@@ -127,7 +128,36 @@ function Events() {
         {/* Display All Tech Events when Tech card is clicked */}
         {showTechEvents && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto animate-fadeIn">
-            {allEvents.map((event) => (
+            {allTechEvents.map((event) => (
+              <div
+                key={event.slug}
+                onClick={() => handleClick(event.slug, event.name)}
+                className="event-card relative border border-gray-700 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-purple-500/60 transition-all duration-500 cursor-pointer bg-gray-800/50 backdrop-blur-sm group"
+              >
+                <div className="relative w-full aspect-[4/3]">
+                  <img
+                    src={event.image}
+                    alt={event.name}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                </div>
+                <div className="p-6">
+                  <h2 className="text-2xl font-semibold text-white group-hover:text-cyan-300 group-hover:underline transition duration-200">
+                    {event.name}
+                  </h2>
+                  <p className="text-sm text-gray-300 italic mt-2 group-hover:text-gray-100 group-hover:tracking-wide transition-all duration-300">
+                    {event.slogan}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+        {showNonTechEvents && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto animate-fadeIn">
+            {allNonTechEvents.map((event) => (
               <div
                 key={event.slug}
                 onClick={() => handleClick(event.slug, event.name)}

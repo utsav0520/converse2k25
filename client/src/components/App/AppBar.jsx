@@ -58,7 +58,7 @@ function AppBar() {
 
         <IconDisplay icon={<HomeIcon />} link="/" />
         <IconDisplay icon={<EventNoteIcon />} link="/events" />
-        <IconDisplay icon={<PeopleIcon />} link="/team" />
+        <IconDisplay icon={<PeopleIcon />} link="/teams" />
         <IconDisplay icon={<InfoIcon />} link="/about" />
 
         {!user ? (

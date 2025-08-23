@@ -1,65 +1,64 @@
 import {
-    pyIt,
-    itQuiz,
-    codathon,
-    aiQuiz,
-    techTussle,
-    cyberSiege,
-    webWave,
-    aiMemes,
-    logoHunt,
-    bugBuzz
-} from '../constants/eventNames'
+  logoHunt,
+  bugBuzz,
+  blindSwap,
+  webWave,
+  cyberSpy,
+  itaiQuiz,
+  promptHunt,
+  aiMemes,
+  pyIt,
+  bgmi,
+  reelCraft,
+  iplAuction,
+  escapeRoom,
+  traitors,
+  mysticMover,
+  ffm,
+  converse,
+  graphics,
+  web,
+  marketing,
+  dec,
+  nontech,
+} from "../constants/eventNames";
 
 import {
   LogoAiMemes,
-  LogoAiQuiz,
   LogoBugBuzz,
   LogoCodathon,
-  LogoCyber,
   LogoItQuiz,
   LogoLogoHunt,
   LogoPYIT,
   LogoTechTussal,
-  LogoWebWave
-} from "../assets"; 
+  LogoWebWave,
+  LogoAiQuiz,
+} from "../assets";
 
-export const EventListing = {
+export const TechEventListing = {
   [pyIt]: {
     name: "PY IT",
     slug: pyIt,
     image: LogoPYIT,
     slogan: "Unleash Python Power!",
   },
-  [itQuiz]: {
-    name: "IT Quiz",
-    slug: itQuiz,
+  [itaiQuiz]: {
+    name: "IT & AI Quiz",
+    slug: itaiQuiz,
     image: LogoItQuiz,
     slogan: "Think. Quiz. Win.",
   },
-  [codathon]: {
-    name: "Codathon",
-    slug: codathon,
+  [blindSwap]: {
+    name: "Blind Swap",
+    slug: blindSwap,
     image: LogoCodathon,
     slogan: "Code Till You Drop!",
   },
-  [aiQuiz]: {
-    name: "AI Quiz",
-    slug: aiQuiz,
-    image: LogoAiQuiz,
-    slogan: "Test Your AI Acumen!",
-  },
-  [techTussle]: {
-    name: "Tech Tussle",
-    slug: techTussle,
+  [cyberSpy]: {
+    name: "Cyber Spy",
+    slug: cyberSpy,
     image: LogoTechTussal,
     slogan: "Clash of Coders!",
-  },
-  [cyberSiege]: {
-    name: "Cyber Siege",
-    slug: cyberSiege,
-    image: LogoCyber,
-    slogan: "Secure or Be Conquered!",
   },
   [webWave]: {
     name: "Web Wave",
@@ -84,5 +83,134 @@ export const EventListing = {
     slug: bugBuzz,
     image: LogoBugBuzz,
     slogan: "Catch the Bugs!",
+  },
+  [promptHunt]: {
+    name: "Prompt Hunt",
+    slug: promptHunt,
+    image: LogoAiQuiz,
+    slogan: "Prompt Your Way to Glory!",
+  },
+};
+
+export const NonTechEventListing = {
+  [bgmi]: {
+    name: "BGMI",
+    slug: bgmi,
+    image: LogoTechTussal,
+    slogan: "Survive. Shoot. Win.",
+  },
+  [reelCraft]: {
+    name: "Reel Craft",
+    slug: reelCraft,
+    image: LogoTechTussal,
+    slogan: "Create. Captivate. Repeat.",
+  },
+  [iplAuction]: {
+    name: "IPL Auction",
+    slug: iplAuction,
+    image: LogoTechTussal,
+    slogan: "Bid Big. Win Bigger!",
+  },
+  [escapeRoom]: {
+    name: "Escape Room",
+    slug: escapeRoom,
+    image: LogoTechTussal,
+    slogan: "Solve. Escape. Survive.",
+  },
+  [traitors]: {
+    name: "TRAITORS",
+    slug: traitors,
+    image: LogoTechTussal,
+    slogan: "Deceive or Be Deceived!",
+  },
+  [mysticMover]: {
+    name: "Mystic Mover",
+    slug: mysticMover,
+    image: LogoTechTussal,
+    slogan: "Move with Mystery!",
+  },
+  [ffm]: {
+    name: "FFM",
+    slug: ffm,
+    image: LogoTechTussal,
+    slogan: "Fun-Filled Mayhem!",
+  },
+};
+
+export const TeamListing = {
+  [converse]: {
+    name: "Converse",
+    slug: converse,
+    image: LogoLogoHunt,
+  },
+  [graphics]: {
+    name: "Graphics",
+    slug: graphics,
+    image: LogoLogoHunt,
+  },
+  [web]: {
+    name: "Web",
+    slug: web,
+    image: LogoLogoHunt,
+  },
+  [marketing]: {
+    name: "Marketing",
+    slug: marketing,
+    image: LogoLogoHunt,
+  },
+  [dec]: {
+    name: "DEC",
+    slug: dec,
+    image: LogoLogoHunt,
+  },
+  [nontech]: {
+    name: "Non-Tech",
+    slug: nontech,
+    image: LogoLogoHunt,
+  },
+  [pyIt]: {
+    name: "PY IT",
+    slug: pyIt,
+    image: LogoLogoHunt,
+  },
+  [itaiQuiz]: {
+    name: "IT & AI Quiz",
+    slug: itaiQuiz,
+    image: LogoLogoHunt,
+  },
+  [blindSwap]: {
+    name: "Blind Swap",
+    slug: blindSwap,
+    image: LogoLogoHunt,
+  },
+  [cyberSpy]: {
+    name: "Cyber Spy",
+    slug: cyberSpy,
+    image: LogoLogoHunt,
+  },
+  [webWave]: {
+    name: "Web Wave",
+    slug: webWave,
+    image: LogoLogoHunt,
+  },
+  [aiMemes]: {
+    name: "AI Memes",
+    slug: aiMemes,
+    image: LogoLogoHunt,
+  },
+  [logoHunt]: {
+    name: "Logo Hunt",
+    slug: logoHunt,
+    image: LogoLogoHunt,
+  },
+  [bugBuzz]: {
+    name: "Bug Buzz",
+    slug: bugBuzz,
+    image: LogoLogoHunt,
+  },
+  [promptHunt]: {
+    name: "Prompt Hunt",
+    slug: promptHunt,
+    image: LogoLogoHunt,
   },
 };

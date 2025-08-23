@@ -1,6 +1,6 @@
 import React from 'react'
-import RegisterButton from '../../components/App/RegisterButton'
-import {aiMemes} from '../../constants/eventNames' 
+import RegisterButton from '../../../components/App/RegisterButton'
+import {aiMemes} from '../../../constants/eventNames' 
 
 function AIMemes() {
   return (

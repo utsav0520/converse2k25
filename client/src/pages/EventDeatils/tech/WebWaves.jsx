@@ -1,6 +1,6 @@
 import React from 'react'
-import RegisterButton from '../../components/App/RegisterButton'
-import {webWave} from '../../constants/eventNames' 
+import RegisterButton from '../../../components/App/RegisterButton'
+import {webWave} from '../../../constants/eventNames' 
 
 function WebWaves() {
   return (
