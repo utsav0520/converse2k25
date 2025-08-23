@@ -35,6 +35,14 @@ function RegisterButtonFotTeam({ event, min, max }) {
       });
       return;
     }
+    if (email === user.email) {
+      toast.info("You cannot add your own email.", {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "dark",
+      });
+      return;
+    }
 
     if (selectedEmailsList.includes(email)) {
       toast.info("This email is already added.", {
