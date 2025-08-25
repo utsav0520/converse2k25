@@ -82,7 +82,7 @@ function Events() {
 
         {/* Event Category Cards */}
         {showCards && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto md:mt-25">
             {/* Tech Events Card */}
             <div
               onClick={handleTechCardClick}

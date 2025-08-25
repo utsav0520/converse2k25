@@ -48,6 +48,8 @@ import TeamsPrompthunt from "./pages/TeamsDetails/TeamsPrompthunt.jsx";
 import TeamsAimemes from "./pages/TeamsDetails/TeamsAimemes.jsx";
 import TeamsPyit from "./pages/TeamsDetails/TeamsPyit.jsx";
 
+import ScrollToTop from "./components/App/ScrollToTop.jsx";
+
 function App() {
   const dispatch = useDispatch();
 
@@ -60,6 +62,7 @@ function App() {
   return (
     <>
       <AppBar />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

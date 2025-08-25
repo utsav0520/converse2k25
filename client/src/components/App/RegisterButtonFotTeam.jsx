@@ -84,6 +84,7 @@ function RegisterButtonFotTeam({ event, min, max }) {
           autoClose: 5000,
           theme: "dark",
         });
+
         setTimeout(() => navigate(`/event/${event}`), 500);
       } else {
         toast.error(res?.message || "Profile Update Failed", {
@@ -102,6 +103,7 @@ function RegisterButtonFotTeam({ event, min, max }) {
     }
     setLoading(false);
   };
+
   const teamKey = `${event}Team`;
   const team = user?.events?.[teamKey] || user?.teams?.[event] || [];
 
@@ -113,11 +115,11 @@ function RegisterButtonFotTeam({ event, min, max }) {
           <p className="text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
             Already Registered
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:mt-6">
             <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
               This is Your Team:
             </p>
-            <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-2 rounded-lg">
               {team.length > 0 ? (
                 <ul className="list-disc list-inside text-sm text-gray-300">
                   {team.map((member, i) => (

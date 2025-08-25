@@ -24,7 +24,5 @@ export {
     LogoPYIT,
     LogoTechTussal,
     LogoWebWave,
-
-    PosterCodathon,
-    
+    PosterCodathon, 
 }
