@@ -43,7 +43,7 @@ const personSchema = new Schema(
     events: {
       logoHunt: { type: Boolean, required: true, default: false },    
       bugBuzz: { type: Boolean, required: true, default: false },
-      blindSwap: { type: Boolean, required: true, default: false },
+      codathon: { type: Boolean, required: true, default: false },
       webWave: { type: Boolean, required: true, default: false },
       cyberSpy: { type: Boolean, required: true, default: false },
       itaiQuiz: { type: Boolean, required: true, default: false },
@@ -51,7 +51,7 @@ const personSchema = new Schema(
       aiMemes: { type: Boolean, required: true, default: false },
       pyIt: { type: Boolean, required: true, default: false },
 
-      blindSwapTeam: [
+      codathonTeam: [
         {
           member: {
             type: Schema.Types.ObjectId,
