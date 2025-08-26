@@ -47,8 +47,8 @@ function EmailDropdown({ emailOptions, handleAddEmail, selectedEmailsList, max }
           if (!isMaxReached) setIsDropdownOpen(true); // always show on focus
         }}
         disabled={isMaxReached}
-        className={`w-full border border-gray-300 rounded px-3 py-2 text-black focus:outline-none focus:ring focus:border-blue-300 ${
-          isMaxReached ? "bg-gray-100 cursor-not-allowed" : ""
+        className={`w-full border border-gray-300 rounded px-3 py-2 text-white focus:outline-none focus:ring focus:border-blue-300 ${
+          isMaxReached ? "bg-black-100 cursor-not-allowed" : ""
         }`}
       />
 

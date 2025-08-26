@@ -1,9 +1,9 @@
 import React from "react";
 import RegisterButtonFotTeam from "../../../components/App/RegisterButtonFotTeam.jsx";
-import { blindSwap } from "../../../constants/eventNames.js";
+import { codathon } from "../../../constants/eventNames.js";
 import { PosterCodathon } from "../../../assets/index.js";
 
-function BliendSwap() {
+function Codathon() {
   return (
     <div className="relative flex flex-col items-center min-h-screen text-white overflow-hidden bg-gradient-to-b from-gray-900 via-purple-950 to-gray-900">
       {/* Animated Background */}
@@ -11,7 +11,7 @@ function BliendSwap() {
       <div className="absolute inset-0 z-10 w-full h-full animate-neon-glow before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-900/30 before:via-blue-900/30 before:to-purple-900/30 before:rounded-full before:blur-3xl" />
 
       <div className="relative z-40 w-full px-6 py-4"> {/* Reduced py-8 to py-4 */}
-        <RegisterButtonFotTeam event={blindSwap} min={1} max={1} />
+        <RegisterButtonFotTeam event={codathon} min={1} max={1} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto mt-4"> {/* Reduced gap-8 to gap-4, mt-8 to mt-4 */}
           {/* Event Poster */}
           <div className="flex justify-center items-center">
@@ -112,4 +112,4 @@ function BliendSwap() {
   );
 }
 
-export default BliendSwap;
+export default Codathon;

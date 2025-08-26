@@ -55,7 +55,7 @@ function Profile() {
           theme: "dark",
         });
 
-        setTimeout(() => navigate("/profile"), 500);
+        setTimeout(() => navigate("/"), 100);
       } else {
         toast.error(res?.message || "Profile Update Failed", {
           position: "top-right",

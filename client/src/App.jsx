@@ -16,7 +16,7 @@ import Profile from "./pages/Profile.jsx";
 
 import LogoHunt from "./pages/EventDeatils/tech/LogoHunt.jsx";
 import BugBuzz from "./pages/EventDeatils/tech/BugBuzz.jsx";
-import BlindSwap from "./pages/EventDeatils/tech/BlindSwap.jsx";
+import Codathon from "./pages/EventDeatils/tech/Codathon.jsx";
 import WebWaves from "./pages/EventDeatils/tech/WebWaves.jsx";
 import CyberSpy from "./pages/EventDeatils/tech/CyberSpy.jsx";
 import ITAIQuiz from "./pages/EventDeatils/tech/ITAIQuiz.jsx";
@@ -75,7 +75,7 @@ function App() {
         {/* Tech Event Page */}
         <Route path="/event/logohunt" element={<LogoHunt />} />
         <Route path="/event/bugbuzz" element={<BugBuzz />} />
-        <Route path="/event/blindswap" element={<BlindSwap />} />
+        <Route path="/event/codathon" element={<Codathon/>} />
         <Route path="/event/webwave" element={<WebWaves />} />
         <Route path="/event/cyberspy" element={<CyberSpy />} />
         <Route path="/event/itaiquiz" element={<ITAIQuiz />} />

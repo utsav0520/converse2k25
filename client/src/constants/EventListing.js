@@ -1,7 +1,7 @@
 import {
   logoHunt,
   bugBuzz,
-  blindSwap,
+  codathon,
   webWave,
   cyberSpy,
   itaiQuiz,
@@ -48,9 +48,9 @@ export const TechEventListing = {
     image: LogoItQuiz,
     slogan: "Think. Quiz. Win.",
   },
-  [blindSwap]: {
-    name: "Blind Swap",
-    slug: blindSwap,
+  [codathon]: {
+    name: "Codathon",
+    slug: codathon,
     image: LogoCodathon,
     slogan: "Code Till You Drop!",
   },
@@ -143,14 +143,14 @@ export const TeamListing = {
     slug: converse,
     image: LogoLogoHunt,
   },
-  [graphics]: {
-    name: "Graphics",
-    slug: graphics,
-    image: LogoLogoHunt,
-  },
   [web]: {
     name: "Web",
     slug: web,
+    image: LogoLogoHunt,
+  },
+  [graphics]: {
+    name: "Graphics",
+    slug: graphics,
     image: LogoLogoHunt,
   },
   [marketing]: {
@@ -178,9 +178,9 @@ export const TeamListing = {
     slug: itaiQuiz,
     image: LogoLogoHunt,
   },
-  [blindSwap]: {
-    name: "Blind Swap",
-    slug: blindSwap,
+  [codathon]: {
+    name: "Codathon",
+    slug: codathon,
     image: LogoLogoHunt,
   },
   [cyberSpy]: {

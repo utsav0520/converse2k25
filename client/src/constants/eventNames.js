@@ -1,6 +1,6 @@
 export const logoHunt = "logoHunt";
 export const bugBuzz = "bugBuzz";
-export const blindSwap = "blindSwap";
+export const codathon = "codathon";
 export const webWave = "webWave";
 export const cyberSpy = "cyberSpy";
 export const itaiQuiz = "itaiQuiz";

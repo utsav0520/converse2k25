@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RegisterInTeam, fetchEmails } from "../../auth/Register.js";
 import EmailDropdown from "./EmailDropdown.jsx";
 
-function RegisterButtonFotTeam({ event, min, max }) {
+function RegisterButtonForTeam({ event, min, max }) {
   const [loading, setLoading] = useState(false);
   const [emailOptions, setEmailOptions] = useState([]);
   const [selectedEmailsList, setSelectedEmailsList] = useState([]);
@@ -145,13 +145,13 @@ function RegisterButtonFotTeam({ event, min, max }) {
   if (!user) {
     return (
       <div className="flex items-center justify-center">
-        <div className="borderFor animate-slideUp w-full max-w-md text-center space-y-4">
+        <div className="borderFor animate-slideUp w-full max-w-md text-center space-y-2">
           <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
             Please Sign in First...
           </h1>
           <button
             onClick={handleSignin}
-            className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-800 transition-all duration-200 disabled:opacity-50 animate-fadeIn hover:scale-105"
+            className="px-6 py-2 m-2 bg-blue-600 text-white font-semibold rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-800 transition-all duration-200 disabled:opacity-50 animate-fadeIn hover:scale-105"
           >
             Sign In
           </button>
@@ -162,7 +162,8 @@ function RegisterButtonFotTeam({ event, min, max }) {
 
   // Registration UI
   return (
-    <div className="flex flex-col borderFor gap-4 max-w-4xl mx-auto animate-slideUp w-full">
+    <div className="flex flex-col items-center justify-center">
+    <div className="borderFor gap-4 max-w-3xl animate-slideUp w-full">
       <EmailDropdown
         emailOptions={emailOptions}
         handleAddEmail={handleAddEmail}
@@ -173,7 +174,7 @@ function RegisterButtonFotTeam({ event, min, max }) {
 
       {selectedEmailsList.length > 0 && (
         <div className="border border-gray-300 rounded p-4 bg-gray-800/50 backdrop-blur-sm animate-fadeIn w-full">
-          <h3 className="font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
+          <h3 className="font-semibold p-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
             Selected Emails
           </h3>
           <ul className="space-y-2 max-h-48 overflow-auto">
@@ -185,7 +186,7 @@ function RegisterButtonFotTeam({ event, min, max }) {
                 <span className="truncate text-gray-300">{email}</span>
                 <button
                   onClick={() => handleRemoveEmail(email)}
-                  className="text-red-600 hover:text-red-800 font-semibold transition-colors duration-300"
+                  className="text-red-600 p-2 hover:text-red-800 font-semibold transition-colors duration-300"
                   aria-label={`Remove ${email}`}
                 >
                   Remove
@@ -207,9 +208,7 @@ function RegisterButtonFotTeam({ event, min, max }) {
       >
         {loading
           ? "Registering..."
-          : `Register (${
-              selectedEmailsList.length + 1
-            }) added · min: ${min} max: ${max}`}
+          : `Register (${selectedEmailsList.length + 1}) added · min: ${min} max: ${max}`}
       </button>
 
       <style>
@@ -245,7 +244,8 @@ function RegisterButtonFotTeam({ event, min, max }) {
         `}
       </style>
     </div>
+    </div>
   );
 }
 
-export default RegisterButtonFotTeam;
+export default RegisterButtonForTeam;
