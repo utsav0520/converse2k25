@@ -3,13 +3,14 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RegisterInSingle } from "../../auth/Register.js";
+import { eventWhatsappLinks } from '../../constants/EventListing.js'
 
 function RegisterButton({ event }) {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth?.authData?.user);
-
+  const whatsappLink = eventWhatsappLinks[event];
   const handleSignin = () => navigate("/signin");
 
   const handleRegister = async () => {
@@ -49,6 +50,17 @@ function RegisterButton({ event }) {
           <p className="text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
             Already Registered
           </p>
+
+          {whatsappLink && (
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 px-6 py-2 text-white bg-green-500 hover:bg-green-600 rounded-lg transition duration-300"
+            >
+              Join WhatsApp Group
+            </a>
+          )}
         </div>
       ) : user ? (
         <div className="borderFor animate-slideUp w-full max-w-2xl mx-auto text-center">

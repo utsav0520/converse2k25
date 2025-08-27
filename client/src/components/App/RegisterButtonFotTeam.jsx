@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RegisterInTeam, fetchEmails } from "../../auth/Register.js";
 import EmailDropdown from "./EmailDropdown.jsx";
+import { eventWhatsappLinks } from '../../constants/EventListing.js'
 
 function RegisterButtonForTeam({ event, min, max }) {
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,7 @@ function RegisterButtonForTeam({ event, min, max }) {
   }, [dispatch, event, user]);
 
   const handleSignin = () => navigate("/signin");
+  const whatsappLink = eventWhatsappLinks[event];
 
   const handleAddEmail = (email) => {
     if (!email) {
@@ -136,6 +138,16 @@ function RegisterButtonForTeam({ event, min, max }) {
               )}
             </div>
           </div>
+          {whatsappLink && (
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 px-6 py-2 text-white bg-green-500 hover:bg-green-600 rounded-lg transition duration-300"
+            >
+              Join WhatsApp Group
+            </a>
+          )}
         </div>
       </div>
     );
@@ -163,56 +175,58 @@ function RegisterButtonForTeam({ event, min, max }) {
   // Registration UI
   return (
     <div className="flex flex-col items-center justify-center">
-    <div className="borderFor gap-4 max-w-3xl animate-slideUp w-full">
-      <EmailDropdown
-        emailOptions={emailOptions}
-        handleAddEmail={handleAddEmail}
-        selectedEmailsList={selectedEmailsList}
-        min={min}
-        max={max}
-      />
+      <div className="borderFor gap-4 max-w-3xl animate-slideUp w-full">
+        <EmailDropdown
+          emailOptions={emailOptions}
+          handleAddEmail={handleAddEmail}
+          selectedEmailsList={selectedEmailsList}
+          min={min}
+          max={max}
+        />
 
-      {selectedEmailsList.length > 0 && (
-        <div className="border border-gray-300 rounded p-4 bg-gray-800/50 backdrop-blur-sm animate-fadeIn w-full">
-          <h3 className="font-semibold p-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
-            Selected Emails
-          </h3>
-          <ul className="space-y-2 max-h-48 overflow-auto">
-            {selectedEmailsList.map((email, idx) => (
-              <li
-                key={idx}
-                className="flex justify-between items-center bg-transparent p-3 rounded shadow-sm hover:bg-gray-700/50 transition-all duration-300 w-full"
-              >
-                <span className="truncate text-gray-300">{email}</span>
-                <button
-                  onClick={() => handleRemoveEmail(email)}
-                  className="text-red-600 p-2 hover:text-red-800 font-semibold transition-colors duration-300"
-                  aria-label={`Remove ${email}`}
+        {selectedEmailsList.length > 0 && (
+          <div className="border border-gray-300 rounded p-4 bg-gray-800/50 backdrop-blur-sm animate-fadeIn w-full">
+            <h3 className="font-semibold p-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
+              Selected Emails
+            </h3>
+            <ul className="space-y-2 max-h-48 overflow-auto">
+              {selectedEmailsList.map((email, idx) => (
+                <li
+                  key={idx}
+                  className="flex justify-between items-center bg-transparent p-3 rounded shadow-sm hover:bg-gray-700/50 transition-all duration-300 w-full"
                 >
-                  Remove
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+                  <span className="truncate text-gray-300">{email}</span>
+                  <button
+                    onClick={() => handleRemoveEmail(email)}
+                    className="text-red-600 p-2 hover:text-red-800 font-semibold transition-colors duration-300"
+                    aria-label={`Remove ${email}`}
+                  >
+                    Remove
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-      <button
-        onClick={handleRegister}
-        disabled={
-          loading ||
-          selectedEmailsList.length < min - 1 ||
-          selectedEmailsList.length > max
-        }
-        className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-800 transition-all duration-200 disabled:opacity-50 animate-fadeIn hover:scale-105 w-full max-w-xs mx-auto"
-      >
-        {loading
-          ? "Registering..."
-          : `Register (${selectedEmailsList.length + 1}) added · min: ${min} max: ${max}`}
-      </button>
+        <button
+          onClick={handleRegister}
+          disabled={
+            loading ||
+            selectedEmailsList.length < min - 1 ||
+            selectedEmailsList.length > max
+          }
+          className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-800 transition-all duration-200 disabled:opacity-50 animate-fadeIn hover:scale-105 w-full max-w-xs mx-auto"
+        >
+          {loading
+            ? "Registering..."
+            : `Register (${
+                selectedEmailsList.length + 1
+              }) added · min: ${min} max: ${max}`}
+        </button>
 
-      <style>
-        {`
+        <style>
+          {`
           @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -242,8 +256,8 @@ function RegisterButtonForTeam({ event, min, max }) {
             overflow: hidden;
           }
         `}
-      </style>
-    </div>
+        </style>
+      </div>
     </div>
   );
 }

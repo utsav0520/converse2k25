@@ -137,6 +137,19 @@ export const NonTechEventListing = {
   },
 };
 
+export const eventWhatsappLinks = {
+  pyIt: "https://chat.whatsapp.com/EjYeaXCeESgFrrx1AQQoUU",
+  bugBuzz: "https://chat.whatsapp.com/E4d0Sn6twiMFkT2AVg2IAS",
+  codathon: "https://chat.whatsapp.com/BgQhx4QJXhzHTTxGys5Feb",
+  promptHunt: "https://chat.whatsapp.com/GtASUTOW26dIqLajqoZd0J",
+  aiMemes: "https://chat.whatsapp.com/JDevZVP8J36Jv4W180ZF0o",
+  itaiQuiz: "https://chat.whatsapp.com/I4PjEHEiztHH15xemQZwGl",
+  webWave: "https://chat.whatsapp.com/GLhjaS2uGs78OMjn0a0OAp",
+  cyberSpy: "https://chat.whatsapp.com/BUNOtIdePwGEmzxJXWu4uS",
+  logoHunt: "https://chat.whatsapp.com/JMVUUR8J7zo2pVWSlGXT8a",
+};
+
+
 export const TeamListing = {
   [converse]: {
     name: "Converse",

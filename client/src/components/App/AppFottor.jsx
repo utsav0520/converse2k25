@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram } from "lucide-react";
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 function AppFottor() {
   return (
@@ -45,7 +45,7 @@ function AppFottor() {
             rel="noopener noreferrer"
             className="flex items-center justify-start mt-8 gap-2 text-muted-foreground hover:underline"
           >
-            <Instagram />
+            <InstagramIcon />
             <span>Follow us</span>
           </a>
         </div>
