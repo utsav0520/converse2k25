@@ -27,12 +27,12 @@ import {
   LogoAiMemes,
   LogoBugBuzz,
   LogoCodathon,
-  LogoItQuiz,
+  LogoITAIQuiz,
   LogoLogoHunt,
   LogoPYIT,
-  LogoTechTussal,
   LogoWebWave,
-  LogoAiQuiz,
+  LogoPromptHunt,
+  LogoCyber,
 } from "../assets";
 
 export const TechEventListing = {
@@ -45,7 +45,7 @@ export const TechEventListing = {
   [itaiQuiz]: {
     name: "IT & AI Quiz",
     slug: itaiQuiz,
-    image: LogoItQuiz,
+    image: LogoITAIQuiz,
     slogan: "Think. Quiz. Win.",
   },
   [codathon]: {
@@ -57,7 +57,7 @@ export const TechEventListing = {
   [cyberSpy]: {
     name: "Cyber Spy",
     slug: cyberSpy,
-    image: LogoTechTussal,
+    image: LogoCyber,
     slogan: "Clash of Coders!",
   },
   [webWave]: {
@@ -87,7 +87,7 @@ export const TechEventListing = {
   [promptHunt]: {
     name: "Prompt Hunt",
     slug: promptHunt,
-    image: LogoAiQuiz,
+    image: LogoPromptHunt,
     slogan: "Prompt Your Way to Glory!",
   },
 };
@@ -96,43 +96,43 @@ export const NonTechEventListing = {
   [bgmi]: {
     name: "BGMI",
     slug: bgmi,
-    image: LogoTechTussal,
+    image: LogoITAIQuiz,
     slogan: "Survive. Shoot. Win.",
   },
   [reelCraft]: {
     name: "Reel Craft",
     slug: reelCraft,
-    image: LogoTechTussal,
+    image: LogoITAIQuiz,
     slogan: "Create. Captivate. Repeat.",
   },
   [iplAuction]: {
     name: "IPL Auction",
     slug: iplAuction,
-    image: LogoTechTussal,
+    image: LogoITAIQuiz,
     slogan: "Bid Big. Win Bigger!",
   },
   [escapeRoom]: {
     name: "Escape Room",
     slug: escapeRoom,
-    image: LogoTechTussal,
+    image: LogoITAIQuiz,
     slogan: "Solve. Escape. Survive.",
   },
   [traitors]: {
     name: "TRAITORS",
     slug: traitors,
-    image: LogoTechTussal,
+    image: LogoITAIQuiz,
     slogan: "Deceive or Be Deceived!",
   },
   [mysticMover]: {
     name: "Mystic Mover",
     slug: mysticMover,
-    image: LogoTechTussal,
+    image: LogoITAIQuiz,
     slogan: "Move with Mystery!",
   },
   [ffm]: {
     name: "FFM",
     slug: ffm,
-    image: LogoTechTussal,
+    image: LogoITAIQuiz,
     slogan: "Fun-Filled Mayhem!",
   },
 };

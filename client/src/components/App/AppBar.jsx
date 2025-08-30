@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import InfoIcon from "@mui/icons-material/Info";
@@ -25,7 +25,6 @@ const IconDisplay = ({ icon, link }) => {
 function AppBar() {
   const user = useSelector((state) => state.auth?.authData?.user);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleLogout = () => {
     try {
@@ -36,7 +35,6 @@ function AppBar() {
         autoClose: 5000,
         theme: "dark",
       });
-      navigate("/");
     } catch (error) {
       console.error("Logout error:", error);
       toast.error("Logout failed. Please try again.", {

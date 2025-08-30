@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RegisterInTeam, fetchEmails } from "../../auth/Register.js";
 import EmailDropdown from "./EmailDropdown.jsx";
-import { eventWhatsappLinks } from '../../constants/EventListing.js'
+import { eventWhatsappLinks } from "../../constants/EventListing.js";
 
 function RegisterButtonForTeam({ event, min, max }) {
   const [loading, setLoading] = useState(false);
@@ -75,6 +75,24 @@ function RegisterButtonForTeam({ event, min, max }) {
     }
 
     setLoading(true);
+    if (
+      user.fullName == "" ||
+      !user.college ||
+      !user.mobileNumber ||
+      !user.enrollment ||
+      !user.department ||
+      !user.year
+    ) {
+      toast.error("Please complete your profile before registering.", {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
+      });
+      navigate("/profile");
+      setLoading(false);
+      return;
+    }
+    
     try {
       const res = await dispatch(
         RegisterInTeam({ event, email: selectedEmailsList })
@@ -143,7 +161,7 @@ function RegisterButtonForTeam({ event, min, max }) {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 px-6 py-2 text-white bg-green-500 hover:bg-green-600 rounded-lg transition duration-300"
+              className="inline-block m-4 px-6 py-2 text-white bg-green-500 hover:bg-green-600 rounded-lg transition duration-300"
             >
               Join WhatsApp Group
             </a>

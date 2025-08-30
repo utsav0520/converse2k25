@@ -15,6 +15,17 @@ function RegisterButton({ event }) {
 
   const handleRegister = async () => {
     setLoading(true);
+    if(user.fullName == "" || !user.college || !user.mobileNumber || !user.enrollment || !user.department || !user.year) {
+      toast.error("Please complete your profile before registering.", {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
+      });
+      navigate("/profile");
+      setLoading(false);
+      return;
+    }
+
     try {
       const res = await dispatch(RegisterInSingle({ event }));
 
@@ -44,7 +55,7 @@ function RegisterButton({ event }) {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-[60vh] w-full px-4">
+    <div className="flex items-start justify-center  w-full px-4">
       {user?.events?.[event] === true ? (
         <div className="borderFor animate-slideUp w-full max-w-2xl mx-auto text-center">
           <p className="text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">

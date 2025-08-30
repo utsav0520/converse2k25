@@ -1,28 +1,44 @@
 import converse2k25 from './converse2k25.png'
 
-import LogoAiMemes from './eventLogo/initaimemes.jpg'
-import LogoAiQuiz from './eventLogo/initaiquiz.jpg'
-import LogoBugBuzz from './eventLogo/initbugbuzz.jpg'
-import LogoCodathon from './eventLogo/initcodathon.jpg'
-import LogoCyber from './eventLogo/initcyber.jpg'
-import LogoItQuiz from './eventLogo/initiqquiz.jpg'
-import LogoLogoHunt from './eventLogo/initlogohunt.jpg'
-import LogoPYIT from './eventLogo/initpyit.jpg'
-import LogoTechTussal from './eventLogo/inittech.jpg'
-import LogoWebWave from './eventLogo/initwb.jpg'
-import PosterCodathon from './Posters/PosterCodathon.jpg'
+import LogoAiMemes from './eventLogo/aimemes.png'
+import LogoITAIQuiz from './eventLogo/itaiquiz.png'
+import LogoBugBuzz from './eventLogo/bugbuzz.png'
+import LogoCodathon from './eventLogo/codathon.png'
+import LogoCyber from './eventLogo/cyberspy.png'
+import LogoLogoHunt from './eventLogo/logohunt.png'
+import LogoPYIT from './eventLogo/PY-IT.png'
+import LogoWebWave from './eventLogo/webwave.png'
+import LogoPromptHunt from './eventLogo/prompthunt.png'
+
+import PosterCodathon from './Posters/poster_cyberspy.jpg'
+import PosterPYIT from './Posters/poster_cyberspy.jpg'
+import PosterITAIQuiz from './Posters/poster_cyberspy.jpg'
+import PosterCyberSpy from './Posters/poster_cyberspy.jpg'
+import PosterwebWave from './Posters/poster_cyberspy.jpg'
+import PosteraiMemes from './Posters/poster_cyberspy.jpg'
+import PosterlogoHunt from './Posters/poster_cyberspy.jpg'
+import PosterbugBuzz from './Posters/poster_cyberspy.jpg'
+import PosterpromptHunt from './Posters/poster_cyberspy.jpg'
 
 export {
     converse2k25,
     LogoAiMemes,
-    LogoAiQuiz,
+    LogoITAIQuiz,
     LogoBugBuzz,
     LogoCodathon,
     LogoCyber,
-    LogoItQuiz,
     LogoLogoHunt,
     LogoPYIT,
-    LogoTechTussal,
     LogoWebWave,
-    PosterCodathon, 
+    LogoPromptHunt,
+
+    PosterCodathon,
+    PosterPYIT,
+    PosterITAIQuiz,
+    PosterCyberSpy,
+    PosterwebWave,
+    PosteraiMemes,
+    PosterlogoHunt,
+    PosterbugBuzz,
+    PosterpromptHunt
 }
