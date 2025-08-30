@@ -36,7 +36,7 @@ const personSchema = new Schema(
       type: String,
       trim: true,
     },
-    collage: {
+    college: {
       type: String,
       trim: true,
     },
