@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Schedule from './Schedule';
+import { LogoConverse } from "../assets/index.js";
 
 function HomePage() {
   const [logoGlow, setLogoGlow] = useState(false);
@@ -59,7 +60,7 @@ function HomePage() {
               className="relative group w-4/5 sm:w-1/3 md:w-1/4 aspect-video rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
             >
               <img
-                src="/sponsers/codewinglet.svg"
+                src={LogoConverse}
                 alt="CodeWinglet"
                 className="w-full h-full object-contain invert group-hover:scale-110 transition-transform duration-400"
                 loading="lazy"
@@ -73,7 +74,7 @@ function HomePage() {
               className="relative group w-4/5 sm:w-1/3 md:w-1/4 aspect-video rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
             >
               <img
-                src="/sponsers/vs-overseas.png"
+                src={LogoConverse}
                 alt="V.S Overseas"
                 className="w-full h-full object-contain invert group-hover:scale-110 transition-transform duration-400"
                 loading="lazy"
@@ -89,7 +90,7 @@ function HomePage() {
             <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Tech Partner</h3>
             <div className="flex justify-center items-center m-8 animate-slideUp-slow">
               <img
-                src="/sponsers/msi.png"
+                src={LogoConverse}
                 alt="MSI"
                 className="w-4/5 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl hover:shadow-2xl hover:shadow-cyan-500/60 transition-all duration-400 animate-fadeInDelay"
                 loading="lazy"
@@ -100,7 +101,7 @@ function HomePage() {
             <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center capitalize animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Co Sponsor</h3>
             <div className="flex justify-center items-center m-8 animate-slideUp-slow">
               <img
-                src="/sponsers/ims.png"
+                src={LogoConverse}
                 alt="IMS"
                 className="w-4/5 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl hover:shadow-2xl hover:shadow-cyan-500/60 transition-all duration-400 animate-fadeInDelay"
                 loading="lazy"

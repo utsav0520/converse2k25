@@ -20,3 +20,4 @@ export const web = "web";
 export const marketing = "marketing";
 export const dec = "dec";
 export const nontech = "nontech";
+export const financial  = "financial";

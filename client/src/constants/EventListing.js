@@ -21,6 +21,7 @@ import {
   marketing,
   dec,
   nontech,
+  financial
 } from "../constants/eventNames";
 
 import {
@@ -33,6 +34,13 @@ import {
   LogoWebWave,
   LogoPromptHunt,
   LogoCyber,
+  LogoConverse,
+  LogoWebTeam,
+  LogoDecoration,
+  LogononTEch,
+  LogoMarketing,
+  LogoGraphics,
+  Logofinancial,
 } from "../assets";
 
 export const TechEventListing = {
@@ -149,67 +157,71 @@ export const eventWhatsappLinks = {
   logoHunt: "https://chat.whatsapp.com/JMVUUR8J7zo2pVWSlGXT8a",
 };
 
-
 export const TeamListing = {
   [converse]: {
-    name: "Converse",
+    name: "Converse Team",
     slug: converse,
-    image: LogoLogoHunt,
+    image: LogoConverse,
+  },
+  [financial]: {
+    name: "Financial Team",
+    slug: financial,
+    image: Logofinancial,
   },
   [web]: {
-    name: "Web",
+    name: "Web Team",
     slug: web,
-    image: LogoLogoHunt,
+    image: LogoWebTeam,
   },
   [graphics]: {
-    name: "Graphics",
+    name: "Graphics Team",
     slug: graphics,
-    image: LogoLogoHunt,
+    image: LogoGraphics,
   },
   [marketing]: {
-    name: "Marketing",
+    name: "Marketing Team",
     slug: marketing,
-    image: LogoLogoHunt,
+    image: LogoMarketing,
   },
   [dec]: {
-    name: "DEC",
+    name: "Decoration Team",
     slug: dec,
-    image: LogoLogoHunt,
+    image: LogoDecoration,
   },
   [nontech]: {
-    name: "Non-Tech",
+    name: "Non-Tech Team",
     slug: nontech,
-    image: LogoLogoHunt,
+    image: LogononTEch,
   },
   [pyIt]: {
     name: "PY IT",
     slug: pyIt,
-    image: LogoLogoHunt,
+    image: LogoPYIT,
   },
   [itaiQuiz]: {
     name: "IT & AI Quiz",
     slug: itaiQuiz,
-    image: LogoLogoHunt,
+    image: LogoITAIQuiz,
   },
   [codathon]: {
     name: "Codathon",
     slug: codathon,
-    image: LogoLogoHunt,
+    image: LogoCodathon,
   },
   [cyberSpy]: {
     name: "Cyber Spy",
     slug: cyberSpy,
-    image: LogoLogoHunt,
+    image: LogoCyber,
   },
   [webWave]: {
     name: "Web Wave",
     slug: webWave,
-    image: LogoLogoHunt,
+    image: LogoWebWave,
   },
   [aiMemes]: {
     name: "AI Memes",
     slug: aiMemes,
-    image: LogoLogoHunt,
+    image: LogoAiMemes,
   },
   [logoHunt]: {
     name: "Logo Hunt",
@@ -219,11 +231,11 @@ export const TeamListing = {
   [bugBuzz]: {
     name: "Bug Buzz",
     slug: bugBuzz,
-    image: LogoLogoHunt,
+    image: LogoBugBuzz,
   },
   [promptHunt]: {
     name: "Prompt Hunt",
     slug: promptHunt,
-    image: LogoLogoHunt,
+    image: LogoPromptHunt,
   },
 };

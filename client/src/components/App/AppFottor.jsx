@@ -1,5 +1,5 @@
 import React from "react";
-import InstagramIcon from '@mui/icons-material/Instagram';
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function AppFottor() {
   return (
@@ -19,10 +19,14 @@ function AppFottor() {
             Faculty Coordinators
           </h1>
           <div className="flex flex-col gap-1">
-            <p className="text-muted-foreground">Prof. Hiren Vavaiya</p>
-            <p className="text-muted-foreground">Prof. Ankita Patel</p>
-            <p className="text-muted-foreground">Prof. Karishma Desai</p>
             <p className="text-muted-foreground">Prof. Nitya Komalan</p>
+            <p className="text-muted-foreground">
+              Dr. Krishna Samarth Delvadia
+            </p>
+            <p className="text-muted-foreground">
+              Prof. Ashishkumar Ranchhodbhai Chaudhari
+            </p>
+            <p className="text-muted-foreground">Prof. Dhaval J. Rana</p>
           </div>
         </div>
 
@@ -32,10 +36,26 @@ function AppFottor() {
             Student Heads
           </h1>
           <div className="flex flex-col gap-1 text-muted-foreground">
-            <p>Vachhani Utsav (+91 9512655868)</p>
-            <p>Vachhani Utsav (+91 9512655868)</p>
-            <p>Vachhani Utsav (+91 9512655868)</p>
-            <p>Vachhani Utsav (+91 9512655868)</p>
+            <p>
+              <a href="tel:+919512655868" className="text-muted-foreground">
+                Utsav Vachhani (+91 9512655868)
+              </a>
+            </p>
+            <p>
+              <a href="tel:+918320937722" className="text-muted-foreground">
+                Harshil Gajipara (+91 8320937722)
+              </a>
+            </p>
+            <p>
+              <a href="tel:+918530058300" className="text-muted-foreground">
+                Shruti Kakadiya (+91 8530058300)
+              </a>
+            </p>
+            <p>
+              <a href="tel:+917802003105" className="text-muted-foreground">
+                Suhani Padmani (+91 7802003105)
+              </a>
+            </p>
           </div>
 
           {/* Instagram Link */}

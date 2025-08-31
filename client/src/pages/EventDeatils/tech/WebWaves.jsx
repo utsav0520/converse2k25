@@ -2,6 +2,7 @@ import React from "react";
 import RegisterButton from "../../../components/App/RegisterButton";
 import { webWave } from "../../../constants/eventNames";
 import { PosterwebWave } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function WebWaves() {
   return (
@@ -115,8 +116,8 @@ function WebWaves() {
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
                   <li>Krishna Panchal - 9913590160</li>
-                  <li>Manan Chovatiya  - 9825611276</li>
-                  <li>Nency Khunt   - 8401295762</li>
+                  <li>Manan Chovatiya - 9825611276</li>
+                  <li>Nency Khunt - 8401295762</li>
                 </ul>
               </section>
 
@@ -177,6 +178,7 @@ function WebWaves() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }

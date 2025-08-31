@@ -1,6 +1,7 @@
 import RegisterButton from "../../../components/App/RegisterButton";
 import { promptHunt } from "../../../constants/eventNames";
 import { PosterpromptHunt } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function PromptHunt() {
   return (
@@ -204,6 +205,7 @@ function PromptHunt() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import RegisterButton from "../../../components/App/RegisterButton";
 import { logoHunt } from "../../../constants/eventNames";
 import { PosterlogoHunt } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function LogoHunt() {
   return (
@@ -203,6 +204,7 @@ function LogoHunt() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }

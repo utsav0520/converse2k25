@@ -2,6 +2,7 @@ import React from "react";
 import RegisterButton from "../../../components/App/RegisterButton";
 import { aiMemes } from "../../../constants/eventNames";
 import { PosteraiMemes } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function AIMemes() {
   return (
@@ -168,9 +169,9 @@ function AIMemes() {
                   Event Heads
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Vishwa Jariwala - ET23BTIT813 - 9662594998</li>
-                  <li>Jemis Kevadiya - ET23BTAI024 - 7862936279</li>
-                  <li>Soham Patel - ET23BTIT052 - 9313342881</li>
+                  <li>Vishwa Jariwala - 9662594998</li>
+                  <li>Jemis Kevadiya - 7862936279</li>
+                  <li>Soham Patel - 9313342881</li>
                 </ul>
               </section>
 
@@ -232,6 +233,7 @@ function AIMemes() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }

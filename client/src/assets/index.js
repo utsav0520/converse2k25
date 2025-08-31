@@ -9,6 +9,13 @@ import LogoLogoHunt from './eventLogo/logohunt.png'
 import LogoPYIT from './eventLogo/PY-IT.png'
 import LogoWebWave from './eventLogo/webwave.png'
 import LogoPromptHunt from './eventLogo/prompthunt.png'
+import LogoConverse from './eventLogo/converseteam.png'
+import LogoWebTeam from './eventLogo/webteam.png'
+import LogoDecoration from './eventLogo/decorationteam.png'
+import LogononTEch from './eventLogo/nontechteam.png'
+import LogoMarketing from './eventLogo/marketingteam.png'
+import LogoGraphics from './eventLogo/graphicsteam.png'
+import Logofinancial from './eventLogo/finicalHead.png'
 
 import PosterCodathon from './Posters/poster_cyberspy.jpg'
 import PosterPYIT from './Posters/poster_cyberspy.jpg'
@@ -22,6 +29,13 @@ import PosterpromptHunt from './Posters/poster_cyberspy.jpg'
 
 export {
     converse2k25,
+    LogoConverse,
+    LogoWebTeam,
+    LogoDecoration,
+    LogononTEch,
+    LogoMarketing,
+    Logofinancial,
+    LogoGraphics,
     LogoAiMemes,
     LogoITAIQuiz,
     LogoBugBuzz,

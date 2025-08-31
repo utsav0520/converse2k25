@@ -33,6 +33,7 @@ import MysticMover from "./pages/EventDeatils/nontech/MysticMover.jsx";
 import FFM from "./pages/EventDeatils/nontech/FFM.jsx";
 
 import TeamsConverse from './pages/TeamsDetails/TeamsConverse.jsx';
+import TeamsFinancial from './pages/TeamsDetails/TeamsFinancial.jsx';
 import TeamsGraphics from './pages/TeamsDetails/TeamsGraphics.jsx';
 import TeamsWeb from './pages/TeamsDetails/TeamsWeb.jsx';
 import TeamsMarketing from './pages/TeamsDetails/TeamsMarketing.jsx';
@@ -40,7 +41,7 @@ import TeamsDEC from './pages/TeamsDetails/TeamsDEC.jsx';
 import TeamsNontech from './pages/TeamsDetails/TeamsNontech.jsx';
 import TeamsLogohunt from "./pages/TeamsDetails/TeamsLogohunt.jsx";
 import TeamsBugbuzz from "./pages/TeamsDetails/TeamsBugbuzz.jsx";
-import TeamsBlindswap from "./pages/TeamsDetails/TeamsBlindswap.jsx";
+import TeamsCodathon from "./pages/TeamsDetails/TeamsCodathon.jsx";
 import TeamsWebwave from "./pages/TeamsDetails/TeamsWebwave.jsx";
 import TeamsCyberspy from "./pages/TeamsDetails/TeamsCyberspy.jsx";
 import TeamsItaiquiz from "./pages/TeamsDetails/TeamsItaiquiz.jsx";
@@ -94,6 +95,7 @@ function App() {
 
         {/* Teams Section */}
         <Route path="/team/converse" element={<TeamsConverse />} />
+        <Route path="/team/financial" element={<TeamsFinancial />} />
         <Route path="/team/graphics" element={<TeamsGraphics />} />
         <Route path="/team/web" element={<TeamsWeb />} />
         <Route path="/team/marketing" element={<TeamsMarketing />} />
@@ -101,7 +103,7 @@ function App() {
         <Route path="/team/nontech" element={<TeamsNontech />} />
         <Route path="/team/logohunt" element={<TeamsLogohunt />} />
         <Route path="/team/bugbuzz" element={<TeamsBugbuzz />} />
-        <Route path="/team/blindswap" element={<TeamsBlindswap />} />
+        <Route path="/team/codathon" element={<TeamsCodathon />} />
         <Route path="/team/webwave" element={<TeamsWebwave />} />
         <Route path="/team/cyberspy" element={<TeamsCyberspy />} />
         <Route path="/team/itaiquiz" element={<TeamsItaiquiz />} />

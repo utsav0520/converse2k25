@@ -2,6 +2,7 @@ import React from "react";
 import RegisterButtonFotTeam from "../../../components/App/RegisterButtonFotTeam.jsx";
 import { codathon } from "../../../constants/eventNames.js";
 import { PosterCodathon } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function Codathon() {
   return (
@@ -195,6 +196,7 @@ function Codathon() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }

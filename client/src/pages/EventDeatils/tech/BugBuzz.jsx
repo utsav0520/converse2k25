@@ -2,6 +2,7 @@ import React from "react";
 import RegisterButton from "../../../components/App/RegisterButton";
 import { bugBuzz } from "../../../constants/eventNames";
 import { PosterbugBuzz } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function BugBuzz() {
   return (
@@ -75,23 +76,23 @@ function BugBuzz() {
                 </h3>
                 <div>
                   <h4 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                    🔹 **Round 1** – Moderate Difficulty Debugging (20 minutes)
+                    🔹 Round 1 – Moderate Difficulty Debugging (20 minutes)
                   </h4>
                   <ul className="text-gray-300 list-disc pl-5 space-y-1">
                     <li>
-                      📌 **Task**: Find and fix errors in a given piece of code.
+                      📌 Task: Find and fix errors in a given piece of code.
                     </li>
-                    <li>⏱ **Time Limit**: 20 minutes</li>
+                    <li>⏱ Time Limit: 20 minutes</li>
                     <li>
-                      🎯 **Objective**: Demonstrate speed and accuracy in
+                      🎯 Objective: Demonstrate speed and accuracy in
                       debugging.
                     </li>
                     <li>
-                      🔍 **Evaluation**: Based on how quickly and accurately the
+                      🔍 Evaluation: Based on how quickly and accurately the
                       errors are fixed.
                     </li>
                     <li>
-                      ✅ **Top Participants**: Top performers will advance to
+                      ✅ Top Participants: Top performers will advance to
                       Round 2.
                     </li>
                   </ul>
@@ -99,20 +100,20 @@ function BugBuzz() {
 
                 <div>
                   <h4 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                    🔹 **Round 2** – Advanced Difficulty Debugging (20 minutes)
+                    🔹 Round 2 – Advanced Difficulty Debugging (20 minutes)
                   </h4>
                   <ul className="text-gray-300 list-disc pl-5 space-y-1">
                     <li>
-                      📌 **Task**: Find and fix errors in a more complex piece
+                      📌 Task: Find and fix errors in a more complex piece
                       of code.
                     </li>
-                    <li>⏱ **Time Limit**: 20 minutes</li>
+                    <li>⏱ Time Limit: 20 minutes</li>
                     <li>
-                      🎯 **Objective**: Show your debugging skills in tougher,
+                      🎯 Objective: Show your debugging skills in tougher,
                       more complex challenges.
                     </li>
                     <li>
-                      🔍 **Evaluation**: Same criteria as Round 1, but with more
+                      🔍 Evaluation: Same criteria as Round 1, but with more
                       complex code.
                     </li>
                   </ul>
@@ -154,9 +155,9 @@ function BugBuzz() {
                   Event Heads
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Jil Rupani  – 9016013336</li>
-                  <li>Sujalkumar Pandav  – 8866006166</li>
-                  <li>Renil Dholariya  – 8140122805</li>
+                  <li>Jil Rupani – 9016013336</li>
+                  <li>Sujalkumar Pandav – 8866006166</li>
+                  <li>Renil Dholariya – 8140122805</li>
                 </ul>
               </section>
 
@@ -218,6 +219,7 @@ function BugBuzz() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }

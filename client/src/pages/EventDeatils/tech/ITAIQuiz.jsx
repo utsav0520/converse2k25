@@ -2,6 +2,7 @@ import React from "react";
 import RegisterButton from "../../../components/App/RegisterButton";
 import { itaiQuiz } from "../../../constants/eventNames";
 import { PosterITAIQuiz } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function ITQuiz() {
   return (
@@ -190,6 +191,7 @@ function ITQuiz() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }

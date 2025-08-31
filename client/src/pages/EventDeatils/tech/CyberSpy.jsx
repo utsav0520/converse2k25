@@ -2,6 +2,7 @@ import React from "react";
 import RegisterButton from "../../../components/App/RegisterButton";
 import { cyberSpy } from "../../../constants/eventNames";
 import { PosterCyberSpy } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function CyberSpy() {
   return (
@@ -149,8 +150,9 @@ function CyberSpy() {
                   Event Heads
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Rahul Soni - ET22BTIT128 - 9016397932</li>
-                  <li>Rushel Dhandheliya - ET22BTIT024 - 9016049602</li>
+                  <li>Rahul Soni - 9016397932</li>
+                  <li>Rushel Dhandheliya - 9016049602</li>
+                  <li>Manan Shah - 9313534970</li>
                 </ul>
               </section>
 
@@ -160,7 +162,6 @@ function CyberSpy() {
                   Volunteers
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Manan Shah</li>
                   <li>Diya Patel</li>
                   <li>Dharmi Sonani</li>
                   <li>Vanshika Koshiya</li>
@@ -212,6 +213,7 @@ function CyberSpy() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }

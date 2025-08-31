@@ -1,7 +1,8 @@
 import React from "react";
 import RegisterButton from "../../../components/App/RegisterButton";
 import { pyIt } from "../../../constants/eventNames";
-import { PosterPYIT } from "../../../assets/index.js"; 
+import { PosterPYIT } from "../../../assets/index.js";
+import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function PYIT() {
   return (
@@ -270,6 +271,7 @@ function PYIT() {
           }
         `}
       </style>
+      <BackToEvent />
     </div>
   );
 }
