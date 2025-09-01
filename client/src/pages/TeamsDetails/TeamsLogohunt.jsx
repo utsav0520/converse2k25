@@ -11,30 +11,29 @@ import dhvanit from "../../assets/StudentsData/Logohunt/LogoHunt_Dhvanit Panchan
 import yamini from "../../assets/StudentsData/Logohunt/Logo_Hunt__Yamini_Tandel.png";
 import devangi from "../../assets/StudentsData/Logohunt/Logo_Hunt_Devangi_Adalja.png";
 import hetvi from "../../assets/StudentsData/Logohunt/Logo_hunt_Hetvi_Patel.png";
-import BackToTeams  from "../../components/App/BackToTeams";
+import BackToTeams from "../../components/App/BackToTeams";
 
 function TeamsLogohunt() {
   const facultyCoordinators = [
-  { name: "Prof. Bhumika Patel", image: bhumika },
-  { name: "Prof. Palak Desai", image: palak },
-];
+    { name: "Prof. Bhumika Patel", image: bhumika },
+    { name: "Prof. Palak Desai", image: palak },
+  ];
 
-const eventCoordinators = [
-  { name: "Sujal Thakkar", image: sujal },
-  { name: "Daksh Aghera", image: daksh },
-  { name: "Shrey Dhola", image: shrey },
-];
+  const eventCoordinators = [
+    { name: "Sujal Thakkar", image: sujal },
+    { name: "Daksh Aghera", image: daksh },
+    { name: "Shrey Dhola", image: shrey },
+  ];
 
-const eventVoluntree = [
-  { name: "Rajbhoi Dev", image: rajbhoi },
-  { name: "Drashti Nimavat", image: drashti },
-  { name: "Shlok Sutariya", image: shlok },
-  { name: "Dhvanit Panchani", image: dhvanit },
-  { name: "Yamini Tandel", image: yamini },
-  { name: "Devangi Adalja", image: devangi },
-  { name: "Hetvi Patel", image: hetvi },
-];
-
+  const eventVoluntree = [
+    { name: "Rajbhoi Dev", image: rajbhoi },
+    { name: "Drashti Nimavat", image: drashti },
+    { name: "Shlok Sutariya", image: shlok },
+    { name: "Dhvanit Panchani", image: dhvanit },
+    { name: "Yamini Tandel", image: yamini },
+    { name: "Devangi Adalja", image: devangi },
+    { name: "Hetvi Patel", image: hetvi },
+  ];
 
   return (
     <div className="relative flex flex-col items-center justify-start min-h-screen text-white overflow-hidden bg-gradient-to-b from-black via-purple-950 to-black">
@@ -45,19 +44,19 @@ const eventVoluntree = [
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Faculty Coordinator"
+          title="Faculty Event Heads"
           members={facultyCoordinators}
           imageBgClass="bgfaculty"
         />
 
         <TeamSection
-          title="Event Heads"
+          title="Student Event Heads"
           members={eventCoordinators}
           imageBgClass="bghead"
         />
 
         <TeamSection
-          title="Event Coordinators"
+          title="Event Volunteers"
           members={eventVoluntree}
           imageBgClass="bgvoluntree"
         />

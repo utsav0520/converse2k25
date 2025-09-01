@@ -1,4 +1,4 @@
-import BackToTeams  from "../../components/App/BackToTeams";
+import BackToTeams from "../../components/App/BackToTeams";
 import TeamSection from "../../components/App/TeamSection";
 import man from "../../assets/StudentsData/Not/maleNot.png";
 import girl from "../../assets/StudentsData/Not/girlNot.png";
@@ -40,26 +40,24 @@ function TeamsPyit() {
       <div className="absolute inset-0 z-10 w-full h-full animate-neon-glow before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-900/30 before:via-blue-900/30 before:to-purple-900/30 before:rounded-full before:blur-3xl" />
 
       {/* Centered Content */}
-      <div className="relative z-40 w-full flex flex-col items-center justify-center px-4">
-        <div className="w-full max-w-7xl flex flex-col items-center justify-center">
-          <TeamSection
-            title="Faculty Coordinator"
-            members={facultyCoordinators}
-            imageBgClass="bgfaculty"
-          />
+      <div className="relative z-40 w-full max-w-7xl mx-auto">
+        <TeamSection
+          title="Faculty Event Heads"
+          members={facultyCoordinators}
+          imageBgClass="bgfaculty"
+        />
 
-          <TeamSection
-            title="Event Heads"
-            members={eventCoordinators}
-            imageBgClass="bghead"
-          />
+        <TeamSection
+          title="Student Event Heads"
+          members={eventCoordinators}
+          imageBgClass="bghead"
+        />
 
-          <TeamSection
-            title="Event Coordinators"
-            members={eventVoluntree}
-            imageBgClass="bgvoluntree"
-          />
-        </div>
+        <TeamSection
+          title="Event Volunteers"
+          members={eventVoluntree}
+          imageBgClass="bgvoluntree"
+        />
       </div>
       <BackToTeams />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import RegisterButtonforNonTech from "../../../components/App/RegisterButtonforNonTech";
-import { PosteraiMemes } from "../../../assets/index.js";
+import { PosterBGMI } from "../../../assets/index.js";
 import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function BGMI() {
@@ -23,7 +23,7 @@ function BGMI() {
           {/* Poster */}
           <div className="flex justify-center items-start">
             <img
-              src={PosteraiMemes}
+              src={PosterBGMI}
               alt="AI Memes"
               className="my-5 rounded-lg shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 posterimage"
             />
@@ -34,163 +34,126 @@ function BGMI() {
             <div className="space-y-3">
               {/* Event Description */}
               <section>
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
                   Description
                 </h3>
                 <div className="text-gray-300 space-y-1">
                   <p>
-                    <strong>Event Name:</strong> AI Memes
+                    <strong>Event Name:</strong> BGMI Tournament
                   </p>
                   <p>
-                    <strong>Number of Rounds:</strong> 2
+                    <strong>Mode:</strong> Classic (Squad)
                   </p>
                   <p>
-                    <strong>Time Duration for Each Round:</strong>
+                    <strong>Entry Fee:</strong> ₹100 per Team
                   </p>
-                  <ul className="list-disc pl-5 text-gray-300 space-y-1">
-                    <li>Round 1: 30 minutes</li>
-                    <li>Round 2: 45 minutes</li>
-                  </ul>
                   <p>
-                    <strong>Preferred Labs:</strong> IT-4, IT-5
+                    <strong>Qualifiers:</strong> Online matches (Top teams
+                    advance to LAN Finals)
                   </p>
                 </div>
               </section>
 
-              {/* Event Overview */}
+              {/* Point System */}
               <section>
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                  Event Overview
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
+                  Point System
                 </h3>
                 <div className="text-gray-300 space-y-1">
-                  <p>🎭 AI Memes – A Creative Meme Making Showdown</p>
                   <p>
-                    AI Memes is an event that combines AI technology with
-                    creativity and humor. Participants will use AI tools to
-                    create engaging memes based on a given theme, showcasing
-                    both their design and humor skills.
+                    ⚔️ <strong>Kill Point:</strong> 1 point per kill
                   </p>
+                  <p className="font-semibold mt-2">🏅 Placement Points:</p>
+                  <ul className="list-disc pl-5">
+                    <li>1st : 10 pts</li>
+                    <li>2nd : 6 pts</li>
+                    <li>3rd : 5 pts</li>
+                    <li>4th : 4 pts</li>
+                    <li>5th : 3 pts</li>
+                    <li>6th : 2 pts</li>
+                    <li>7th : 1 pt</li>
+                    <li>8th : 1 pt</li>
+                  </ul>
                 </div>
               </section>
 
-              {/* Round Details */}
+              {/* Tie-Breaker */}
               <section>
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                  Round Details
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
+                  Tie-Breaker Rules
                 </h3>
-
-                {/* Round 1: The Theme Challenge */}
-                <div>
-                  <h4 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                    🔹 Round 1: The Theme Challenge (30 minutes)
-                  </h4>
-                  <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                    <li>📌 Theme will be revealed on the spot.</li>
-                    <li>
-                      🖼 Participants must create AI-generated memes based on the
-                      theme.
-                    </li>
-                    <li>⏱ Time Limit: 30 minutes</li>
-                    <li>
-                      🎯 Evaluation: Humor, creativity, theme relevance, and
-                      originality.
-                    </li>
-                    <li>
-                      ✅ Shortlisting: Top participants will qualify for Round
-                      2.
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Round 2: The Meme Evolution */}
-                <div>
-                  <h4 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                    🔹 Round 2: The Meme Evolution (45 minutes)
-                  </h4>
-                  <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                    <li>📌 Refine and upgrade the memes created in Round 1.</li>
-                    <li>
-                      🎨 Enhance the meme’s animation, visual appeal, and impact
-                      using AI tools.
-                    </li>
-                    <li>⏱ Time Limit: 45 minutes</li>
-                    <li>
-                      🎯 Evaluation: Innovation, design quality, humor factor,
-                      and improvement over Round 1.
-                    </li>
-                  </ul>
-                </div>
+                <ol className="text-gray-300 list-decimal pl-5 space-y-1">
+                  <li>WWCD (Winner Winner Chicken Dinner)</li>
+                  <li>Position Points</li>
+                  <li>Kill Points</li>
+                </ol>
               </section>
 
-              {/* Rules & Guidelines */}
+              {/* Schedule */}
               <section>
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
+                  Match Schedule
+                </h3>
+                <p className="text-gray-300">📅 To be announced later.</p>
+              </section>
+
+              {/* LAN Facilities */}
+              <section>
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
+                  LAN Facilities
+                </h3>
+                <p className="text-gray-300">
+                  🎮 Advanced room card will be provided. <br />❌ Network &
+                  devices will NOT be provided.
+                </p>
+              </section>
+
+              {/* Rules */}
+              <section>
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
                   Rules & Guidelines
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
                   <li>
-                    Eligibility: Open to all students/participants interested in
-                    AI, design, and creativity.
+                    Players can be from any college but must be present at venue
+                    if they qualify for finals.
                   </li>
+                  <li>Minimum BGMI ID level 40 required.</li>
                   <li>
-                    Tools Allowed: Any AI-based meme/image generation tool
-                    (e.g., ChatGPT, MidJourney, DALL·E, Canva AI, etc.).
-                  </li>
-                  <li>
-                    Originality: Plagiarized or copied memes will lead to
+                    POV may be asked for online qualifiers. Failure →
                     disqualification.
                   </li>
+                  <li>Screenshot of results is mandatory.</li>
                   <li>
-                    Theme Adherence: Memes must strictly relate to the given
-                    theme in Round 1.
+                    Players must join room 5 mins before start, else seat may be
+                    lost.
                   </li>
                   <li>
-                    Content Policy: No offensive, abusive, or inappropriate
-                    content. Memes must respect individuals, communities, and
-                    cultures.
+                    🚫 Emergency Pickup not allowed. Using it → 0 pts, opponents
+                    +10 pts.
                   </li>
-                  <li>
-                    Time Limit: Round 1 – 30 minutes, Round 2 – 45 minutes.
-                  </li>
-                  <li>Late submissions will not be considered.</li>
+                  <li>🚫 Self Revive Kit usage → Direct disqualification.</li>
                 </ul>
               </section>
 
-              {/* Faculty Coordinators */}
+              {/* Prize */}
               <section>
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                  Faculty Coordinators
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
+                  Prize
                 </h3>
-                <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Dr. Dhruti Sharma</li>
-                  <li>Prof. Snehal Kathale</li>
-                </ul>
+                <p className="text-gray-300">
+                  🏆 Exciting Rewards Await the Champions!
+                </p>
               </section>
 
               {/* Event Heads */}
               <section>
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
                   Event Heads
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Vishwa Jariwala - ET23BTIT813 - 9662594998</li>
-                  <li>Jemis Kevadiya - ET23BTAI024 - 7862936279</li>
-                  <li>Soham Patel - ET23BTIT052 - 9313342881</li>
-                </ul>
-              </section>
-
-              {/* Volunteers */}
-              <section>
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                  Volunteers
-                </h3>
-                <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Harsh Ramani</li>
-                  <li>Dhruvil Sorathiya</li>
-                  <li>Tirth Hirpara</li>
-                  <li>Muskaan Patel</li>
-                  <li>Tushar Kapoor</li>
-                  <li>Karan Mehta</li>
+                  <li>Rushabh Devani - 8980005030</li>
+                  <li>Aryan Pandey - 8780912463</li>
                 </ul>
               </section>
             </div>

@@ -11,8 +11,7 @@ import dharm from "../../assets/StudentsData/PromptHunt/PromptHunt_DharmPatel.pn
 import krisha from "../../assets/StudentsData/PromptHunt/PromptHunt_KrishaKoshiya.png";
 import shreya from "../../assets/StudentsData/PromptHunt/PromptHunt_ShriyaAgrawal.png";
 import bhavya from "../../assets/StudentsData/PromptHunt/PromptHunt_BhavyaLadumor.png";
-import BackToTeams  from "../../components/App/BackToTeams";
-
+import BackToTeams from "../../components/App/BackToTeams";
 
 function TeamsPrompthunt() {
   const facultyCoordinators = [
@@ -45,19 +44,19 @@ function TeamsPrompthunt() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Faculty Coordinator"
+          title="Faculty Event Heads"
           members={facultyCoordinators}
           imageBgClass="bgfaculty"
         />
 
         <TeamSection
-          title="Event Heads"
+          title="Student Event Heads"
           members={eventCoordinators}
           imageBgClass="bghead"
         />
 
         <TeamSection
-          title="Event Coordinators"
+          title="Event Volunteers"
           members={eventVoluntree}
           imageBgClass="bgvoluntree"
         />

@@ -1,5 +1,5 @@
 import RegisterButtonforNonTech from "../../../components/App/RegisterButtonforNonTech";
-import { PosteraiMemes } from "../../../assets/index.js";
+import { PosterMystic } from "../../../assets/index.js";
 import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function MysticMover() {
@@ -22,7 +22,7 @@ function MysticMover() {
           {/* Poster */}
           <div className="flex justify-center items-start">
             <img
-              src={PosteraiMemes}
+              src={PosterMystic}
               alt="AI Memes"
               className="my-5 rounded-lg shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 posterimage"
             />

@@ -10,7 +10,7 @@ import tisha from "../../assets/StudentsData/Bugbuzz/BugBuzz_Tisha Goti.png";
 import sneha from "../../assets/StudentsData/Bugbuzz/BugBuzz_Sneha Donga .png";
 import jevin from "../../assets/StudentsData/Bugbuzz/BugBuzz_Jevin.png";
 import sapnil from "../../assets/StudentsData/Not/maleNot.png";
-import BackToTeams  from "../../components/App/BackToTeams";
+import BackToTeams from "../../components/App/BackToTeams";
 
 function TeamsBugbuzz() {
   const facultyCoordinators = [
@@ -42,19 +42,19 @@ function TeamsBugbuzz() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Faculty Coordinator"
+          title="Faculty Event Heads"
           members={facultyCoordinators}
           imageBgClass="bgfaculty"
         />
 
         <TeamSection
-          title="Event Heads"
+          title="Student Event Heads"
           members={eventCoordinators}
           imageBgClass="bghead"
         />
 
         <TeamSection
-          title="Event Coordinators"
+          title="Event Volunteers"
           members={eventVoluntree}
           imageBgClass="bgvoluntree"
         />

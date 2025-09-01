@@ -59,13 +59,13 @@ function TeamsNontech() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Event Heads"
+          title="Non-Tech Coordinators"
           members={eventCoordinators}
           imageBgClass="bghead"
         />
 
         <TeamSection
-          title="Event Coordinators"
+          title="Non-Tech Event Heads"
           members={eventVoluntree}
           imageBgClass="bgvoluntree"
         />

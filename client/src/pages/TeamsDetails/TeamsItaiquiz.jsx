@@ -12,7 +12,7 @@ import volDrishi from "../../assets/StudentsData/IT&AIQuizz/IT&AI_Drishi Morkhia
 import volKhushi from "../../assets/StudentsData/IT&AIQuizz/IT_AI_Khushi_gajrawala_-removebg-preview.png";
 import volManasvi from "../../assets/StudentsData/IT&AIQuizz/IT_AI_Manasvi_Bhesania-removebg-preview.png";
 import volRishika from "../../assets/StudentsData/IT&AIQuizz/IT&AI_Rishika_Jain.png";
-import BackToTeams  from "../../components/App/BackToTeams";
+import BackToTeams from "../../components/App/BackToTeams";
 
 function TeamsItaiquiz() {
   const facultyCoordinators = [
@@ -44,19 +44,19 @@ function TeamsItaiquiz() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Faculty Coordinator"
+          title="Faculty Event Heads"
           members={facultyCoordinators}
           imageBgClass="bgfaculty"
         />
 
         <TeamSection
-          title="Event Heads"
+          title="Student Event Heads"
           members={eventCoordinators}
           imageBgClass="bghead"
         />
 
         <TeamSection
-          title="Event Coordinators"
+          title="Event Volunteers"
           members={eventVoluntree}
           imageBgClass="bgvoluntree"
         />

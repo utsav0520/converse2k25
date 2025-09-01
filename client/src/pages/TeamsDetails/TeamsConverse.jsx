@@ -31,13 +31,13 @@ function TeamsConverse() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Faculty Coordinator"
+          title="Faculty Coordinators"
           members={facultyCoordinators}
           imageBgClass="bgfaculty"
         />
 
         <TeamSection
-          title="Event Heads"
+          title="Student Coordinators"
           members={eventCoordinators}
           imageBgClass="bghead"
         />

@@ -9,7 +9,7 @@ import dharmi from "../../assets/StudentsData/Cyberspy/Cyberspy_DharmiSonani.png
 import vanshika from "../../assets/StudentsData/Cyberspy/CyberSpy_VanshikaKoshiya-removebg-preview.png";
 import yashvi from "../../assets/StudentsData/Cyberspy/CyberSpy_YashviBhatt-removebg-preview.png";
 import aryan from "../../assets/StudentsData/Not/maleNot.png";
-import BackToTeams  from "../../components/App/BackToTeams";
+import BackToTeams from "../../components/App/BackToTeams";
 
 function TeamsCyberspy() {
   const facultyCoordinators = [
@@ -40,19 +40,19 @@ function TeamsCyberspy() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Faculty Coordinator"
+          title="Faculty Event Heads"
           members={facultyCoordinators}
           imageBgClass="bgfaculty"
         />
 
         <TeamSection
-          title="Event Heads"
+          title="Student Event Heads"
           members={eventCoordinators}
           imageBgClass="bghead"
         />
 
         <TeamSection
-          title="Event Coordinators"
+          title="Event Volunteers"
           members={eventVoluntree}
           imageBgClass="bgvoluntree"
         />

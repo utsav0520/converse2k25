@@ -16,7 +16,7 @@ function TeamsFinancial() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Event Heads"
+          title="Financial Heads"
           members={eventCoordinators}
           imageBgClass="bghead"
         />

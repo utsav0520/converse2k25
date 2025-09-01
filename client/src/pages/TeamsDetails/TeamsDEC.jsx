@@ -51,13 +51,13 @@ function TeamsDEC() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Event Heads"
+          title="Decoration Team Coordinators"
           members={eventCoordinators}
           imageBgClass="bghead"
         />
 
         <TeamSection
-          title="Event Coordinators"
+          title="Decoration Team Members"
           members={eventVoluntree}
           imageBgClass="bgvoluntree"
         />

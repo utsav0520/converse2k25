@@ -10,7 +10,7 @@ import KenviChaklasiya from "../../assets/StudentsData/Codathon/Codathon_Kenvi_C
 import KrishPatel from "../../assets/StudentsData/Not/maleNot.png";
 import BansiGoyani from "../../assets/StudentsData/Codathon/codathon_bansi_goyani.png";
 import BriyaMavani from "../../assets/StudentsData/Codathon/codathon_briya_mavani.png";
-import BackToTeams  from "../../components/App/BackToTeams";
+import BackToTeams from "../../components/App/BackToTeams";
 
 function TeamsCodathon() {
   const facultyCoordinators = [
@@ -42,19 +42,19 @@ function TeamsCodathon() {
       {/* Sections */}
       <div className="relative z-40 w-full max-w-7xl mx-auto">
         <TeamSection
-          title="Faculty Coordinator"
+          title="Faculty Event Heads"
           members={facultyCoordinators}
           imageBgClass="bgfaculty"
         />
 
         <TeamSection
-          title="Event Heads"
+          title="Student Event Heads"
           members={eventCoordinators}
           imageBgClass="bghead"
         />
 
         <TeamSection
-          title="Event Coordinators"
+          title="Event Volunteers"
           members={eventVoluntree}
           imageBgClass="bgvoluntree"
         />

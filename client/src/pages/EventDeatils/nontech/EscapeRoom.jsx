@@ -1,6 +1,6 @@
 import React from "react";
 import RegisterButtonforNonTech from "../../../components/App/RegisterButtonforNonTech";
-import { PosteraiMemes } from "../../../assets/index.js";
+import { PosterEscapeRoom } from "../../../assets/index.js";
 import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function EscapeRoom() {
@@ -23,7 +23,7 @@ function EscapeRoom() {
           {/* Poster */}
           <div className="flex justify-center items-start">
             <img
-              src={PosteraiMemes}
+              src={PosterEscapeRoom}
               alt="AI Memes"
               className="my-5 rounded-lg shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 posterimage"
             />

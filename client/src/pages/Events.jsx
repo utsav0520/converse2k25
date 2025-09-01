@@ -143,7 +143,7 @@ function Events() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
                 </div>
-                <div className="p-6">
+                <div className="p-6 grid text-center">
                   <h2 className="text-2xl font-semibold text-white group-hover:text-cyan-300 group-hover:underline transition duration-200">
                     {event.name}
                   </h2>
@@ -172,7 +172,7 @@ function Events() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
                 </div>
-                <div className="p-6">
+                <div className="p-6 grid text-center">
                   <h2 className="text-2xl font-semibold text-white group-hover:text-cyan-300 group-hover:underline transition duration-200">
                     {event.name}
                   </h2>

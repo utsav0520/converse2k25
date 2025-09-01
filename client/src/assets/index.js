@@ -27,6 +27,14 @@ import PosterlogoHunt from './Posters/poster_cyberspy.jpg'
 import PosterbugBuzz from './Posters/poster_cyberspy.jpg'
 import PosterpromptHunt from './Posters/poster_cyberspy.jpg'
 
+import PosterBGMI from './Posters/poster_cyberspy.jpg'
+import PosterEscapeRoom from './Posters/poster_cyberspy.jpg'
+import PosterFFM from './Posters/poster_cyberspy.jpg'
+import PosterIPLAuction from './Posters/poster_cyberspy.jpg'
+import PosterMystic from './Posters/poster_cyberspy.jpg'
+import PosterReelCraft from './Posters/poster_cyberspy.jpg'
+import PosterTraitors from './Posters/poster_cyberspy.jpg'
+
 export {
     converse2k25,
     LogoConverse,
@@ -54,5 +62,13 @@ export {
     PosteraiMemes,
     PosterlogoHunt,
     PosterbugBuzz,
-    PosterpromptHunt
+    PosterpromptHunt,
+    
+    PosterBGMI,
+    PosterEscapeRoom,
+    PosterFFM,
+    PosterIPLAuction,
+    PosterMystic,
+    PosterReelCraft,
+    PosterTraitors
 }

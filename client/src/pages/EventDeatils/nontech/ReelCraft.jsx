@@ -1,5 +1,5 @@
 import RegisterButtonforNonTech from "../../../components/App/RegisterButtonforNonTech";
-import { PosteraiMemes } from "../../../assets/index.js";
+import { PosterReelCraft } from "../../../assets/index.js";
 import BackToEvent from "../../../components/App/BackToEvent.jsx";
 
 function ReelCraft() {
@@ -22,7 +22,7 @@ function ReelCraft() {
           {/* Poster */}
           <div className="flex justify-center items-start">
             <img
-              src={PosteraiMemes}
+              src={PosterReelCraft}
               alt="AI Memes"
               className="my-5 rounded-lg shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 posterimage"
             />
@@ -38,17 +38,20 @@ function ReelCraft() {
                 </h3>
                 <div className="text-gray-300 space-y-1">
                   <p>
-                    <strong>Event Name:</strong> Escape Room
+                    <strong>Event Name:</strong> Reel Craft 🎥
                   </p>
                   <p>
-                    <strong>Players:</strong> Duo (2 members per team)
+                    <strong>Players:</strong> Solo or Team (1–3 members)
                   </p>
                   <p>
-                    <strong>Goal:</strong> Escape from the room before the timer
-                    ends.
+                    <strong>Goal:</strong> Create a reel based on the given
+                    theme.
                   </p>
                   <p>
-                    <strong>Entry Fee:</strong> ₹40 per Duo
+                    <strong>Duration:</strong> 30–60 seconds
+                  </p>
+                  <p>
+                    <strong>Entry Fee:</strong> Free
                   </p>
                 </div>
               </section>
@@ -60,74 +63,17 @@ function ReelCraft() {
                 </h3>
                 <div className="text-gray-300 space-y-1">
                   <p>
-                    🧠 A room of puzzles stands between you and freedom. Each
-                    level gives a digit/code piece. Collect them all to unlock
-                    the final door. But beware – challenges increase in
-                    difficulty!
+                    🎬 Bring your creativity to life with short reels shot on
+                    the <strong>SCET campus</strong>.
                   </p>
                   <p>
-                    🎯 Teamwork, observation, and sharp thinking are your
-                    greatest tools.
+                    🎯 You can choose from exciting themes like{" "}
+                    <em>Campus Chronicles</em>,<em> Storytelling</em>,{" "}
+                    <em>Comedy</em>, and more!
                   </p>
-                </div>
-              </section>
-
-              {/* Level Details */}
-              <section>
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                  Level Details
-                </h3>
-
-                <div className="text-gray-300 space-y-4">
-                  <div>
-                    <h4 className="text-xl font-semibold">
-                      🔐 Level 1: Box of Keys
-                    </h4>
-                    <ul className="list-disc pl-5">
-                      <li>
-                        Search through a set of keys to find the correct one.
-                      </li>
-                      <li>Unlock the box to reveal the first clue.</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold">
-                      ⚡ Level 2: Buzz Wire
-                    </h4>
-                    <ul className="list-disc pl-5">
-                      <li>
-                        Guide the loop carefully without touching the wire.
-                      </li>
-                      <li>Claim your next clue if successful.</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold">
-                      🧩 Level 3: Observational Puzzle
-                    </h4>
-                    <ul className="list-disc pl-5">
-                      <li>Solve an image-based pattern puzzle.</li>
-                      <li>Use clues from Level 2 to decode it.</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold">
-                      ♟️ Level 4: Mind Game
-                    </h4>
-                    <ul className="list-disc pl-5">
-                      <li>
-                        A tricky logic puzzle that uses the hidden clue from
-                        Level 1.
-                      </li>
-                      <li>Combine insights to unlock the last digit.</li>
-                    </ul>
-                  </div>
-
-                  <p className="text-yellow-300 italic">
-                    🚪 Final Door Has a Catch — Stay Sharp!
+                  <p>
+                    ✨ Showcase your editing, acting, and direction skills in
+                    just 60 seconds.
                   </p>
                 </div>
               </section>
@@ -138,54 +84,66 @@ function ReelCraft() {
                   Rules & Guidelines
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
+                  <li>Team of 1–3 members only</li>
+                  <li>Reel duration must be between 30–60 seconds</li>
+                  <li>Reel must be based on the chosen theme</li>
+                  <li>You can participate in multiple themes</li>
                   <li>
-                    Teams must complete levels in sequence. Skipping is not
-                    allowed.
+                    Credits must be added at the end of the reel (Name, Contact,
+                    Enrolment No, Email, Branch ID)
                   </li>
                   <li>
-                    All props must be handled carefully. Damaging items will
-                    lead to disqualification.
-                  </li>
-                  <li>
-                    The game must be completed within the time limit to escape
-                    successfully.
-                  </li>
-                  <li>
-                    Teamwork is essential – both players must actively
-                    participate.
-                  </li>
-                  <li>
-                    Only one team will enter at a time. Spectators are not
-                    allowed.
+                    Reel should be shot on the <strong>SCET campus</strong>
                   </li>
                 </ul>
               </section>
 
-              {/* Prize */}
+              {/* Notes */}
               <section>
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                  Prize
+                  Notes
                 </h3>
-                <p className="text-gray-300">
-                  🏆 The Exciting Prize Awaits the Winners!
-                </p>
+                <ul className="text-gray-300 list-disc pl-5 space-y-1">
+                  <li>
+                    Submit your reel in the Google Drive link (shared in the
+                    WhatsApp group)
+                  </li>
+                  <li>Make sure you’ve joined the WhatsApp group</li>
+                </ul>
               </section>
+
+              {/* Themes */}
+              <section>
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
+                  Themes
+                </h3>
+                <ol className="text-gray-300 list-decimal pl-5 space-y-1">
+                  <li>
+                    Campus Chronicles (Canteen, People, Infrastructure,
+                    Departments)
+                  </li>
+                  <li>Storytelling Video</li>
+                  <li>Transition</li>
+                  <li>Comedy / Entertainment / Dance</li>
+                  <li>Converse</li>
+                </ol>
+              </section>
+
               {/* Event Heads */}
               <section>
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
                   Event Heads
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Snehal Rapolu - 7989844724</li>
-                  <li>Kush Patel - 7984136547</li>
-                  <li>Gediya Dwarkesh - 7779013444</li>
+                  <li>Siddharth Ghoghari – 📱 81603 92844</li>
+                  <li>Manav Tarsariya  – 📱 81608 44231</li>
+                  <li>Kadu Parth – 📱 75679 26167</li>
                 </ul>
               </section>
             </div>
           </div>
         </div>
       </div>
-
       <style>
         {`
           @keyframes twinklingStars {
