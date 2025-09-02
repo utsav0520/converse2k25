@@ -33,29 +33,37 @@ function PYIT() {
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
                   Description
                 </h3>
-                <div className="text-gray-300 space-y-1">
-                  <p>
+                <ul className="text-gray-300 space-y-2 list-disc pl-5">
+                  <li>
                     <strong>Event Name:</strong> PY-IT
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <strong>Number of Rounds:</strong> 3
-                  </p>
-                  <p>
-                    <strong>Preferred Labs:</strong>
-                  </p>
-                  <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                    <li>Round 1 - Lab 1, 2, 3</li>
-                    <li>Round 2 & 3 - Lab 5</li>
-                  </ul>
-                  <p>
+                  </li>
+                  <li>
+                    <strong>Round Details:</strong>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>
+                        <strong>Round 1:</strong> 19th September 2025 – IT Lab
+                        1, 2, 3
+                      </li>
+                      <li>
+                        <strong>Round 2:</strong> 20th September 2025 – IT Lab 3
+                      </li>
+                      <li>
+                        <strong>Round 3:</strong> 20th September 2025 – IT Lab 3
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
                     <strong>Time Duration for Each Round:</strong>
-                  </p>
-                  <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                    <li>Round 1: 1 hour</li>
-                    <li>Round 2: 1 hour</li>
-                    <li>Round 3: Depending on the number of students</li>
-                  </ul>
-                </div>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>Round 1: 1 hour</li>
+                      <li>Round 2: 1 hour</li>
+                      <li>Round 3: Depending on the number of students</li>
+                    </ul>
+                  </li>
+                </ul>
               </section>
 
               {/* Event Overview */}

@@ -33,17 +33,23 @@ function ITQuiz() {
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
                   Description
                 </h3>
-                <div className="text-gray-300 space-y-1">
-                  <p>
+                <ul className="text-gray-300 space-y-2 list-disc pl-5">
+                  <li>
                     <strong>Event Name:</strong> IT & AI Quiz
-                  </p>
-                  <p>
+                  </li>
+                  <li>
+                    <strong>Date:</strong> 19th September 2025
+                  </li>
+                  <li>
+                    <strong>Location:</strong> IT Lab - 1, 2, 3
+                  </li>
+                  <li>
                     <strong>Number of Rounds:</strong> 1
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <strong>Time Duration:</strong> 30 minutes
-                  </p>
-                </div>
+                  </li>
+                </ul>
               </section>
 
               {/* Event Overview */}
@@ -107,6 +113,21 @@ function ITQuiz() {
                     In case of a tie, the participant who completes the quiz in
                     the shortest time will be ranked higher.
                   </li>
+                </ul>
+              </section>
+
+              {/* Quiz Syllabus */}
+              <section>
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
+                  Quiz Components
+                </h3>
+                <ul className="text-gray-300 list-disc pl-5 space-y-1">
+                  <li>📘 Part A – Basics of Computer & IT</li>
+                  <li>💻 Part B – Programming & Data Structures</li>
+                  <li>🤖 Part C – Artificial Intelligence</li>
+                  <li>⚙️ Part D – Advanced IT & Emerging Tech</li>
+                  <li>🧠 Part E – AI Applications & Machine Learning</li>
+                  <li>🎯 Part F – Mixed Knowledge (IT + AI)</li>
                 </ul>
               </section>
 

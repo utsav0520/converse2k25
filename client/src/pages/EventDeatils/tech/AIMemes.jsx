@@ -33,24 +33,26 @@ function AIMemes() {
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
                   Description
                 </h3>
-                <div className="text-gray-300 space-y-1">
-                  <p>
+                <ul className="text-gray-300 space-y-2 list-disc pl-5">
+                  <li>
                     <strong>Event Name:</strong> AI Memes
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <strong>Number of Rounds:</strong> 2
-                  </p>
-                  <p>
-                    <strong>Time Duration for Each Round:</strong>
-                  </p>
-                  <ul className="list-disc pl-5 text-gray-300 space-y-1">
-                    <li>Round 1: 30 minutes</li>
-                    <li>Round 2: 45 minutes</li>
-                  </ul>
-                  <p>
-                    <strong>Preferred Labs:</strong> IT-4, IT-5
-                  </p>
-                </div>
+                  </li>
+                  <li>
+                    <strong>Date:</strong> 20th September 2025
+                  </li>
+                  <li>
+                    <strong>Location:</strong> IT Lab - 1, 2, 3
+                  </li>
+                  <li>
+                    <strong>Round 1 Duration:</strong> 30 minutes
+                  </li>
+                  <li>
+                    <strong>Round 2 Duration:</strong> 45 minutes
+                  </li>
+                </ul>
               </section>
 
               {/* Event Overview */}

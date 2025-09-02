@@ -34,26 +34,42 @@ function CyberSpy() {
                   Description
                 </h3>
                 <div className="text-gray-300 space-y-1">
-                  <p>
-                    <strong>Event Name:</strong> Cyber Spy
-                  </p>
-                  <p>
-                    <strong>Number of Rounds:</strong> 2
-                  </p>
-                  <p>
-                    <strong>Time Duration:</strong>
-                  </p>
-                  <ul className="text-gray-300 list-disc pl-5 space-y-1">
+                  <ul className="text-gray-300 space-y-2 list-disc pl-5">
                     <li>
-                      <strong>Round 1:</strong> 20 minutes
+                      <strong>Event Name:</strong> Cyber Spy
                     </li>
                     <li>
-                      <strong>Round 2:</strong> ~1 hour
+                      <strong>Number of Rounds:</strong> 2
+                    </li>
+                    <li>
+                      <strong>Round 1:</strong>
+                      <ul className="list-disc pl-5">
+                        <li>
+                          <strong>Date:</strong> 19th September 2025
+                        </li>
+                        <li>
+                          <strong>Location:</strong> IT Lab - 4, 5
+                        </li>
+                        <li>
+                          <strong>Duration:</strong> 20 minutes
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Round 2:</strong>
+                      <ul className="list-disc pl-5">
+                        <li>
+                          <strong>Date:</strong> 20th September 2025
+                        </li>
+                        <li>
+                          <strong>Location:</strong> IT Lab - 4, 5
+                        </li>
+                        <li>
+                          <strong>Duration:</strong> 1 hour
+                        </li>
+                      </ul>
                     </li>
                   </ul>
-                  <p>
-                    <strong>Preferred Labs:</strong> IT-5 and IT-4
-                  </p>
                 </div>
               </section>
 

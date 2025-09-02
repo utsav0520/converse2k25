@@ -33,20 +33,23 @@ function BugBuzz() {
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
                   Description
                 </h3>
-                <div className="text-gray-300 space-y-1">
-                  <p>
-                    <strong>Event Name:</strong> Debugging Challenge
-                  </p>
-                  <p>
+                <ul className="text-gray-300 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong>Event Name:</strong> Bug Buzz
+                  </li>
+                  <li>
                     <strong>Number of Rounds:</strong> 2
-                  </p>
-                  <p>
-                    <strong>Time Duration:</strong> 20 minutes per round
-                  </p>
-                  <p>
-                    <strong>Preferred Labs:</strong> IT-4 and IT-5
-                  </p>
-                </div>
+                  </li>
+                  <li>
+                    <strong>Date:</strong> 20th September 2025
+                  </li>
+                  <li>
+                    <strong>Location:</strong> IT Lab - 1, 2, 4
+                  </li>
+                  <li>
+                    <strong>Time Duration:</strong> 20 minutes each round
+                  </li>
+                </ul>
               </section>
 
               {/* Event Overview */}
@@ -84,16 +87,15 @@ function BugBuzz() {
                     </li>
                     <li>⏱ Time Limit: 20 minutes</li>
                     <li>
-                      🎯 Objective: Demonstrate speed and accuracy in
-                      debugging.
+                      🎯 Objective: Demonstrate speed and accuracy in debugging.
                     </li>
                     <li>
                       🔍 Evaluation: Based on how quickly and accurately the
                       errors are fixed.
                     </li>
                     <li>
-                      ✅ Top Participants: Top performers will advance to
-                      Round 2.
+                      ✅ Top Participants: Top performers will advance to Round
+                      2.
                     </li>
                   </ul>
                 </div>
@@ -104,13 +106,13 @@ function BugBuzz() {
                   </h4>
                   <ul className="text-gray-300 list-disc pl-5 space-y-1">
                     <li>
-                      📌 Task: Find and fix errors in a more complex piece
-                      of code.
+                      📌 Task: Find and fix errors in a more complex piece of
+                      code.
                     </li>
                     <li>⏱ Time Limit: 20 minutes</li>
                     <li>
-                      🎯 Objective: Show your debugging skills in tougher,
-                      more complex challenges.
+                      🎯 Objective: Show your debugging skills in tougher, more
+                      complex challenges.
                     </li>
                     <li>
                       🔍 Evaluation: Same criteria as Round 1, but with more

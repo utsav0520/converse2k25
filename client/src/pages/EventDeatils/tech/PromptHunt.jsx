@@ -32,6 +32,40 @@ function PromptHunt() {
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
                   Event Description
                 </h3>
+                <ul className="text-gray-300 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong>Event Name:</strong> Prompt Hunt
+                  </li>
+                  <li>
+                    <strong>Number of Rounds:</strong> 2
+                  </li>
+                  <li>
+                    <strong>Round 1:</strong>
+                    <ul className="list-disc pl-5">
+                      <li>
+                        <strong>Date:</strong> 19th September 2025
+                      </li>
+                      <li>
+                        <strong>Location:</strong> IT Lab - 4, 5
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Round 2:</strong>
+                    <ul className="list-disc pl-5">
+                      <li>
+                        <strong>Date:</strong> 20th September 2025
+                      </li>
+                      <li>
+                        <strong>Location:</strong> IT Lab - 1, 2
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Time Duration:</strong> 20 minutes each round
+                  </li>
+                </ul>
+                <br />
                 <div className="text-gray-300 space-y-1">
                   <p>
                     In this event, participants will test their ability to

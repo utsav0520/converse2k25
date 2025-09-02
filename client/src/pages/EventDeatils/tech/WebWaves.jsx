@@ -33,20 +33,23 @@ function WebWaves() {
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
                   Description
                 </h3>
-                <div className="text-gray-300 space-y-1">
-                  <p>
+                <ul className="text-gray-300 space-y-2 list-disc pl-5">
+                  <li>
                     <strong>Event Name:</strong> Web Wave
-                  </p>
-                  <p>
+                  </li>
+                  <li>
+                    <strong>Date:</strong> 20th September 2025
+                  </li>
+                  <li>
                     <strong>Number of Rounds:</strong> 1
-                  </p>
-                  <p>
-                    <strong>Time Duration for Each Round:</strong> 30 Minutes
-                  </p>
-                  <p>
-                    <strong>Preferred Labs:</strong> Lab – 4, Lab – 5
-                  </p>
-                </div>
+                  </li>
+                  <li>
+                    <strong>Time Duration for Each Round:</strong> 30 minutes
+                  </li>
+                  <li>
+                    <strong>Location:</strong> IT Lab - 4, 5
+                  </li>
+                </ul>
               </section>
 
               {/* Event Overview */}

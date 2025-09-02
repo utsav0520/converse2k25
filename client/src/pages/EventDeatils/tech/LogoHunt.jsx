@@ -35,20 +35,19 @@ function LogoHunt() {
                 </h3>
                 <div className="text-gray-300 space-y-1">
                   <p>
-                    <strong>Event Name:</strong> Logo Hunt
+                    <strong>Event Name:</strong> IT & AI Quiz
                   </p>
                   <p>
-                    <strong>Slogan:</strong> "Where speed meets smarts."
+                    <strong>Date:</strong> 19th September 2025
+                  </p>
+                  <p>
+                    <strong>Location :</strong> IT Lab - 1,2,3,4
                   </p>
                   <p>
                     <strong>Number of Rounds:</strong> 1
                   </p>
                   <p>
-                    <strong>Time Duration:</strong> 1 hour
-                  </p>
-                  <p>
-                    <strong>Preferred Labs:</strong> As many as possible with
-                    projector (min. 4)
+                    <strong>Time Duration:</strong> 30 minutes
                   </p>
                 </div>
               </section>

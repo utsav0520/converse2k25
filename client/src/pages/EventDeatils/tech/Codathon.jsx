@@ -33,26 +33,23 @@ function Codathon() {
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
                   Description
                 </h3>
-                <div className="text-gray-300 space-y-1">
-                  <p>
+                <ul className="text-gray-300 space-y-2 list-disc pl-5">
+                  <li>
                     <strong>Event Name:</strong> Codathon
-                  </p>
-                  <p>
-                    <strong>Date:</strong> 20 September 2024
-                  </p>
-                  <p>
-                    <strong>Time:</strong> 1:30 PM - 3:30 PM
-                  </p>
-                  <p>
+                  </li>
+                  <li>
+                    <strong>Date:</strong> 19th September 2024
+                  </li>
+                  <li>
                     <strong>Event Duration:</strong> 90 minutes
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <strong>Number of Rounds:</strong> 1
-                  </p>
-                  <p>
-                    <strong>Preferred Labs:</strong> IT1, IT2, IT3, IT4
-                  </p>
-                </div>
+                  </li>
+                  <li>
+                    <strong>Location:</strong> IT Lab - 1, 2, 4, 5
+                  </li>
+                </ul>
               </section>
 
               {/* Event Overview */}
