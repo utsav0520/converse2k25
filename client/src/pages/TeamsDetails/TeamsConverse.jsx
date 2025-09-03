@@ -1,6 +1,8 @@
 import TeamSection from "../../components/App/TeamSection";
-import man from "../../assets/StudentsData/Not/maleNot.png";
-import girl from "../../assets/StudentsData/Not/girlNot.png";
+import nitya from "../../assets/StudentsData/Faculty/nityaC.png";
+import krishna from "../../assets/StudentsData/Faculty/KrishnaD.png";
+import ashish from "../../assets/StudentsData/Faculty/ashishC.png";
+import dhawal from "../../assets/StudentsData/Faculty/DhavalR.png";
 import uv from "../../assets/StudentsData/Head/Head_UtsavVachhani.png";
 import harshil from "../../assets/StudentsData/Head/head_harshil.png";
 import shrutiK from "../../assets/StudentsData/Head/Head_shruti_kakadiya.png";
@@ -9,10 +11,10 @@ import BackToTeams  from "../../components/App/BackToTeams";
 
 function TeamsConverse() {
   const facultyCoordinators = [
-    { name: "Prof. Nitya Komalan", image: girl },
-    { name: "Dr. Krishna Samarth Delvadia", image: girl },
-    { name: "Prof. Ashishkumar Ranchhodbhai Chaudhari", image: man },
-    { name: "Prof. Dhaval J. Rana", image: man },
+    { name: "Prof. Nitya Komalan", image: nitya },
+    { name: "Dr. Krishna Samarth Delvadia", image: krishna },
+    { name: "Prof. Ashishkumar Ranchhodbhai Chaudhari", image: ashish },
+    { name: "Prof. Dhaval J. Rana", image: dhawal },
   ];
 
   const eventCoordinators = [

@@ -71,9 +71,32 @@ function AppFottor() {
         </div>
 
         {/* Footer Copyright */}
-        <p className="col-span-2 mt-8 text-center text-muted-foreground/70 animate-slideUp">
-          © Converse 2025. All Rights Reserved
-        </p>
+        <div className="col-span-2 mt-8 text-center text-muted-foreground/70 animate-slideUp">
+          <hr className="mb-4 border-muted-foreground/20" />
+
+          <p>
+            Designed & Developed by{" "}
+            <a
+              href="https://github.com/utsavvachhani"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-primary"
+            >
+              Utsav Vachhani
+            </a>{" "}
+            &{" "}
+            <a
+              href="https://github.com/jayganjawala"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-primary"
+            >
+              Jay Ganjawala
+            </a>
+          </p>
+
+          <p className="mt-2">© Converse 2025. All Rights Reserved</p>
+        </div>
 
         {/* Animated Background (fixed with pointer-events-none) */}
         <div

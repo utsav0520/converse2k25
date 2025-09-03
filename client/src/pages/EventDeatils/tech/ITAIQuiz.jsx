@@ -119,7 +119,7 @@ function ITQuiz() {
               {/* Quiz Syllabus */}
               <section>
                 <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                  Quiz Components
+                  IT & AI quiz topics
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
                   <li>📘 Part A – Basics of Computer & IT</li>

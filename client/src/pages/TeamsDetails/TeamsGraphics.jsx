@@ -1,7 +1,7 @@
 import TeamSection from "../../components/App/TeamSection";
 import krisha from "../../assets/StudentsData/Graphics/GraphicsLead_KrishaKeraliya.png";
 import shiven from "../../assets/StudentsData/Graphics/Graphics_shivenParamar.png";
-import sanchi from "../../assets/StudentsData/Graphics/GraphicsLead_KrishaKeraliya.png";
+import sanchi from "../../assets/StudentsData/Graphics/Graphics_SanchiSavani.png";
 import twisha from "../../assets/StudentsData/Graphics/Graphics_Twisha Savani.png";
 import kavya from "../../assets/StudentsData/Graphics/Graphics_Kavya_Bhalala.png";
 import krushali from "../../assets/StudentsData/Graphics/Graphic_krushali.png";
