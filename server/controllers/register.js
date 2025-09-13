@@ -1,6 +1,10 @@
 import jwt from "jsonwebtoken";
 import Person from "../models/user/person.js";
-import { sendEmailForOneEvent, sendEmailForTeamEvent } from "../utils/sendMessage.js";
+import {
+  sendEmailForOneEvent,
+  sendEmailForTeamEvent,
+} from "../utils/sendMessage.js";
+import { saveParticipantforOneMemeber, saveParticipantforTwoMemeber } from "../firebase.js";
 
 export const addedOneEvent = async (req, res) => {
   try {
@@ -24,6 +28,17 @@ export const addedOneEvent = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
+
+    await saveParticipantforOneMemeber({
+      fullName: user.fullName || "",
+      email: user.email || "",
+      year: user.year || "",
+      mobileNumber: user.mobileNumber || "",
+      enrollment: user.enrollment || "",
+      department: user.department || "",
+      college: user.college || "",
+      eventName: eventName.event || "",
+    });
 
     // Generate new JWT token with updated user
     const jwtToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
@@ -87,6 +102,7 @@ export const addedTeamEvent = async (req, res) => {
     const updateTeamPath = `events.${eventName}Team`;
 
     // For each member: set their flag and team (excluding themselves)
+    // console.log(team);
     for (const person of team) {
       const teamWithoutSelf = team
         .filter((p) => p.email !== person.email)
@@ -100,6 +116,8 @@ export const addedTeamEvent = async (req, res) => {
       person.set(updateTeamPath, teamWithoutSelf);
       await person.save();
     }
+
+    saveParticipantforTwoMemeber(team, eventName);
 
     for (const person of team) {
       sendEmailForTeamEvent(person, eventName, team).catch((err) => {

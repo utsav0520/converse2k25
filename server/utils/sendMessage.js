@@ -90,6 +90,8 @@ Team Converse2k25
 
 export const sendEmailForTeamEvent = async (user, eventName, team = []) => {
   try {
+    console.log("Sending email for team event registration...");
+
     if (!user?.email) throw new Error("User email is required");
 
     const filePath = path.join(__dirname, "templates", "eventTeam.html");
