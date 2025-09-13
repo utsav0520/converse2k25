@@ -1,6 +1,6 @@
 import TeamSection from "../../components/App/TeamSection";
-import ashish from "../../assets/StudentsData/Not/maleNot.png";
-import ankit from "../../assets/StudentsData/Not/maleNot.png";
+import ashish from "../../assets/StudentsData/Faculty/ashishK.png";
+import ankit from "../../assets/StudentsData/Faculty/ark.png";
 import rahul from "../../assets/StudentsData/Cyberspy/Cyberspy_RahulSoni.png";
 import rushel from "../../assets/StudentsData/Cyberspy/cyberspy_rusheeldhandhaly.png";
 import manan from "../../assets/StudentsData/Cyberspy/CYBER-SPY_Manan shah.PNG";

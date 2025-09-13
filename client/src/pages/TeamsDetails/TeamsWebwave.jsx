@@ -1,6 +1,6 @@
 import TeamSection from "../../components/App/TeamSection";
-import vivek from "../../assets/StudentsData/Not/maleNot.png";
-import mitul from "../../assets/StudentsData/Not/maleNot.png";
+import vivek from "../../assets/StudentsData/Faculty/vivek.png";
+import mitul from "../../assets/StudentsData/Faculty/mitul.png";
 import krishna from "../../assets/StudentsData/Webwave/WebWave_Panchal Krishna.png";
 import manan from "../../assets/StudentsData/Webwave/WebWave_Manan_Chovatiya.png";
 import nency from "../../assets/StudentsData/Webwave/Webwave_Nency_khunt.png";

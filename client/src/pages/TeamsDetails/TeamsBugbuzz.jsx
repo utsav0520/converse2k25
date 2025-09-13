@@ -1,6 +1,6 @@
 import TeamSection from "../../components/App/TeamSection";
-import dhyani from "../../assets/StudentsData/Not/girlNot.png";
-import hill from "../../assets/StudentsData/Not/maleNot.png";
+import dhyani from "../../assets/StudentsData/Faculty/dhayani.png";
+import mitual from "../../assets/StudentsData/Faculty/mitul.png";
 import jil from "../../assets/StudentsData/Bugbuzz/BugBuzz_Rupani Jil.png";
 import sujalPandav from "../../assets/StudentsData/Bugbuzz/BugBuzz_SujalPandav.png";
 import renil from "../../assets/StudentsData/Bugbuzz/BugBuzz_Renil_Dholariya.png";
@@ -15,7 +15,7 @@ import BackToTeams from "../../components/App/BackToTeams";
 function TeamsBugbuzz() {
   const facultyCoordinators = [
     { name: "Prof. Dhyani Joshi", image: dhyani },
-    { name: "Prof. Hill Modi", image: hill },
+    { name: "Prof. Hill Modi", image: mitual },
   ];
 
   const eventCoordinators = [

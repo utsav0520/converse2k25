@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
-import Schedule from './Schedule';
-import { LogoConverse } from "../assets/index.js";
+import React, { useState } from "react";
+import Schedule from "./Schedule";
+import {
+  LogoAwesome,
+  LogoBhai,
+  LogoCodewinglend,
+  LogoConverse,
+  LogoEZholiday,
+  LogoSkill,
+} from "../assets/index.js";
 
 function HomePage() {
   const [logoGlow, setLogoGlow] = useState(false);
@@ -18,7 +25,7 @@ function HomePage() {
 
       {/* Main Logo Section with Attractive Click Animation */}
       <div className="relative z-40 w-3/4 sm:w-1/3 md:w-1/4 lg:w-1/3 mt-8">
-        <div className={`relative ${logoGlow ? 'animate-logo-glow' : ''}`}>
+        <div className={`relative ${logoGlow ? "animate-logo-glow" : ""}`}>
           <img
             src="converse2k25Logo.png"
             alt="Converse 2k25 Logo"
@@ -51,94 +58,118 @@ function HomePage() {
 
         {/* Title Sponsors with Card-like Styling */}
         <div className="mt-20 animate-slideUp">
-          <h2 className="font-extrabold tracking-tighter text-4xl sm:text-5xl xl:text-6xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300">Title Sponsors</h2>
+          <h2 className="font-extrabold tracking-tighter text-4xl sm:text-5xl xl:text-6xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300">
+            Title Sponsors
+          </h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 sm:gap-16 m-8 animate-fadeInDelay">
             <a
-              href="https://www.codewinglet.com/"
+              href="https://converse2k25-ez-holidays.vercel.app/"
               target="_blank"
-              title="CodeWinglet"
+              title="EZHoliday"
               className="relative group w-4/5 sm:w-1/3 md:w-1/4 aspect-video rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
             >
               <img
-                src={LogoConverse}
-                alt="CodeWinglet"
-                className="w-full h-full object-contain invert group-hover:scale-110 transition-transform duration-400"
+                src={LogoEZholiday}
+                alt="EZHoliday"
+                className="w-full h-full hover:scale-110 transition-transform duration-400 p-4"
                 loading="lazy"
               />
               <div className="絶対 inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
             </a>
-            <a
-              href="https://www.instagram.com/v.s.overseas/"
-              target="_blank"
-              title="V.S Overseas"
-              className="relative group w-4/5 sm:w-1/3 md:w-1/4 aspect-video rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
-            >
-              <img
-                src={LogoConverse}
-                alt="V.S Overseas"
-                className="w-full h-full object-contain invert group-hover:scale-110 transition-transform duration-400"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-            </a>
           </div>
         </div>
 
-        {/* Tech Partner & Co Sponsor with Fixed and Enhanced Animations */}
+        {/* Food Partner & Media with Fixed and Enhanced Animations */}
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-12 mt-20">
           <div className="animate-slideUp">
-            <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Tech Partner</h3>
+            <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
+              Tech Partner
+            </h3>
             <div className="flex justify-center items-center m-8 animate-slideUp-slow">
-              <img
-                src={LogoConverse}
-                alt="MSI"
-                className="w-4/5 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl hover:shadow-2xl hover:shadow-cyan-500/60 transition-all duration-400 animate-fadeInDelay"
-                loading="lazy"
-              />
+              <a
+                href="https://www.codewinglet.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Visit CodeWinglet Website"
+                className="group flex justify-center items-center relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl hover:shadow-purple-500/60"
+              >
+                <img
+                  src={LogoCodewinglend}
+                  alt="CodeWinglet Logo"
+                  loading="lazy"
+                  className="w-4/5 p-6 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
+                />
+              </a>
             </div>
           </div>
           <div className="animate-slideUp">
-            <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center capitalize animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Co Sponsor</h3>
+            <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
+              Co-Sponser
+            </h3>
             <div className="flex justify-center items-center m-8 animate-slideUp-slow">
-              <img
-                src={LogoConverse}
-                alt="IMS"
-                className="w-4/5 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl hover:shadow-2xl hover:shadow-cyan-500/60 transition-all duration-400 animate-fadeInDelay"
-                loading="lazy"
-              />
+              <a
+                href="https://www.instagram.com/skilledmigrationnz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Visit skill NZ Website"
+                className="group flex justify-center items-center relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl hover:shadow-purple-500/60"
+              >
+                <img
+                  src={LogoSkill}
+                  alt="skill NZ Logo"
+                  loading="lazy"
+                  className="w-4/5 p-6 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-12 mt-20">
+          <div className="animate-slideUp">
+            <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
+              Media Partner
+            </h3>
+            <div className="flex justify-center items-center m-8 animate-slideUp-slow">
+              <a
+                href="https://www.instagram.com/awesome.surat?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Visit Awsome Instagram"
+                className="group flex justify-center items-center relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl hover:shadow-purple-500/60"
+              >
+                <img
+                  src={LogoAwesome}
+                  alt="Awsome Logo"
+                  loading="lazy"
+                  className="w-4/5 p-6 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="animate-slideUp">
+            <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
+              Food Partner
+            </h3>
+            <div className="flex justify-center items-center m-8 animate-slideUp-slow">
+              <a
+                href="https://www.instagram.com/bhai_bhai_dabeliwala_since1991?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Visit Bhai Bhai Dabheli Instagram"
+                className="group flex justify-center items-center relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl hover:shadow-purple-500/60"
+              >
+                <img
+                  src={LogoBhai}
+                  alt="Bhai Bhai Dabheli Logo"
+                  loading="lazy"
+                  className="w-4/5 p-6 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
+                />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Gifting Sponsor with Enhanced Hover Animation */}
-        {/* <div className="mt-20 animate-slideUp">
-          <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center capitalize animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">Gifting Sponsor</h3>
-          <div className="flex justify-center items-center m-8 animate-fadeInDelay">
-            <img
-              src="/sponsers/lamont.png"
-              alt="Lamont"
-              className="w-4/5 sm:w-1/3 md:w-1/4 aspect-video rounded-xl bg-white shadow-xl hover:shadow-2xl hover:shadow-pink-500/60 hover:scale-110 transition-all duration-400"
-              loading="lazy"
-            />
-          </div>
-        </div> */}
-
-        {/* Supportive Sponsors with Grid and Enhanced Hover Effects */}
-        {/* <div className="mt-20 animate-slideUp">
-          <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center capitalize animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">Supportive Sponsors</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 m-8 animate-fadeInDelay">
-            {['solex', 'crony', 'samsung', 'chaipartner'].map((sponsor, index) => (
-              <img
-                key={index}
-                src={`/sponsers/${sponsor}.png`}
-                alt={sponsor.charAt(0).toUpperCase() + sponsor.slice(1)}
-                className="w-full aspect-video rounded-xl bg-white shadow-xl hover:shadow-2xl hover:shadow-purple-500/60 hover:scale-110 transition-all duration-400"
-                loading="lazy"
-              />
-            ))}
-          </div>
-        </div> */}
-        <Schedule/>
+        <Schedule />
       </section>
 
       {/* Enhanced CSS Keyframes for Animations */}
@@ -204,7 +235,9 @@ function HomePage() {
               box-shadow: 0 0 5px 2px currentColor;
             }
             100% {
-              transform: scale(0) translate(${Math.random() * 50 - 25}px, ${Math.random() * 50 - 25}px);
+              transform: scale(0) translate(${Math.random() * 50 - 25}px, ${
+          Math.random() * 50 - 25
+        }px);
               opacity: 0;
               box-shadow: 0 0 10px 5px currentColor;
             }

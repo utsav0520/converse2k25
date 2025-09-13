@@ -1,6 +1,6 @@
 import TeamSection from "../../components/App/TeamSection";
 import nitya from "../../assets/StudentsData/Faculty/nityaC.png";
-import krishna from "../../assets/StudentsData/Faculty/KrishnaD.png";
+import krishna from "../../assets/StudentsData/Faculty/krishna.png";
 import ashish from "../../assets/StudentsData/Faculty/ashishC.png";
 import dhawal from "../../assets/StudentsData/Faculty/DhavalR.png";
 import uv from "../../assets/StudentsData/Head/Head_UtsavVachhani.png";

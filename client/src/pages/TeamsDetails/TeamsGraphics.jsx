@@ -16,8 +16,8 @@ import BackToTeams  from "../../components/App/BackToTeams";
 function TeamsGraphics() {
   const eventCoordinators = [
     { name: "Shiven Parmar", image: shiven },
-    { name: "Krisha Keraliya", image: krisha },
     { name: "Sanchi Savani", image: sanchi },
+    { name: "Krisha Keraliya", image: krisha },
   ];
 
   const eventVoluntree = [

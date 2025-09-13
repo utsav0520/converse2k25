@@ -1,5 +1,11 @@
 import converse2k25 from './converse2k25.png'
 
+import LogoEZholiday from "./sponser/ezholiays.png"
+import LogoAwesome from "./sponser/awsome.png"
+import LogoSkill from "./sponser/skilled.png"
+import LogoCodewinglend from "./sponser/codewinglend.png"
+import LogoBhai from "./sponser/bhaibhaiDabel.png"
+
 import LogoAiMemes from './eventLogo/aimemes.png'
 import LogoITAIQuiz from './eventLogo/itaiquiz.png'
 import LogoBugBuzz from './eventLogo/bugbuzz.png'
@@ -17,27 +23,42 @@ import LogoMarketing from './eventLogo/marketingteam.png'
 import LogoGraphics from './eventLogo/graphicsteam.png'
 import Logofinancial from './eventLogo/finicalHead.png'
 
-import PosterCodathon from './Posters/poster_cyberspy.jpg'
-import PosterPYIT from './Posters/poster_cyberspy.jpg'
-import PosterITAIQuiz from './Posters/poster_cyberspy.jpg'
-import PosterCyberSpy from './Posters/poster_cyberspy.jpg'
-import PosterwebWave from './Posters/poster_cyberspy.jpg'
-import PosteraiMemes from './Posters/poster_cyberspy.jpg'
-import PosterlogoHunt from './Posters/poster_cyberspy.jpg'
-import PosterbugBuzz from './Posters/poster_cyberspy.jpg'
-import PosterpromptHunt from './Posters/poster_cyberspy.jpg'
+import LogoBGMI from './eventLogo/nontech/BGMI.png'
+import LogoEscapeRoom from './eventLogo/nontech/EscapeRoom.png'
+import LogoFFM from './eventLogo/nontech/FreeFire.png'
+import LogoIPLAuction from './eventLogo/nontech/IPL.png'
+import LogoMystic from './eventLogo/nontech/MysticMover.png'
+import LogoReelCraft from './eventLogo/nontech/reelcraft.png'
+import LogoTraitors from './eventLogo/nontech/traitors.png'
 
-import PosterBGMI from './Posters/poster_cyberspy.jpg'
-import PosterEscapeRoom from './Posters/poster_cyberspy.jpg'
-import PosterFFM from './Posters/poster_cyberspy.jpg'
-import PosterIPLAuction from './Posters/poster_cyberspy.jpg'
-import PosterMystic from './Posters/poster_cyberspy.jpg'
-import PosterReelCraft from './Posters/poster_cyberspy.jpg'
-import PosterTraitors from './Posters/poster_cyberspy.jpg'
+import PosterCodathon from './Posters/techPoster/CODATHON.jpg'
+import PosterPYIT from './Posters/techPoster/cyberspy.jpg'
+import PosterITAIQuiz from './Posters/techPoster/it&aiquiz.jpg'
+import PosterCyberSpy from './Posters/techPoster/cyberspy.jpg'
+import PosterwebWave from './Posters/techPoster/webwave.jpg'
+import PosteraiMemes from './Posters/techPoster/AImemes.jpg'
+import PosterlogoHunt from './Posters/techPoster/logohunt.jpg'
+import PosterbugBuzz from './Posters/techPoster/Bugbuzz.jpg'
+import PosterpromptHunt from './Posters/techPoster/prompthunt.jpg'
+
+import PosterBGMI from './Posters/nontechPoster/BGMI.png'
+import PosterEscapeRoom from './Posters/nontechPoster/EscapeRoom.png'
+import PosterFFM from './Posters/nontechPoster/FFM.png'
+import PosterIPLAuction from './Posters/nontechPoster/IPLAUCTION.png'
+import PosterMystic from './Posters/nontechPoster/MysticMover.png'
+import PosterReelCraft from './Posters/nontechPoster/reelcraftfinal.png'
+import PosterTraitors from './Posters/nontechPoster/traitors.png'
 
 export {
     converse2k25,
     LogoConverse,
+
+    LogoEZholiday,
+    LogoSkill,
+    LogoAwesome,
+    LogoBhai,
+    LogoCodewinglend,
+
     LogoWebTeam,
     LogoDecoration,
     LogononTEch,
@@ -53,6 +74,14 @@ export {
     LogoPYIT,
     LogoWebWave,
     LogoPromptHunt,
+
+    LogoBGMI,
+    LogoEscapeRoom,
+    LogoFFM,
+    LogoIPLAuction,
+    LogoMystic,
+    LogoReelCraft,
+    LogoTraitors,
 
     PosterCodathon,
     PosterPYIT,

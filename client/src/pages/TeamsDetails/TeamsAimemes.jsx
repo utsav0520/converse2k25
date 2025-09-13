@@ -1,6 +1,6 @@
 import TeamSection from "../../components/App/TeamSection";
-import dhruti from "../../assets/StudentsData/Not/girlNot.png";
-import snehal from "../../assets/StudentsData/Not/girlNot.png";
+import dhruti from "../../assets/StudentsData/Faculty/dhruti.png";
+import snehal from "../../assets/StudentsData/Faculty/snehal.png";
 import vishwa from "../../assets/StudentsData/AIMemes/AI-MEMES_Vishwa Jariwala.png";
 import jemis from "../../assets/StudentsData/AIMemes/AI- MEMES_JEMIS KEVADIYA.png";
 import soham from "../../assets/StudentsData/AIMemes/AI-MEMES_Soham Patel.PNG";

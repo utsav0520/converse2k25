@@ -35,7 +35,7 @@ function LogoHunt() {
                 </h3>
                 <div className="text-gray-300 space-y-1">
                   <p>
-                    <strong>Event Name:</strong> IT & AI Quiz
+                    <strong>Event Name:</strong> Logo Hunt
                   </p>
                   <p>
                     <strong>Date:</strong> 19th September 2025

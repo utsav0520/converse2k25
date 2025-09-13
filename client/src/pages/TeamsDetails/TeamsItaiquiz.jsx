@@ -1,7 +1,7 @@
 import TeamSection from "../../components/App/TeamSection";
 import facultyMita from "../../assets/StudentsData/Not/girlNot.png";
-import facultyTushar from "../../assets/StudentsData/Not/maleNot.png";
-import facultyApurva from "../../assets/StudentsData/Not/maleNot.png";
+import facultyTushar from "../../assets/StudentsData/Faculty/tushar.png";
+import facultyApurva from "../../assets/StudentsData/Faculty/apurav.png";
 
 import headSahil from "../../assets/StudentsData/IT&AIQuizz/IT&AI_sahil sidhdhapara.png";
 import headVasu from "../../assets/StudentsData/Not/maleNot.png";

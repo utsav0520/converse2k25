@@ -23,6 +23,7 @@ import ITAIQuiz from "./pages/EventDeatils/tech/ITAIQuiz.jsx";
 import PromptHunt from "./pages/EventDeatils/tech/PromptHunt.jsx";
 import AIMemes from "./pages/EventDeatils/tech/AIMemes.jsx";
 import PYIT from "./pages/EventDeatils/tech/PYIT.jsx";
+import Codewinglet from "./pages/EventDeatils/tech/Codewinglet.jsx";
 
 import BGMI from "./pages/EventDeatils/nontech/BGMI.jsx";
 import ReelCraft from "./pages/EventDeatils/nontech/ReelCraft.jsx";
@@ -31,6 +32,7 @@ import EscapeRoom from "./pages/EventDeatils/nontech/EscapeRoom.jsx";
 import Traitors from "./pages/EventDeatils/nontech/Traitors.jsx";
 import MysticMover from "./pages/EventDeatils/nontech/MysticMover.jsx";
 import FFM from "./pages/EventDeatils/nontech/FFM.jsx";
+import Ezholiday from "./pages/EventDeatils/nontech/Ezholiday.jsx";
 
 import TeamsConverse from './pages/TeamsDetails/TeamsConverse.jsx';
 import TeamsFinancial from './pages/TeamsDetails/TeamsFinancial.jsx';
@@ -83,6 +85,7 @@ function App() {
         <Route path="/event/prompthunt" element={<PromptHunt />} />
         <Route path="/event/aimemes" element={<AIMemes />} />
         <Route path="/event/pyit" element={<PYIT />} />
+        <Route path="/event/codewinglet" element={<Codewinglet />} />
 
         {/* Non Tech Event Page */}
         <Route path="/event/bgmi" element={<BGMI />} />
@@ -92,6 +95,7 @@ function App() {
         <Route path="/event/traitors" element={<Traitors />} />
         <Route path="/event/mysticmover" element={<MysticMover />} />
         <Route path="/event/ffm" element={<FFM />} />
+        <Route path="/event/ezholiday" element={<Ezholiday />} />
 
         {/* Teams Section */}
         <Route path="/team/converse" element={<TeamsConverse />} />

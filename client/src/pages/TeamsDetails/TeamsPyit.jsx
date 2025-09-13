@@ -1,7 +1,7 @@
 import BackToTeams from "../../components/App/BackToTeams";
 import TeamSection from "../../components/App/TeamSection";
-import man from "../../assets/StudentsData/Not/maleNot.png";
-import girl from "../../assets/StudentsData/Not/girlNot.png";
+import muko from "../../assets/StudentsData/Faculty/muko.png";
+import vivkasha from "../../assets/StudentsData/Faculty/vivkasha.png";
 import tanisha from "../../assets/StudentsData/PYIT/PYIT_Tanisha_Agarwal.png";
 import het from "../../assets/StudentsData/PYIT/PYIT_het_salamvala.png";
 import krishna from "../../assets/StudentsData/PYIT/PYIT_KrishnaShethna.png";
@@ -14,8 +14,8 @@ import hetvi from "../../assets/StudentsData/Not/girlNot.png";
 
 function TeamsPyit() {
   const facultyCoordinators = [
-    { name: "Dr. Vivaksha Jariwala", image: girl },
-    { name: "Prof. Mukesh Patel", image: man },
+    { name: "Dr. Vivaksha Jariwala", image: vivkasha },
+    { name: "Prof. Mukesh Patel", image: muko },
   ];
 
   const eventCoordinators = [

@@ -21,7 +21,9 @@ import {
   marketing,
   dec,
   nontech,
-  financial
+  financial,
+  codewinglet,
+  ezholiday
 } from "../constants/eventNames";
 
 import {
@@ -41,6 +43,13 @@ import {
   LogoMarketing,
   LogoGraphics,
   Logofinancial,
+  LogoBGMI,
+  LogoEscapeRoom,
+  LogoFFM,
+  LogoIPLAuction,
+  LogoMystic,
+  LogoReelCraft,
+  LogoTraitors,
 } from "../assets";
 
 export const TechEventListing = {
@@ -98,49 +107,61 @@ export const TechEventListing = {
     image: LogoPromptHunt,
     slogan: "Prompt Your Way to Glory!",
   },
+  [codewinglet]: {
+    name: "Codewinglet",
+    slug: codewinglet,
+    image: LogoConverse,
+    slogan: "Prompt Your Way to Glory!",
+  },
 };
 
 export const NonTechEventListing = {
   [bgmi]: {
     name: "BGMI",
     slug: bgmi,
-    image: LogoITAIQuiz,
+    image: LogoBGMI,
     slogan: "Survive. Shoot. Win.",
   },
   [reelCraft]: {
     name: "Reel Craft",
     slug: reelCraft,
-    image: LogoITAIQuiz,
+    image: LogoReelCraft,
     slogan: "Create. Captivate. Repeat.",
   },
   [iplAuction]: {
     name: "IPL Auction",
     slug: iplAuction,
-    image: LogoITAIQuiz,
+    image: LogoIPLAuction,
     slogan: "Bid Big. Win Bigger!",
   },
   [escapeRoom]: {
     name: "Escape Room",
     slug: escapeRoom,
-    image: LogoITAIQuiz,
+    image: LogoEscapeRoom,
     slogan: "Solve. Escape. Survive.",
   },
   [traitors]: {
     name: "TRAITORS",
     slug: traitors,
-    image: LogoITAIQuiz,
+    image: LogoTraitors,
     slogan: "Deceive or Be Deceived!",
   },
   [mysticMover]: {
     name: "Mystic Mover",
     slug: mysticMover,
-    image: LogoITAIQuiz,
+    image: LogoMystic,
     slogan: "Move with Mystery!",
   },
   [ffm]: {
     name: "FFM",
     slug: ffm,
-    image: LogoITAIQuiz,
+    image: LogoFFM,
+    slogan: "Fun-Filled Mayhem!",
+  },
+  [ezholiday]: {
+    name: "ezholiday",
+    slug: ezholiday,
+    image: LogoConverse,
     slogan: "Fun-Filled Mayhem!",
   },
 };

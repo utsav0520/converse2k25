@@ -1,6 +1,6 @@
 import TeamSection from "../../components/App/TeamSection";
-import bhumika from "../../assets/StudentsData/Not/girlNot.png";
-import palak from "../../assets/StudentsData/Not/girlNot.png";
+import bhumika from "../../assets/StudentsData/Faculty/bhumika.png";
+import palak from "../../assets/StudentsData/Faculty/plack.png";
 import sujal from "../../assets/StudentsData/Logohunt/Logohunt_Sujal Thakkar.png";
 import daksh from "../../assets/StudentsData/Logohunt/LogoHunt_Daksh_Aghera.png";
 import shrey from "../../assets/StudentsData/Logohunt/Logohunt_shrey_dhola.png";
