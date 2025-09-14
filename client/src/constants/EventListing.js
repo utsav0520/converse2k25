@@ -26,7 +26,7 @@ import {
   ezholiday
 } from "../constants/eventNames";
 
-import LogoEscapeRoom from "../assets/Posters/nontechPoster/EscapeRoom.png"
+import LogoEscapeRoom from "../assets/eventLogo/nontech/escaperoom.png"
 
 import {
   LogoAiMemes,
