@@ -7,15 +7,14 @@ function Codewinglet() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0 w-full h-full animate-twinkling-stars bg-[url('/textures/starry-bg.png')] bg-cover opacity-50" />
       <div className="absolute inset-0 z-10 w-full h-full animate-neon-glow before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-900/30 before:via-blue-900/30 before:to-purple-900/30 before:rounded-full before:blur-3xl" />
-
+      <div className="mt-5 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300">
+        Code Winglet
+      </div>
       <div className="relative z-40 w-full px-6 py-4">
         {" "}
         {/* Reduced py-8 to py-4 */}
         {/* <RegisterButton event={pyIt} /> */}
-
-        <a href="">
-            register here
-        </a>
+        <a href="">register here</a>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mt-4 px-4 md:px-8">
           {/* Poster */}
           <div className="flex justify-center items-start">

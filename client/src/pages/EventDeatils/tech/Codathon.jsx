@@ -10,7 +10,9 @@ function Codathon() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0 w-full h-full animate-twinkling-stars bg-[url('/textures/starry-bg.png')] bg-cover opacity-50" />
       <div className="absolute inset-0 z-10 w-full h-full animate-neon-glow before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-900/30 before:via-blue-900/30 before:to-purple-900/30 before:rounded-full before:blur-3xl" />
-
+      <div className="mt-5 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300">
+        Codathon
+      </div>
       <div className="relative z-40 w-full px-6 py-4">
         {" "}
         {/* Reduced py-8 to py-4 */}
@@ -41,13 +43,13 @@ function Codathon() {
                     <strong>Date:</strong> 19th September 2024
                   </li>
                   <li>
-                    <strong>Event Duration:</strong> 90 minutes
+                    <strong>Event Duration:</strong> 60 minutes
                   </li>
                   <li>
                     <strong>Number of Rounds:</strong> 1
                   </li>
                   <li>
-                    <strong>Location:</strong> IT Lab - 1, 2, 4, 5
+                    <strong>Location:</strong> IT Lab - 1, 2, 3
                   </li>
                 </ul>
               </section>

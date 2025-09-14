@@ -1,4 +1,3 @@
-import LogoEscape from "../assets/eventLogo/nontech/escaperoom.png"
 import {
   logoHunt,
   bugBuzz,
@@ -27,6 +26,8 @@ import {
   ezholiday
 } from "../constants/eventNames";
 
+import LogoEscapeRoom from "../assets/Posters/nontechPoster/EscapeRoom.png"
+
 import {
   LogoAiMemes,
   LogoBugBuzz,
@@ -45,7 +46,6 @@ import {
   LogoGraphics,
   Logofinancial,
   LogoBGMI,
-  LogoEscapeRoom,
   LogoFFM,
   LogoIPLAuction,
   LogoMystic,
@@ -138,7 +138,7 @@ export const NonTechEventListing = {
   [escapeRoom]: {
     name: "Escape Room",
     slug: escapeRoom,
-    image: LogoEscape,
+    image: LogoEscapeRoom,
     slogan: "Solve. Escape. Survive.",
   },
   [traitors]: {
