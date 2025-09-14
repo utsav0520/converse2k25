@@ -24,7 +24,7 @@ import LogoGraphics from './eventLogo/graphicsteam.png'
 import Logofinancial from './eventLogo/finicalHead.png'
 
 import LogoBGMI from './eventLogo/nontech/BGMI.png'
-import LogoEscapeRoom from './eventLogo/nontech/EscapeRoom.png'
+// import LogoEscapeRoom from './eventLogo/nontech/EscapeRoom.png'
 import LogoFFM from './eventLogo/nontech/FreeFire.png'
 import LogoIPLAuction from './eventLogo/nontech/IPL.png'
 import LogoMystic from './eventLogo/nontech/MysticMover.png'
@@ -76,7 +76,7 @@ export {
     LogoPromptHunt,
 
     LogoBGMI,
-    LogoEscapeRoom,
+    // LogoEscapeRoom,
     LogoFFM,
     LogoIPLAuction,
     LogoMystic,
