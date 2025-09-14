@@ -59,7 +59,7 @@ function HomePage() {
         {/* Title Sponsors with Card-like Styling */}
         <div className="md:mt-20 mt-10 animate-slideUp">
           <h2 className="font-extrabold tracking-tighter text-4xl sm:text-5xl xl:text-6xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300">
-            Title Sponsors
+            Title Sponsor
           </h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 sm:gap-16 m-8 animate-fadeInDelay">
             <a
@@ -287,3 +287,4 @@ function HomePage() {
 }
 
 export default HomePage;
+
