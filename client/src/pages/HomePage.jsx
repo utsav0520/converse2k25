@@ -57,7 +57,7 @@ function HomePage() {
         <div className="w-[500px] sm:w-[800px] h-[800px] absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 rounded-full blur-3xl bg-gradient-to-br from-purple-900/60 via-blue-900/60 to-violet-900/60 opacity-40 animate-pulse-slow" />
 
         {/* Title Sponsors with Card-like Styling */}
-        <div className="mt-20 animate-slideUp">
+        <div className="md:mt-20 mt-10 animate-slideUp">
           <h2 className="font-extrabold tracking-tighter text-4xl sm:text-5xl xl:text-6xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300">
             Title Sponsors
           </h2>
@@ -71,7 +71,7 @@ function HomePage() {
               <img
                 src={LogoEZholiday}
                 alt="EZHoliday"
-                className="w-full h-full hover:scale-110 transition-transform duration-400 p-4"
+                className="w-full h-full hover:scale-110 transition-transform duration-400"
                 loading="lazy"
               />
               <div className="絶対 inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -97,7 +97,7 @@ function HomePage() {
                   src={LogoCodewinglend}
                   alt="CodeWinglet Logo"
                   loading="lazy"
-                  className="w-4/5 p-6 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
+                  className="w-4/5 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
                 />
               </a>
             </div>
@@ -118,7 +118,7 @@ function HomePage() {
                   src={LogoSkill}
                   alt="skill NZ Logo"
                   loading="lazy"
-                  className="w-4/5 p-6 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
+                  className="w-5/5 sm:w-2/2 md:w-4/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
                 />
               </a>
             </div>
@@ -141,7 +141,7 @@ function HomePage() {
                   src={LogoAwesome}
                   alt="Awsome Logo"
                   loading="lazy"
-                  className="w-4/5 p-6 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
+                  className="w-5/5 sm:w-2/2 md:w-4/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
                 />
               </a>
             </div>
@@ -162,7 +162,7 @@ function HomePage() {
                   src={LogoBhai}
                   alt="Bhai Bhai Dabheli Logo"
                   loading="lazy"
-                  className="w-4/5 p-6 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
+                  className="w-5/5 sm:w-2/2 md:w-4/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
                 />
               </a>
             </div>
