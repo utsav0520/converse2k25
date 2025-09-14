@@ -15,7 +15,7 @@ import BackToTeams from "../../components/App/BackToTeams";
 function TeamsBugbuzz() {
   const facultyCoordinators = [
     { name: "Prof. Dhyani Joshi", image: dhyani },
-    { name: "Prof. Hill Modi", image: mitual },
+    { name: "Prof. Mitul Patel", image: mitual },
   ];
 
   const eventCoordinators = [
