@@ -193,8 +193,8 @@ function Codewinglet() {
                   Event Heads
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Shiven Parmar - 93139 48911</li>
                   <li>Jay Ganjawala - 90164 19325</li>
+                  <li>Shiven Parmar - 93139 48911</li>
                   <li>Tisha Sutariya - 95106 55206</li>
                 </ul>
               </section>
