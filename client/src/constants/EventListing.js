@@ -41,7 +41,6 @@ import {
   LogoConverse,
   LogoWebTeam,
   LogoDecoration,
-  LogoCodewinglendEvent,
   LogononTEch,
   LogoMarketing,
   LogoGraphics,
@@ -112,7 +111,7 @@ export const TechEventListing = {
   [codewinglet]: {
     name: "Codewinglet",
     slug: codewinglet,
-    image: LogoCodewinglendEvent,
+    image: LogoConverse,
     slogan: "Prompt Your Way to Glory!",
   },
 };

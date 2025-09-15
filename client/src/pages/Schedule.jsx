@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Schedule = () => {
-  // Schedule data
+  // Adjusted schedule data
   const schedule = [
     {
       day: 'Friday, 19th September, 2025',
@@ -63,25 +63,7 @@ const Schedule = () => {
           <h2 className="animate-glitchFlicker text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300">
             {day.day}
           </h2>
-          <table className="schedule-table">
-            <thead>
-              <tr>
-                <th>Time</th>
-                <th>Event</th>
-                <th>Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              {day.events.map((event, idx) => (
-                <tr key={idx} className="animate-fadeIn">
-                  <td>{event.time}</td>
-                  <td>{event.event}</td>
-                  <td>{event.location}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="navigation-buttons flex justify-between mt-6">
+          <div className="navigation-buttons flex justify-between mb-6">
             <button
               onClick={handlePrevious}
               disabled={currentDay === 0}
@@ -97,6 +79,24 @@ const Schedule = () => {
               Next Day
             </button>
           </div>
+          <table className="schedule-table">
+            <thead>
+              <tr>
+                <th style={{ width: '30%' }}>Time</th>
+                <th style={{ width: '40%' }}>Event</th>
+                <th style={{ width: '30%' }}>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              {day.events.map((event, idx) => (
+                <tr key={idx} className="animate-fadeIn">
+                  <td>{event.time}</td>
+                  <td>{event.event}</td>
+                  <td>{event.location}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
       <style>
@@ -159,12 +159,16 @@ const Schedule = () => {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             overflow: hidden;
+            table-layout: fixed; /* Ensures columns maintain fixed widths */
           }
           .schedule-table th,
           .schedule-table td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            word-wrap: break-word; /* Prevents text overflow */
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .schedule-table th {
             background: linear-gradient(to right, #4a148c, #1a0033);

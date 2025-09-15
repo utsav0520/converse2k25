@@ -15,7 +15,6 @@ import LogoLogoHunt from './eventLogo/logohunt.png'
 import LogoPYIT from './eventLogo/PY-IT.png'
 import LogoWebWave from './eventLogo/webwave.png'
 import LogoPromptHunt from './eventLogo/prompthunt.png'
-import LogoCodewinglendEvent from "./eventLogo/codewinglent.png"
 import LogoConverse from './eventLogo/converseteam.png'
 import LogoWebTeam from './eventLogo/webteam.png'
 import LogoDecoration from './eventLogo/decorationteam.png'
@@ -69,7 +68,6 @@ export {
     LogoAiMemes,
     LogoITAIQuiz,
     LogoBugBuzz,
-    LogoCodewinglendEvent,
     LogoCodathon,
     LogoCyber,
     LogoLogoHunt,

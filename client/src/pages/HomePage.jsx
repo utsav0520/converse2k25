@@ -14,7 +14,7 @@ function HomePage() {
 
   const triggerLogoAnimation = () => {
     setLogoGlow(true);
-    setTimeout(() => setLogoGlow(false), 1000); // Reset after animation
+    setTimeout(() => setLogoGlow(false), 1000);
   };
 
   return (
@@ -32,7 +32,6 @@ function HomePage() {
             className="relative w-full animate-slideUp hover:scale-105 transition-transform duration-300 cursor-pointer"
             onClick={triggerLogoAnimation}
           />
-          {/* Subtle Sparkle Particles on Click */}
           {logoGlow && (
             <div className="absolute inset-0 z-50 pointer-events-none overflow-hidden">
               {[...Array(10)].map((_, i) => (
@@ -56,22 +55,23 @@ function HomePage() {
         {/* Enhanced Decorative Gradient Effect */}
         <div className="w-[500px] sm:w-[800px] h-[800px] absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 rounded-full blur-3xl bg-gradient-to-br from-purple-900/60 via-blue-900/60 to-violet-900/60 opacity-40 animate-pulse-slow" />
 
-        {/* Title Sponsors with Card-like Styling */}
-        <div className="md:mt-20 mt-10 animate-slideUp">
+        {/* Title Sponsor */}
+        <div className="mt-10 animate-slideUp">
           <h2 className="font-extrabold tracking-tighter text-4xl sm:text-5xl xl:text-6xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300">
             Title Sponsor
           </h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8 sm:gap-16 m-8 animate-fadeInDelay">
+          <div className="flex justify-center items-center gap-12 m-8 animate-fadeInDelay">
             <a
               href="https://converse2k25-ez-holidays.vercel.app/"
               target="_blank"
+              rel="noopener noreferrer"
               title="EZHoliday"
-              className="relative group w-4/5 sm:w-1/3 md:w-1/4 aspect-video rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
+              className="relative group w-full max-w-[400px] sm:max-w-[350px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
             >
               <img
                 src={LogoEZholiday}
                 alt="EZHoliday"
-                className="w-full h-full hover:scale-110 transition-transform duration-400"
+                className="w-full h-full object-contain hover:scale-105 transition-transform duration-400 bg-white/10 p-4"
                 loading="lazy"
               />
               <div className="絶対 inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -79,8 +79,8 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Food Partner & Media with Fixed and Enhanced Animations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-12 mt-20">
+        {/* Tech Partner & Co-Sponsor */}
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-12 mt-16">
           <div className="animate-slideUp">
             <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
               Tech Partner
@@ -91,58 +91,63 @@ function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Visit CodeWinglet Website"
-                className="group flex justify-center items-center relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl hover:shadow-purple-500/60"
+                className="relative group w-full max-w-[350px] sm:max-w-[300px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
               >
                 <img
                   src={LogoCodewinglend}
                   alt="CodeWinglet Logo"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-400 bg-white/10 p-4"
                   loading="lazy"
-                  className="w-4/5 sm:w-1/2 md:w-3/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
                 />
+                <div className="絶対 inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
               </a>
             </div>
           </div>
           <div className="animate-slideUp">
             <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
-              Co-Sponser
+              Co-Sponsor
             </h3>
             <div className="flex justify-center items-center m-8 animate-slideUp-slow">
               <a
-                href="https://www.instagram.com/skilledmigrationnz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                href="https://www.instagram.com/skilledmigrationnz"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Visit skill NZ Website"
-                className="group flex justify-center items-center relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl hover:shadow-purple-500/60"
+                title="Visit Skill NZ Website"
+                className="relative group w-full max-w-[350px] sm:max-w-[300px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
               >
                 <img
                   src={LogoSkill}
-                  alt="skill NZ Logo"
+                  alt="Skill NZ Logo"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-400 bg-white/10 p-4"
                   loading="lazy"
-                  className="w-5/5 sm:w-2/2 md:w-4/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
                 />
+                <div className="絶対 inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
               </a>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-12 mt-20">
+
+        {/* Media Partner & Food Partner */}
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-12 mt-16">
           <div className="animate-slideUp">
             <h3 className="font-extrabold tracking-tighter text-3xl sm:text-4xl xl:text-5xl text-center animate-glitch-flicker text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
               Media Partner
             </h3>
             <div className="flex justify-center items-center m-8 animate-slideUp-slow">
               <a
-                href="https://www.instagram.com/awesome.surat?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                href="https://www.instagram.com/awesome.surat"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Visit Awsome Instagram"
-                className="group flex justify-center items-center relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl hover:shadow-purple-500/60"
+                title="Visit Awesome Instagram"
+                className="relative group w-full max-w-[350px] sm:max-w-[300px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
               >
                 <img
                   src={LogoAwesome}
-                  alt="Awsome Logo"
+                  alt="Awesome Logo"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-400 bg-white/10 p-4"
                   loading="lazy"
-                  className="w-5/5 sm:w-2/2 md:w-4/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
                 />
+                <div className="絶対 inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
               </a>
             </div>
           </div>
@@ -152,18 +157,19 @@ function HomePage() {
             </h3>
             <div className="flex justify-center items-center m-8 animate-slideUp-slow">
               <a
-                href="https://www.instagram.com/bhai_bhai_dabeliwala_since1991?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                href="https://www.instagram.com/bhai_bhai_dabeliwala_since1991"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Visit Bhai Bhai Dabheli Instagram"
-                className="group flex justify-center items-center relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl hover:shadow-purple-500/60"
+                className="relative group w-full max-w-[350px] sm:max-w-[300px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transition-all duration-500"
               >
                 <img
                   src={LogoBhai}
                   alt="Bhai Bhai Dabheli Logo"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-400 bg-white/10 p-4"
                   loading="lazy"
-                  className="w-5/5 sm:w-2/2 md:w-4/4 aspect-video rounded-xl shadow-xl transition-all duration-400 animate-fadeInDelay"
                 />
+                <div className="絶対 inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
               </a>
             </div>
           </div>
@@ -235,9 +241,8 @@ function HomePage() {
               box-shadow: 0 0 5px 2px currentColor;
             }
             100% {
-              transform: scale(0) translate(${Math.random() * 50 - 25}px, ${
-          Math.random() * 50 - 25
-        }px);
+              transform: scale(0) translate(${Math.random() * 50 - 25}px, ${Math.random() * 50 - 25
+          }px);
               opacity: 0;
               box-shadow: 0 0 10px 5px currentColor;
             }
