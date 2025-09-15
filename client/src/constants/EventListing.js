@@ -56,6 +56,12 @@ import {
 } from "../assets";
 
 export const TechEventListing = {
+  [CodeBridge]: {
+    name: "CodeBridge",
+    slug: CodeBridge,
+    image: LogoEventCode,
+    slogan: "Test to Placement ",
+  },
   [pyIt]: {
     name: "PY IT",
     slug: pyIt,
@@ -109,12 +115,6 @@ export const TechEventListing = {
     slug: promptHunt,
     image: LogoPromptHunt,
     slogan: "",
-  },
-  [CodeBridge]: {
-    name: "CodeBridge",
-    slug: CodeBridge,
-    image: LogoEventCode,
-    slogan: "Test to Placement ",
   },
 };
 
@@ -264,3 +264,4 @@ export const TeamListing = {
     image: LogoPromptHunt,
   },
 };
+
