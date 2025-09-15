@@ -117,7 +117,7 @@ function CyberSpy() {
                       <li>Tools Awareness</li>
                     </ul>
                     <li>⏱ Time Limit: 20 minutes</li>
-                    <li>🌐 Internet Allowed</li>
+                    <li>🌐 Internet not Allowed</li>
                     <li>✅ Top scorers will qualify for Round 2</li>
                   </ul>
                 </div>
@@ -237,3 +237,4 @@ function CyberSpy() {
 }
 
 export default CyberSpy;
+
