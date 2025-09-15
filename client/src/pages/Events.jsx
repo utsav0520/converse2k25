@@ -148,7 +148,7 @@ function Events() {
                     {event.name}
                   </h2>
                   <p className="text-sm text-gray-300 italic mt-2 group-hover:text-gray-100 group-hover:tracking-wide transition-all duration-300">
-                    {/* {event.slogan} */}
+                    {event.slogan}
                   </p>
                 </div>
               </div>

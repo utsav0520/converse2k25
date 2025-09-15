@@ -85,7 +85,7 @@ function App() {
         <Route path="/event/prompthunt" element={<PromptHunt />} />
         <Route path="/event/aimemes" element={<AIMemes />} />
         <Route path="/event/pyit" element={<PYIT />} />
-        <Route path="/event/codewinglet" element={<Codewinglet />} />
+        <Route path="/event/codebridge" element={<Codewinglet />} />
 
         {/* Non Tech Event Page */}
         <Route path="/event/bgmi" element={<BGMI />} />

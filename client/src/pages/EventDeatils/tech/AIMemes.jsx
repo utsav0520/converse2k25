@@ -105,7 +105,7 @@ function AIMemes() {
                 {/* Round 2: The Meme Evolution */}
                 <div>
                   <h4 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 mb-2">
-                    🔹 Round 2: The Meme Evolution (45 minutes)
+                    🔹 Round 2: The Meme in Motion (45 minutes)
                   </h4>
                   <ul className="text-gray-300 list-disc pl-5 space-y-1">
                     <li>📌 Refine and upgrade the memes created in Round 1.</li>

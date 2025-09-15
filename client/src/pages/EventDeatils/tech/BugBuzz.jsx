@@ -149,8 +149,8 @@ function BugBuzz() {
                   Faculty Coordinators
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
+                  <li>Prof. Mitual Patel</li>
                   <li>Prof. Dhyani Joshi</li>
-                  <li>Prof. Hill Modi</li>
                 </ul>
               </section>
               {/* Event Heads */}

@@ -22,7 +22,7 @@ import {
   dec,
   nontech,
   financial,
-  codewinglet,
+  CodeBridge,
   ezholiday
 } from "../constants/eventNames";
 
@@ -51,6 +51,7 @@ import {
   LogoMystic,
   LogoReelCraft,
   LogoTraitors,
+  LogoEventCode,
 } from "../assets";
 
 export const TechEventListing = {
@@ -58,61 +59,61 @@ export const TechEventListing = {
     name: "PY IT",
     slug: pyIt,
     image: LogoPYIT,
-    slogan: "Unleash Python Power!",
+    slogan: "",
   },
   [itaiQuiz]: {
     name: "IT & AI Quiz",
     slug: itaiQuiz,
     image: LogoITAIQuiz,
-    slogan: "Think. Quiz. Win.",
+    slogan: "",
   },
   [codathon]: {
     name: "Codathon",
     slug: codathon,
     image: LogoCodathon,
-    slogan: "Code Till You Drop!",
+    slogan: "",
   },
   [cyberSpy]: {
     name: "Cyber Spy",
     slug: cyberSpy,
     image: LogoCyber,
-    slogan: "Clash of Coders!",
+    slogan: "",
   },
   [webWave]: {
     name: "Web Wave",
     slug: webWave,
     image: LogoWebWave,
-    slogan: "Surf the Code!",
+    slogan: "",
   },
   [aiMemes]: {
     name: "AI Memes",
     slug: aiMemes,
     image: LogoAiMemes,
-    slogan: "Laugh with Logic!",
+    slogan: "",
   },
   [logoHunt]: {
     name: "Logo Hunt",
     slug: logoHunt,
     image: LogoLogoHunt,
-    slogan: "Spot the Brand!",
+    slogan: "",
   },
   [bugBuzz]: {
     name: "Bug Buzz",
     slug: bugBuzz,
     image: LogoBugBuzz,
-    slogan: "Catch the Bugs!",
+    slogan: "",
   },
   [promptHunt]: {
     name: "Prompt Hunt",
     slug: promptHunt,
     image: LogoPromptHunt,
-    slogan: "Prompt Your Way to Glory!",
+    slogan: "",
   },
-  [codewinglet]: {
-    name: "Codewinglet",
-    slug: codewinglet,
-    image: LogoConverse,
-    slogan: "Prompt Your Way to Glory!",
+  [CodeBridge]: {
+    name: "CodeBridge",
+    slug: CodeBridge,
+    image: LogoEventCode,
+    slogan: "Test to Placement ",
   },
 };
 
@@ -163,7 +164,7 @@ export const NonTechEventListing = {
     name: "ezholiday",
     slug: ezholiday,
     image: LogoConverse,
-    slogan: "Fun-Filled Mayhem!",
+    slogan: " Answer Right, Travel Bright!",
   },
 };
 

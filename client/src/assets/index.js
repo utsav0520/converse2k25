@@ -14,6 +14,7 @@ import LogoCyber from './eventLogo/cyberspy.png'
 import LogoLogoHunt from './eventLogo/logohunt.png'
 import LogoPYIT from './eventLogo/PY-IT.png'
 import LogoWebWave from './eventLogo/webwave.png'
+import LogoEventCode from "./eventLogo/codewinglentEvent.png"
 import LogoPromptHunt from './eventLogo/prompthunt.png'
 import LogoConverse from './eventLogo/converseteam.png'
 import LogoWebTeam from './eventLogo/webteam.png'
@@ -40,6 +41,7 @@ import PosteraiMemes from './Posters/techPoster/aimemes.jpg'
 import PosterlogoHunt from './Posters/techPoster/logohunt.jpg'
 import PosterbugBuzz from './Posters/techPoster/Bugbuzz.jpg'
 import PosterpromptHunt from './Posters/techPoster/prompthunt.jpg'
+import PosterCodwinglent from "./Posters/techPoster/codebridge.jpg"
 
 import PosterBGMI from './Posters/nontechPoster/BGMI.png'
 import PosterEscapeRoom from './Posters/nontechPoster/EscapeRoom.png'
@@ -48,6 +50,7 @@ import PosterIPLAuction from './Posters/nontechPoster/IPLAUCTION.png'
 import PosterMystic from './Posters/nontechPoster/MysticMover.png'
 import PosterReelCraft from './Posters/nontechPoster/reelcraftfinal.png'
 import PosterTraitors from './Posters/nontechPoster/traitors.png'
+import PosterEZholidays from "./Posters/nontechPoster/EZHOlidays.png"
 
 export {
     converse2k25,
@@ -74,6 +77,7 @@ export {
     LogoPYIT,
     LogoWebWave,
     LogoPromptHunt,
+    LogoEventCode,
 
     LogoBGMI,
     // LogoEscapeRoom,
@@ -92,6 +96,7 @@ export {
     PosterlogoHunt,
     PosterbugBuzz,
     PosterpromptHunt,
+    PosterCodwinglent,
     
     PosterBGMI,
     PosterEscapeRoom,
@@ -99,5 +104,6 @@ export {
     PosterIPLAuction,
     PosterMystic,
     PosterReelCraft,
-    PosterTraitors
+    PosterTraitors,
+    PosterEZholidays
 }
