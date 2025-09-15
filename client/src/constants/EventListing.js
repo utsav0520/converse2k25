@@ -52,6 +52,7 @@ import {
   LogoReelCraft,
   LogoTraitors,
   LogoEventCode,
+  LogoEZholidayNONTECH,
 } from "../assets";
 
 export const TechEventListing = {
@@ -118,6 +119,12 @@ export const TechEventListing = {
 };
 
 export const NonTechEventListing = {
+  [ezholiday]: {
+    name: "ezholiday",
+    slug: ezholiday,
+    image: LogoEZholidayNONTECH,
+    slogan: " Answer Right, Travel Bright!",
+  },
   [bgmi]: {
     name: "BGMI",
     slug: bgmi,
@@ -160,12 +167,7 @@ export const NonTechEventListing = {
     image: LogoFFM,
     slogan: "Fun-Filled Mayhem!",
   },
-  [ezholiday]: {
-    name: "ezholiday",
-    slug: ezholiday,
-    image: LogoConverse,
-    slogan: " Answer Right, Travel Bright!",
-  },
+  
 };
 
 export const eventWhatsappLinks = {

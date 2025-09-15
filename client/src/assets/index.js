@@ -31,6 +31,7 @@ import LogoIPLAuction from './eventLogo/nontech/IPL.png'
 import LogoMystic from './eventLogo/nontech/MysticMover.png'
 import LogoReelCraft from './eventLogo/nontech/reelcraft.png'
 import LogoTraitors from './eventLogo/nontech/traitors.png'
+import LogoEZholidayNONTECH from "./eventLogo/nontech/ezholidayNo.png"
 
 import PosterCodathon from './Posters/techPoster/CODATHON.jpg'
 import PosterPYIT from './Posters/techPoster/pyit.jpg'
@@ -86,6 +87,7 @@ export {
     LogoMystic,
     LogoReelCraft,
     LogoTraitors,
+    LogoEZholidayNONTECH,
 
     PosterCodathon,
     PosterPYIT,
