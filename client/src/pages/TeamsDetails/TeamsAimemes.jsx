@@ -4,7 +4,6 @@ import snehal from "../../assets/StudentsData/Faculty/snehal.png";
 import vishwa from "../../assets/StudentsData/AIMemes/AI-MEMES_Vishwa Jariwala.png";
 import jemis from "../../assets/StudentsData/AIMemes/AI- MEMES_JEMIS KEVADIYA.png";
 import soham from "../../assets/StudentsData/AIMemes/AI-MEMES_Soham Patel.PNG";
-import harsh from "../../assets/StudentsData/Not/maleNot.png";
 import dhruvil from "../../assets/StudentsData/AIMemes/AIMEMES_Dhruvil Sorathiya.png";
 import tirth from "../../assets/StudentsData/Not/maleNot.png";
 import muskaan from "../../assets/StudentsData/AIMemes/AI-memes_Muskaan Patel.png";
@@ -25,7 +24,6 @@ function TeamsAimemes() {
   ];
 
   const eventVoluntree = [
-    { name: "Harsh Ramani", image: harsh },
     { name: "Dhruvil Sorathiya", image: dhruvil },
     { name: "Tirth Hirpara", image: tirth },
     { name: "Muskaan Patel", image: muskaan },

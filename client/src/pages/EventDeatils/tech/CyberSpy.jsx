@@ -130,6 +130,12 @@ function CyberSpy() {
                   <ul className="text-gray-300 list-disc pl-5 space-y-1">
                     <li>📌 Format: Scenario-based investigation</li>
                     <li>
+                      For Quires Checkout Video :  
+                      <a href="https://drive.google.com/drive/folders/1gSbqHbFTd_BeOOyWSJDs0rTY8jy8aNDz"
+                      className="font-bold"
+                      >  Click Here </a>
+                    </li>
+                    <li>
                       🔍 Participants will use OSINT tools to uncover real-world
                       digital clues and solve a mystery.
                     </li>
@@ -237,4 +243,3 @@ function CyberSpy() {
 }
 
 export default CyberSpy;
-

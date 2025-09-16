@@ -177,7 +177,7 @@ function PromptHunt() {
                   Event Heads
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Vyoma Kapadiya – 7041885904</li>
+                  <li>Vyoma Kapadiya – 7041885304</li>
                   <li>Twisha Savani - 9723596171</li>
                   <li>Kevadiya Dhruvit - 7863060529</li>
                 </ul>

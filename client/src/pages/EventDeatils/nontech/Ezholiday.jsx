@@ -11,7 +11,7 @@ function Ezholiday() {
       <RegisterButtonforNonTech
         event={{
           name: "EZHOLIDAYS",
-          link: "",
+          link: "https://forms.gle/jGWWnN9hmFFosk886",
         }}
       />
       <div className="relative z-40 w-full px-6 py-4">

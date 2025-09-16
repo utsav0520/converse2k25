@@ -8,7 +8,7 @@ import vishva from "../../assets/StudentsData/Webwave/Wabwave_Vishva_Bharodia.pn
 import krish from "../../assets/StudentsData/Webwave/WebWave_Krish_kakadiya.png";
 import utsav from "../../assets/StudentsData/Webwave/Webwave_utsav_davariya.png";
 import sakshi from "../../assets/StudentsData/Webwave/Webwave_Sakshi_Jain.png";
-import fenil from "../../assets/StudentsData/Webwave/Webwave_Fenil_Patel.png";
+import fenil from "../../assets/StudentsData/Webwave/Webwave_dhriti_jhaveri.png";
 import BackToTeams from "../../components/App/BackToTeams";
 
 function TeamsWebwave() {
@@ -28,7 +28,7 @@ function TeamsWebwave() {
     { name: "Krish Kakadiya", image: krish },
     { name: "Utsav Davaria", image: utsav },
     { name: "Sakshi Jain", image: sakshi },
-    { name: "Fenil Patel", image: fenil },
+    { name: "Dhriti Mehul Jhaveri", image: fenil },
   ];
 
   return (

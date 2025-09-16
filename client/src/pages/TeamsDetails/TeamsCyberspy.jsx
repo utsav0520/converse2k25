@@ -8,7 +8,6 @@ import diya from "../../assets/StudentsData/Cyberspy/Cyberspy_DiyaPatel.png";
 import dharmi from "../../assets/StudentsData/Cyberspy/Cyberspy_DharmiSonani.png";
 import vanshika from "../../assets/StudentsData/Cyberspy/CyberSpy_VanshikaKoshiya-removebg-preview.png";
 import yashvi from "../../assets/StudentsData/Cyberspy/CyberSpy_YashviBhatt-removebg-preview.png";
-import aryan from "../../assets/StudentsData/Not/maleNot.png";
 import BackToTeams from "../../components/App/BackToTeams";
 
 function TeamsCyberspy() {
@@ -28,7 +27,6 @@ function TeamsCyberspy() {
     { name: "Dharmi Sonani", image: dharmi },
     { name: "Vanshika Koshiya", image: vanshika },
     { name: "Yashvi Bhatt", image: yashvi },
-    { name: "Aryan Tarsariya", image: aryan },
   ];
 
   return (
