@@ -23,10 +23,10 @@ import {
   nontech,
   financial,
   CodeBridge,
-  ezholiday
+  ezholiday,
 } from "../constants/eventNames";
 
-import LogoEscapeRoom from "../assets/eventLogo/nontech/escaperoom.png"
+import LogoEscapeRoom from "../assets/eventLogo/nontech/escaperoom.png";
 
 import {
   LogoAiMemes,
@@ -52,6 +52,7 @@ import {
   LogoReelCraft,
   LogoTraitors,
   LogoEventCode,
+  LogoAnchor,
   LogoEZholidayNONTECH,
 } from "../assets";
 
@@ -167,7 +168,6 @@ export const NonTechEventListing = {
     image: LogoFFM,
     slogan: "Fun-Filled Mayhem!",
   },
-  
 };
 
 export const eventWhatsappLinks = {
@@ -263,5 +263,9 @@ export const TeamListing = {
     slug: promptHunt,
     image: LogoPromptHunt,
   },
+  [LogoAnchor]: {
+    name: "Anchor Team",
+    slug: "anchore",
+    image: LogoAnchor,
+  },
 };
-

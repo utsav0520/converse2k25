@@ -50,6 +50,7 @@ import TeamsItaiquiz from "./pages/TeamsDetails/TeamsItaiquiz.jsx";
 import TeamsPrompthunt from "./pages/TeamsDetails/TeamsPrompthunt.jsx";
 import TeamsAimemes from "./pages/TeamsDetails/TeamsAimemes.jsx";
 import TeamsPyit from "./pages/TeamsDetails/TeamsPyit.jsx";
+import Teamsanchore from "./pages/TeamsDetails/Teamsanchore";
 
 import ScrollToTop from "./components/App/ScrollToTop.jsx";
 
@@ -114,6 +115,9 @@ function App() {
         <Route path="/team/prompthunt" element={<TeamsPrompthunt />} />
         <Route path="/team/aimemes" element={<TeamsAimemes />} />
         <Route path="/team/pyit" element={<TeamsPyit />} />
+        <Route path="/team/anchore" element={<Teamsanchore />} />
+
+        
       </Routes>
       <AppFottor />
     </>

@@ -131,8 +131,8 @@ function Codathon() {
                   Event Heads
                 </h3>
                 <ul className="text-gray-300 list-disc pl-5 space-y-1">
-                  <li>Vishva Gohil - +91 81530 76229</li>
-                  <li>Deep Patel - +91 72659 77700</li>
+                  <li>Deep Patel - +91 81530 76229</li>
+                  <li>Vishva Gohil - +91 72659 77700</li>
                   <li>Manan Chodvadiya - +91 99097 67205</li>
                 </ul>
               </section>

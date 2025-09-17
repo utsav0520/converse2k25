@@ -15,7 +15,7 @@ const Schedule = () => {
         { time: '1:15 pm - 1:45 pm', event: 'Lunch Break', location: '' },
         { time: '1:45 pm - 2:45 pm', event: 'PY-IT (Round 1)', location: 'Lab 1,2,3' },
         { time: '2:00 pm - 4:00 pm', event: 'CodeWinglet (Round 2)', location: 'Lab 4,5' },
-        { time: '2:30 pm - 4:30 pm', event: 'Codathon', location: 'Lab 1,2,3' },
+        { time: '3:00 pm - 4:30 pm', event: 'Codathon', location: 'Lab 1,2,3' },
       ]
     },
     {
