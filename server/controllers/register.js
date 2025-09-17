@@ -45,7 +45,7 @@ export const addedOneEvent = async (req, res) => {
       expiresIn: "1d",
     });
 
-    await sendEmailForOneEvent(user, eventName);
+    // await sendEmailForOneEvent(user, eventName);
 
     res.status(200).json({
       success: true,
