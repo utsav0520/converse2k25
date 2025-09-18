@@ -57,11 +57,11 @@ function Codewinglet() {
                     <strong>Round Details:</strong>
                     <ul className="list-disc pl-5 space-y-1">
                       <li>
-                        <strong>Round 1:</strong> Debugging Round – 16th
+                        <strong>Round 1:</strong> Debugging Round – 19th
                         September 2025
                       </li>
                       <li>
-                        <strong>Round 2:</strong> Coding Challenge – 16th
+                        <strong>Round 2:</strong> Coding Challenge – 19th
                         September 2025
                       </li>
                     </ul>
@@ -288,3 +288,4 @@ function Codewinglet() {
 }
 
 export default Codewinglet;
+
